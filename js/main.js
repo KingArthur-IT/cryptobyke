@@ -45,4 +45,16 @@ $(document).ready(function(){
     $('.about__right-btn').click(function() {
         aboutOwl.trigger('next.owl.carousel');
     })
+
+
+    $('.bikes__carousel').owlCarousel({
+        loop: true,
+        autoplay: false,
+        slideTransition: 'linear',
+        autoplayTimeout: 2000,
+        autoplaySpeed: 2000,
+        nav: false,
+        dots: false,
+        items: 5,
+    });
 });

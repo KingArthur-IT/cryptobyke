@@ -195,6 +195,11 @@ body {
   background-color: #0A0011;
   margin-top: -170px;
   border-radius: 20%;
+  padding-bottom: 400px;
+}
+
+.about {
+  margin-bottom: 165px;
 }
 
 .about__item {
@@ -245,6 +250,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: -130px;
 }
 
 .about__leftline {
@@ -275,4 +281,28 @@ body {
           align-items: center;
   min-height: 71px;
   min-width: 165px;
+}
+
+.bikes__title {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 84.4%;
+  text-align: center;
+  letter-spacing: -0.025em;
+  color: #8AEDFF;
+  margin-bottom: 80px;
+}
+
+.bikes__name {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 84.4%;
+  text-align: center;
+  letter-spacing: -0.025em;
+  color: #FFFFFF;
+}
+
+.bikes__btn {
+  margin: auto;
 }
