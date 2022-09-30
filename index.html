@@ -83,40 +83,73 @@
                 </li>
               </ul>
         </section>
+        <section class="section details">
+            <div class="about">
+                <div class="about__carousel owl-carousel">
+                    <div class="about__item">
+                        <div class="about__img">
+                            <img src="./assets/img/about-carousel/1.png" alt="">
+                        </div>
+                        <div class="about__hero">
+                            <h2 class="about__title">What kind <br> of game is it?</h2>
+                            <p class="about__text">
+                                What makes it special is that we are the first game in the world that gives you the opportunity to bring your bikes and NFTs to life.You can also create your own motorcycle, improve it to your taste, place it on our marketplace for further sale or exchange with other users. And also, every half a year we will improve the game and its functionality, only for the better.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__item">
+                        <div class="about__img">
+                            <img src="./assets/img/about-carousel/4.png" alt="">
+                        </div>
+                        <div class="about__hero">
+                            <h2 class="about__title">The more powerful the bike – the more power you have to mine</h2>
+                            <p class="about__text">
+                                The more bikes you have in your collection – the more of our coin output you have
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__item">
+                        <div class="about__img">
+                            <img src="./assets/img/about-carousel/3.png" alt="">
+                        </div>
+                        <div class="about__hero">
+                            <h2 class="about__title">Mining</h2>
+                            <p class="about__text">
+                                Our bike building technology allows you to mine our token before it even launches on the platform and use the in-game currency in the future internally, to buy NFT bikes and other items. How much you mine in the beginning is how much you get when the coin comes out
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__item">
+                        <div class="about__img">
+                            <img src="./assets/img/about-carousel/2.png" alt="">
+                        </div>
+                        <div class="about__hero">
+                            <h2 class="about__title">Game mechanics</h2>
+                            <p class="about__text">
+                                It's simple: be faster, and more powerful, to come first to the finish line. Become a professional racer. Be one of the FIRST.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__controls">
+                    <div class="about__leftline"></div>
+                    <button class="btn about__btn about__left-btn">
+                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.91606 9.23516C0.622057 10.0122 0.622057 11.8882 1.91606 12.6652L16.0291 21.1332C17.3621 21.9332 19.0581 20.9732 19.0581 19.4182L19.0581 2.48216C19.0581 0.928162 17.3621 -0.0318377 16.0291 0.767162L1.91606 9.23516V9.23516Z" fill="#291071"/>
+                        </svg>                            
+                    </button>
+                    <button class="btn about__btn about__right-btn">
+                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.0837 9.23516C19.3777 10.0122 19.3777 11.8882 18.0837 12.6652L3.9707 21.1332C2.6377 21.9332 0.941699 20.9732 0.941699 19.4182L0.9417 2.48216C0.9417 0.928162 2.6377 -0.0318377 3.9707 0.767162L18.0837 9.23516V9.23516Z" fill="#291071"/>
+                        </svg>                            
+                    </button>
+                    <div class="about__rightline"></div>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="./js/jquery.slim.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-          $('.bikes-slider__carousel').owlCarousel({
-            loop: true,
-            autoplay: true,
-            slideTransition: 'linear',
-            autoplayTimeout: 2000,
-            autoplaySpeed: 2000,
-            autoplayHoverPause: true,
-            nav: false,
-            dots: false,
-            items: 8,
-            responsive:{
-              0:{
-                items: 2
-              },
-              500:{
-                items: 3
-              },
-              768:{
-                items: 4
-              },
-              1024:{
-                items: 6,
-              },
-              1400:{
-                items: 5,
-              }
-          }
-          })
-        });
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
