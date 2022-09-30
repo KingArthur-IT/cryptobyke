@@ -14,9 +14,7 @@ a, a:visited
 
 
 body
-//   color: var(--color-text)
-//   background: var(--color-background)
-  line-height: 1.35
+  line-height: 1.7
   font-family: 'Montserrat', sans-serif
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
@@ -32,5 +30,25 @@ body
     appearance: none
     border: none
     display: block
-    border-radius: 50px
     cursor: pointer
+    color: #140124
+    background: linear-gradient(264.04deg, #8AEDFF 5.93%, #6100FF 97.24%)
+    border-radius: 66px
+    padding: 10px 40px
+    font-weight: bold
+    font-size: 20px
+    z-index: 1
+    &::before
+      content: ""
+      top: -6px
+      bottom: -6px
+      left: -6px
+      right: -6px
+      border-radius: 66px
+      position: absolute
+      background: linear-gradient(270deg, #29ACE2 0%, #AB22FF 100%)
+      z-index: -1
+      opacity: 0.46
+.text
+  font-size: 19px
+  color: #fff
