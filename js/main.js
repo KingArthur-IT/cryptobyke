@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.bikes-slider__carousel').owlCarousel({
+    $('.bikes-ticker__carousel').owlCarousel({
       loop: true,
       autoplay: true,
       slideTransition: 'linear',
