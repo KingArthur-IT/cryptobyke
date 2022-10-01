@@ -48,6 +48,11 @@
         align-items: center
         min-height: 71px
         min-width: 165px
+        &::before
+            top: -10px
+            bottom: -10px
+            left: -10px
+            right: -10px 
 
 .bikes
     &__title
@@ -60,7 +65,20 @@
         margin-bottom: 80px
     &__carousel
     &__item
+        position: relative
+        padding-bottom: 30px
+        &:before
+            content: ""
+            position: absolute
+            left: 0
+            top: 0
+            bottom: 0
+            right: 0
+            background: url("../assets/img/details-bikes-carousel/bg.png") no-repeat
+            background-position: center 0
     &__img
+        & img
+            width: 110% !important
     &__name
         margin-bottom: 30px
         font-weight: 700
@@ -70,5 +88,30 @@
         letter-spacing: -0.025em
         color: #FFFFFF
     &__btn
+        appearance: none
+        border: none
+        display: block
+        cursor: pointer
+        color: #E1E1E1
+        border-radius: 66px
+        padding: 10px 40px
+        font-weight: bold
+        font-size: 13px
+        position: relative
         margin: auto
+        background: linear-gradient(270deg, #DCDCDC 0%, #E1E1E1 100%)
+        z-index: 1
+        background-clip: padding-box
+        opacity: 0.46
+        &::after
+            content: ''
+            position: absolute
+            top: 1px
+            bottom: 1px
+            left: 1px
+            right: 1px
+            border-radius: 66px
+            background: #000
+            z-index: -1
+            opacity: 1
 
