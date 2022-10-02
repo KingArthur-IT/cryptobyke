@@ -2,8 +2,32 @@
     background: url("../assets/img/details-bg.png") no-repeat
     background-color: #0A0011
     border-radius: 20%
-    padding-bottom: 400px
+    padding-bottom: 250px
     margin-top: -400px
+    &__hands
+        position: absolute
+        bottom: -100px
+        left: 0
+        right: 0
+        transform: translateY(50%)
+        z-index: 5
+        width: 100%
+    &:before
+        content: ""
+        position: absolute
+        bottom: -10px
+        left: 0
+        width: 10%
+        height: 200px
+        background: #fff
+    &:after
+        content: ""
+        position: absolute
+        bottom: -10px
+        right: 0
+        width: 10%
+        height: 200px
+        background: #fff
 .about
     margin-bottom: 165px
     &__item
