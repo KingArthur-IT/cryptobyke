@@ -467,6 +467,7 @@ body {
 .metaworld {
   background-color: #fff;
   padding: 500px 0 80px;
+  border-radius: 0 0 10% 10%;
 }
 
 .metaworld__title {
@@ -549,6 +550,7 @@ body {
 
 .metaworld__item {
   max-width: 390px;
+  z-index: 5;
 }
 
 .metaworld__item h3 {
@@ -573,4 +575,18 @@ body {
   z-index: 10;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.metaworld__left-design {
+  position: absolute;
+  left: 0;
+  bottom: 6%;
+  z-index: 0;
+}
+
+.metaworld__right-design {
+  position: absolute;
+  right: 0;
+  bottom: 25%;
+  z-index: 0;
 }
