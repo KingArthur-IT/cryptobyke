@@ -56,5 +56,36 @@ $(document).ready(function(){
         nav: false,
         dots: false,
         items: 5,
+        center: true
     });
+
+    $('.bikes__carousel').on('changed.owl.carousel', (e) => {
+      setTimeout(() => {
+        $('.bikes__carousel .owl-item.active').each(function(i){
+          $( this ).removeClass('leftTransform');
+          $( this ).removeClass('rightTransform');
+          $( this ).removeClass('setTransparentsy');
+  
+          if (i === 0)
+            $( this ).addClass('setTransparentsy');
+          if (i === 1)
+            $( this ).addClass('leftTransform');
+          if (i === 3)
+            $( this ).addClass('rightTransform');
+          if (i === 4)
+            $( this ).addClass('setTransparentsy');
+        })
+      }, 10);
+    });
+
+    $('.bikes__carousel .owl-item.active').each(function(i){
+      if (i === 0)
+        $( this ).addClass('setTransparentsy');
+      if (i === 1)
+        $( this ).addClass('leftTransform');
+      if (i === 3)
+        $( this ).addClass('rightTransform');
+      if (i === 4)
+        $( this ).addClass('setTransparentsy');
+    })
 });

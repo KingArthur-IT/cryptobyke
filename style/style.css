@@ -197,10 +197,11 @@ body {
   content: "";
   position: absolute;
   top: 55px;
-  left: 20px;
-  right: 0px;
+  left: 50px;
+  right: 20px;
   bottom: 0;
   background: url("../assets/img/bikes/bg.png") no-repeat;
+  background-size: contain;
 }
 
 .details {
@@ -303,6 +304,11 @@ body {
   right: -10px;
 }
 
+.bikes {
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+
 .bikes__title {
   font-weight: 700;
   font-size: 70px;
@@ -310,7 +316,7 @@ body {
   text-align: center;
   letter-spacing: -0.025em;
   color: #8AEDFF;
-  margin-bottom: 80px;
+  margin-bottom: 200px;
 }
 
 .bikes__item {
@@ -321,12 +327,13 @@ body {
 .bikes__item:before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 50px;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: 50px;
   background: url("../assets/img/details-bikes-carousel/bg.png") no-repeat;
   background-position: center 0;
+  background-size: contain;
 }
 
 .bikes__img img {
@@ -375,4 +382,53 @@ body {
   background: #000;
   z-index: -1;
   opacity: 1;
+}
+
+.bikes__carousel.owl-carousel .owl-stage-outer {
+  overflow: inherit !important;
+}
+
+.bikes__carousel .owl-item.active {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.bikes__carousel .owl-item.active.center {
+  -webkit-transform: scale(1.5) !important;
+          transform: scale(1.5) !important;
+}
+
+.bikes__carousel .owl-item.active.center .bikes__name {
+  margin-top: -40px;
+}
+
+.bikes__carousel .owl-item.active.center .bikes__btn {
+  color: #0A0011;
+  background: -webkit-gradient(linear, right top, left top, from(#dcdcdc80), to(#e1e1e193));
+  background: linear-gradient(270deg, #dcdcdc80 0%, #e1e1e193 100%);
+  opacity: 1;
+  padding: 15px 40px;
+}
+
+.bikes__carousel .owl-item.active.center .bikes__btn::after {
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(5.93%, #FFFFFF), color-stop(97.24%, #BFBFBF));
+  background: linear-gradient(90deg, #FFFFFF 5.93%, #BFBFBF 97.24%);
+}
+
+.leftTransform {
+  -webkit-transform: translateX(-10%) !important;
+          transform: translateX(-10%) !important;
+}
+
+.rightTransform {
+  -webkit-transform: translateX(10%) !important;
+          transform: translateX(10%) !important;
+}
+
+.setTransparentsy {
+  opacity: 0.5;
 }
