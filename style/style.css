@@ -696,3 +696,78 @@ body {
   text-align: center;
   margin-bottom: 50px;
 }
+
+.milestones__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: calc(100% + 75px);
+  -webkit-transform: translateX(-37.5px);
+          transform: translateX(-37.5px);
+}
+
+.milestones__wrapper {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 9px;
+}
+
+.milestones__item {
+  padding: 9px;
+  background: url("../assets/img/milestones/bg.png") no-repeat;
+  background-size: contain;
+}
+
+.milestones__hero {
+  background: linear-gradient(42.19deg, #390E58 2.34%, #9C33E4 105.89%);
+  border-radius: 19px;
+  padding: 28px 45px 50px;
+}
+
+.milestones__head {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.milestones__head p {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 123.4%;
+  letter-spacing: -0.025em;
+  color: #FFFFFF;
+}
+
+.milestones__progress-wrapper {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  background: #fff;
+}
+
+.milestones__progress {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  font-size: 20px;
+  color: #3C0F5C;
+  width: 50%;
+  background: #6FCFCF;
+  -webkit-box-shadow: 0px 0px 30px rgba(34, 255, 255, 0.63);
+          box-shadow: 0px 0px 30px rgba(34, 255, 255, 0.63);
+}
