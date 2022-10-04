@@ -771,3 +771,56 @@ body {
   -webkit-box-shadow: 0px 0px 30px rgba(34, 255, 255, 0.63);
           box-shadow: 0px 0px 30px rgba(34, 255, 255, 0.63);
 }
+
+.diagramms {
+  padding-bottom: 135px;
+}
+
+.diagramms__title {
+  margin-bottom: 75px;
+  color: #fff;
+  text-align: center;
+}
+
+.diagramms__table {
+  font-size: 19px;
+  line-height: 171%;
+  color: #FFFFFF;
+  border: 1px solid #FBFBFA;
+  -webkit-filter: drop-shadow(0px 65.9501px 125.518px rgba(152, 152, 152, 0.76));
+          filter: drop-shadow(0px 65.9501px 125.518px rgba(152, 152, 152, 0.76));
+  border-radius: 14px;
+  margin-bottom: 60px;
+}
+
+.diagramms__table-row {
+  border: 1px solid #FBFBFA;
+  padding: 50px 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.diagramms__table-title {
+  font-weight: 700;
+  font-size: 22px;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.diagramms__table-text {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+}
+
+.diagramms__table-btn {
+  margin: auto;
+  min-width: 281px;
+  min-height: 70px;
+}
