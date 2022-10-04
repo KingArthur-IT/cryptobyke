@@ -88,4 +88,17 @@ $(document).ready(function(){
       if (i === 4)
         $( this ).addClass('setTransparentsy');
     })
+
+
+    //team carousel
+    $('.team__list').owlCarousel({
+      loop: false,
+      slideTransition: 'linear',
+      autoplayTimeout: 2000,
+      autoplaySpeed: 2000,
+      nav: false,
+      dots: false,
+      center: true,
+      items: 5.2
+    });
 });
