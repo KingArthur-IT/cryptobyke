@@ -685,10 +685,107 @@ body {
   min-width: 290px;
 }
 
+.roadmap {
+  padding-bottom: 115px;
+}
+
 .roadmap__title {
   margin-bottom: 75px;
   color: #fff;
   text-align: center;
+}
+
+.roadmap__quater-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.roadmap__quater-item {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-right: 100px;
+}
+
+.roadmap__head-wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 23px;
+}
+
+.roadmap__head {
+  background: url("../assets/img/roadmap-bg.png") no-repeat;
+  background-size: contain;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.roadmap__head-circle {
+  background: radial-gradient(80.7% 86.32% at 60.76% 0%, #00FCFC 0%, #9F35FF 100%);
+  -webkit-box-shadow: 0px 5px 193px rgba(171, 34, 255, 0.38);
+          box-shadow: 0px 5px 193px rgba(171, 34, 255, 0.38);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 243px;
+  height: 243px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 123.4%;
+  letter-spacing: -0.025em;
+  color: #FFFFFF;
+}
+
+.roadmap__circle {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  background: #13021F;
+  border: 1px solid #4ABCFD;
+  margin: auto;
+}
+
+.roadmap__list {
+  position: relative;
+}
+
+.roadmap__list::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  bottom: 60px;
+  left: 9.5px;
+  width: 1px;
+  background: #AB22FF;
+}
+
+.roadmap__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.roadmap__item svg {
+  margin-right: 13px;
+  margin-top: 4px;
+  min-width: 20px;
+  min-height: 20px;
+  background-color: #000;
+}
+
+.roadmap__item p {
+  font-size: 20px;
+  line-height: 171%;
+  color: #FFFFFF;
 }
 
 .milestones__title {
@@ -836,6 +933,89 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.proceeds {
+  padding-top: 170px;
+}
+
+.proceeds__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.proceeds__left {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  margin-right: -70px;
+}
+
+.proceeds__right {
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+  margin-left: -30px;
+}
+
+.proceeds__item {
+  color: #FFFFFF;
+  font-size: 19px;
+  line-height: 171%;
+  margin-bottom: 48px;
+}
+
+.proceeds__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 22px;
+}
+
+.proceeds__circle {
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  margin-right: 18px;
+}
+
+.proceeds__name h4 {
+  font-weight: 700;
+}
+
+.proceeds__name p {
+  font-weight: 400;
+}
+
+.proceeds__build {
+  background: #5134FE;
+}
+
+.proceeds__marketing {
+  background: #EB69FF;
+}
+
+.proceeds__operations {
+  background: #FF53B4;
+}
+
+.proceeds__countingency {
+  background: #FD9FB4;
+}
+
+.proceeds__legal {
+  background: #FFC7C3;
+}
+
+.proceeds__btn {
+  min-height: 70px;
+  min-width: 290px;
+  margin-top: 230px;
 }
 
 .team {
