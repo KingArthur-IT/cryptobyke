@@ -37,6 +37,36 @@
         display: flex
         align-items: center
         justify-content: space-between
+        width: calc( 100% + 25px )
+        transform: translateX(-12.5px)
+    &__btn-wrapper
+        flex-basis: 33.3%
+        padding: 0 12.5px
+    &__btn
+        appearance: none
+        border: none
+        display: block
+        cursor: pointer
+        margin: auto
+        min-width: 281px
+        min-height: 70px
+        border-radius: 66px
+        font-weight: 700
+        font-size: 19px
+        line-height: 171%
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #fff
+        color: #4C0E73
+        border: 1px solid #4C0E73
+        width: 100%
+        &.active
+            background: linear-gradient(95deg, #290046 5.93%, #0A0011 97.24%)
+            box-shadow: 0px 54px 88px rgba(0, 0, 0, 0.12)
+            border: 10px solid #C1BDC4
+            color: #FFFFFF
+            min-height: 81px
     &__content
         display: flex
         padding-top: 75px
@@ -48,11 +78,21 @@
         flex-basis: 16.6%
         padding: 0 12.5px
     &__item
+    &__img-wrapper
+        position: relative
+        &::before
+            content: ""
+            top: -6px
+            bottom: 0px
+            left: -6px
+            right: -6px
+            position: absolute
+            background: linear-gradient(90deg, #D6D6D6 0%, #fff 50%, #D6D6D6 100%)
+            border-radius: 50%
     &__img
         border-radius: 50%
         overflow: hidden
         margin-bottom: 26px
-        width: 100%
         & img
             width: 100%
     &__name
