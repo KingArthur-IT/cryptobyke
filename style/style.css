@@ -689,6 +689,13 @@ body {
   margin: auto;
   padding: 10px 34px;
   width: 100vw;
+  opacity: 0.6;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+
+.groups__item.active {
+  opacity: 1;
 }
 
 .groups__label {
@@ -760,6 +767,13 @@ body {
   min-width: 290px;
 }
 
+.groups__btn::before {
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
 .roadmap {
   padding-bottom: 115px;
 }
@@ -770,16 +784,45 @@ body {
   text-align: center;
 }
 
+.roadmap__quater-container {
+  position: relative;
+  overflow: hidden;
+  padding: 150px;
+  padding-bottom: 0;
+  margin-top: -150px;
+  margin-left: calc(15% - 150px);
+}
+
+.roadmap__line {
+  position: absolute;
+  top: 436px;
+  left: 229px;
+  right: 0;
+  width: 97%;
+}
+
 .roadmap__quater-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
 }
 
 .roadmap__quater-item {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   padding-right: 100px;
+  min-width: 37%;
+  opacity: 0.6;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+
+.roadmap__quater-item.active {
+  opacity: 1;
 }
 
 .roadmap__head-wrapper {
@@ -793,7 +836,7 @@ body {
   background: url("../assets/img/roadmap-bg.png") no-repeat;
   background-size: contain;
   padding: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 90px;
 }
 
 .roadmap__head-circle {
@@ -820,6 +863,7 @@ body {
 }
 
 .roadmap__circle {
+  display: none;
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -840,6 +884,14 @@ body {
   left: 9.5px;
   width: 1px;
   background: #AB22FF;
+}
+
+.roadmap__list.three-line::before {
+  bottom: 90px;
+}
+
+.roadmap__list.one-line::before {
+  bottom: 30px;
 }
 
 .roadmap__item {

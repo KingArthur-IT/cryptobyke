@@ -21,6 +21,10 @@
         margin: auto
         padding: 10px 34px
         width: 100vw
+        opacity: 0.6
+        transition: opacity 0.3s ease-in
+        &.active
+            opacity: 1
     &__label
         color: #FFFFFF
         text-align: center
@@ -65,4 +69,9 @@
         margin: auto
         min-height: 90px
         min-width: 290px
+        &::before
+            top: 10px
+            bottom: 10px
+            left: 10px
+            right: 10px
 
