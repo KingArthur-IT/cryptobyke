@@ -44,7 +44,9 @@ body {
   display: block;
   cursor: pointer;
   color: #140124;
-  background: linear-gradient(264.04deg, #8AEDFF 5.93%, #6100FF 97.24%);
+  background: -webkit-gradient(linear, right top, left top, from(#29ACE27A), to(#AB22FF6B));
+  background: linear-gradient(270deg, #29ACE27A 0%, #AB22FF6B 100%);
+  background-size: 100% 100%;
   border-radius: 66px;
   padding: 10px 40px;
   font-weight: bold;
@@ -54,16 +56,14 @@ body {
 
 .btn::before {
   content: "";
-  top: -6px;
-  bottom: -6px;
-  left: -6px;
-  right: -6px;
+  top: 6px;
+  bottom: 6px;
+  left: 6px;
+  right: 6px;
   border-radius: 66px;
   position: absolute;
-  background: -webkit-gradient(linear, right top, left top, from(#29ACE2), to(#AB22FF));
-  background: linear-gradient(270deg, #29ACE2 0%, #AB22FF 100%);
+  background: linear-gradient(264.04deg, #8AEDFF 5.93%, #6100FF 97.24%);
   z-index: -1;
-  opacity: 0.46;
 }
 
 .text {
@@ -127,7 +127,8 @@ body {
 
 .header__btn {
   min-width: 215px;
-  min-height: 47px;
+  min-height: 59px;
+  font-size: 16px;
 }
 
 .head {
@@ -386,13 +387,7 @@ body {
           align-items: center;
   min-height: 71px;
   min-width: 165px;
-}
-
-.about__btn::before {
-  top: -10px;
-  bottom: -10px;
-  left: -10px;
-  right: -10px;
+  min-height: 80px;
 }
 
 .bikes {
@@ -675,11 +670,25 @@ body {
 
 .groups__carousel {
   margin-bottom: 80px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.groups__carousel-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 15%;
 }
 
 .groups__item {
   max-width: 1200px;
   margin: auto;
+  padding: 10px 34px;
+  width: 100vw;
 }
 
 .groups__label {
@@ -701,6 +710,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: url("../assets/img/bikes/bg.png") no-repeat;
+  background-size: 100% 100%;
+  min-height: 158px;
 }
 
 .groups__label span {
@@ -714,7 +726,8 @@ body {
 
 .groups__card {
   max-width: 1200px;
-  background: linear-gradient(94.06deg, #390E58 1.79%, #9C33E4 101.82%);
+  background: url("../assets/img/stages/bg.png") no-repeat;
+  background-size: 100% 100%;
   border-radius: 37px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -743,7 +756,7 @@ body {
 
 .groups__btn {
   margin: auto;
-  min-height: 70px;
+  min-height: 90px;
   min-width: 290px;
 }
 

@@ -33,7 +33,9 @@ body
     display: block
     cursor: pointer
     color: #140124
-    background: linear-gradient(264.04deg, #8AEDFF 5.93%, #6100FF 97.24%)
+    background: linear-gradient(270deg, #29ACE27A 0%, #AB22FF6B 100%)
+    // background: url("../assets/img/btn-bg.png") no-repeat
+    background-size: 100% 100%
     border-radius: 66px
     padding: 10px 40px
     font-weight: bold
@@ -41,15 +43,14 @@ body
     z-index: 1
     &::before
       content: ""
-      top: -6px
-      bottom: -6px
-      left: -6px
-      right: -6px
+      top: 6px
+      bottom: 6px
+      left: 6px
+      right: 6px
       border-radius: 66px
       position: absolute
-      background: linear-gradient(270deg, #29ACE2 0%, #AB22FF 100%)
+      background: linear-gradient(264.04deg, #8AEDFF 5.93%, #6100FF 97.24%)
       z-index: -1
-      opacity: 0.46
 .text
   font-size: 19px
   color: #fff
