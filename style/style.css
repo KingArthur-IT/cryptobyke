@@ -996,10 +996,29 @@ body {
   text-align: center;
   font-size: 20px;
   color: #3C0F5C;
-  width: 50%;
   background: #6FCFCF;
   -webkit-box-shadow: 0px 0px 30px rgba(34, 255, 255, 0.63);
           box-shadow: 0px 0px 30px rgba(34, 255, 255, 0.63);
+}
+
+.progress-35 {
+  width: 0%;
+  -webkit-transition: width 1.0s ease-in;
+  transition: width 1.0s ease-in;
+}
+
+.progress-90 {
+  width: 0%;
+  -webkit-transition: width 1.0s ease-in-out;
+  transition: width 1.0s ease-in-out;
+}
+
+.anim-active .progress-35 {
+  width: 35%;
+}
+
+.anim-active .progress-90 {
+  width: 90%;
 }
 
 .diagramms {
