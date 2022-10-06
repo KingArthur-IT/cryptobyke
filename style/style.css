@@ -78,6 +78,10 @@ body {
   letter-spacing: -0.025em;
 }
 
+.d-none {
+  display: none !important;
+}
+
 .header {
   width: 100%;
   position: absolute;
