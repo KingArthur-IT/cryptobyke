@@ -655,6 +655,11 @@ body {
   z-index: 0;
 }
 
+.groups-and-roadmap {
+  background: url("../assets/img/groups-bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+
 .groups {
   padding-top: 130px;
   margin-bottom: 110px;
@@ -799,6 +804,7 @@ body {
   left: 229px;
   right: 0;
   width: 97%;
+  opacity: 0.6;
 }
 
 .roadmap__quater-list {
@@ -998,6 +1004,16 @@ body {
 
 .diagramms {
   padding-bottom: 135px;
+  position: relative;
+  background: url("../assets/img/svg-bg.png") no-repeat;
+  background-position-y: bottom;
+  background-size: contain;
+}
+
+.diagramms__hand {
+  position: absolute;
+  top: -18%;
+  left: 0;
 }
 
 .diagramms__title {
