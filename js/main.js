@@ -77,6 +77,9 @@ $(document).ready(function(){
         })
       }, 10);
     });
+    $(document).on('click', '.bikes__item', function() {
+      $('.bikes__carousel').trigger('to.owl.carousel', $(this).data( 'position' ) ); 
+    });
 
     $('.bikes__carousel .owl-item.active').each(function(i){
       if (i === 0)
