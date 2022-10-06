@@ -1006,7 +1006,7 @@ body {
   padding-bottom: 135px;
   position: relative;
   background: url("../assets/img/svg-bg.png") no-repeat;
-  background-position-y: bottom;
+  background-position-y: 105%;
   background-size: contain;
 }
 
@@ -1034,7 +1034,7 @@ body {
 }
 
 .diagramms__table-row {
-  border: 1px solid #FBFBFA;
+  border-bottom: 1px solid #FBFBFA;
   padding: 50px 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1045,6 +1045,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.diagramms__table-row:last-child {
+  border-bottom: 0;
 }
 
 .diagramms__table-title {

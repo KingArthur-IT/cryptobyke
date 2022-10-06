@@ -2,7 +2,7 @@
     padding-bottom: 135px
     position: relative
     background: url("../assets/img/svg-bg.png") no-repeat
-    background-position-y: bottom
+    background-position-y: 105%
     background-size: contain
     &__hand
         position: absolute
@@ -21,11 +21,13 @@
         border-radius: 14px
         margin-bottom: 60px
         &-row
-            border: 1px solid #FBFBFA
+            border-bottom: 1px solid #FBFBFA
             padding: 50px 70px
             display: flex
             justify-content: space-between
             align-items: center
+            &:last-child
+                border-bottom: 0
         &-title
             font-weight: 700
             font-size: 22px
