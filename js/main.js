@@ -102,6 +102,24 @@ $(document).ready(function(){
       nav: false,
       dots: false,
       center: true,
-      items: 5.2
+      items: 6.2
     });
 });
+
+
+//open modal
+document.querySelector('.about__video').addEventListener('click', () => {
+  document.querySelector('.modal').classList.add('modal-display');
+  setTimeout(() => {
+    document.querySelector('.modal').classList.add('modal-visible');
+  }, 100);
+});
+//close modal
+const closeModal = () => {
+  document.querySelector('.modal').classList.remove('modal-visible');
+  setTimeout(() => {
+    document.querySelector('.modal').classList.remove('modal-display');
+  }, 300);
+}
+document.querySelector('.modal').addEventListener('click', () => closeModal());
+document.querySelector('.modal__hero').addEventListener('click', (e) => e.stopPropagation());
