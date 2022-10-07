@@ -145,3 +145,9 @@ tabsArr.forEach(el => {
     document.querySelector(`.tab-content-${el}`).classList.remove('d-none');
   })
 })
+
+//table
+document.querySelector('.diagramms__table-btn').addEventListener('click', () => {
+  document.querySelectorAll('.short-table').forEach((el) => el.classList.toggle('d-none'))
+  document.querySelectorAll('.full-table').forEach((el) => el.classList.toggle('d-none'))
+})
