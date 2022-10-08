@@ -8,6 +8,7 @@ var activeItem = 1;
 
 window.addEventListener('wheel', (e) => {
   const isOnPosition = groupsCarousel.getBoundingClientRect().top - topOffset < 0;
+  const isOnSection = groupsCarousel.getBoundingClientRect().top - topOffset + groupsCarousel.getBoundingClientRect().height < 0;
   const isDownDirection = e.wheelDeltaY < 0;
 
   //lock on scroll
@@ -21,7 +22,7 @@ window.addEventListener('wheel', (e) => {
   }
 
   //unlock on scroll
-  if ((groupsCarouselTransform >= maxTransform && isDownDirection) ||
+  if ((groupsCarouselTransform >= maxTransform && isDownDirection && !isOnSection) ||
       (groupsCarouselTransform <= 0 && !isDownDirection)
   ){
     document.querySelector('body').classList.remove('stop-scrolling');
