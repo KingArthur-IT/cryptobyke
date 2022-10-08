@@ -170,3 +170,24 @@ svgItemsArr.forEach((item) => {
     })
   }
 })
+
+
+//diagramm
+const diagrammArr = ['game', 'staking', 'community', 'presale', 'sale', 'reserve', 'team', 'coin', 'ecosystem', 'partners', 'liquidity', 'marketing']
+diagrammArr.forEach((item) => {
+  const svgPath = document.querySelector(`.diagramm-${item}`);
+  if (svgPath){
+
+    svgPath.addEventListener('mouseover', (e) => {
+      svgPath.classList.add('svg-show-shadow');
+      document.querySelector(`.diagramm-${item}-bg`)?.classList.add('opacity0');
+      document.querySelector(`.diagramm-${item}-text`)?.classList.add(`${item}-text-fill`);
+    })
+
+    svgPath.addEventListener('mouseleave', (e) => {
+      e.target.classList.remove('svg-show-shadow');
+      document.querySelector(`.diagramm-${item}-bg`)?.classList.remove('opacity0');
+      document.querySelector(`.diagramm-${item}-text`)?.classList.remove(`${item}-text-fill`);
+    })
+  }
+})

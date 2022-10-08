@@ -119,6 +119,10 @@ body {
   opacity: 0.2;
 }
 
+.opacity0 {
+  opacity: 0;
+}
+
 .stop-scrolling {
   overflow: hidden;
 }
@@ -1169,6 +1173,154 @@ body {
   bottom: 10px;
   left: 10px;
   right: 10px;
+}
+
+.diagramm-section {
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-in, -webkit-transform 0.4s ease-in;
+  transition: opacity 0.1s ease-in, -webkit-transform 0.4s ease-in;
+  transition: opacity 0.1s ease-in, transform 0.4s ease-in;
+  transition: opacity 0.1s ease-in, transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+  cursor: pointer;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+.diagramm-bg {
+  -webkit-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
+}
+
+.diagramm-game:hover {
+  -webkit-transform: translate(15px, 10px);
+          transform: translate(15px, 10px);
+}
+
+.diagramm-staking:hover {
+  -webkit-transform: translate(15px, -20px);
+          transform: translate(15px, -20px);
+}
+
+.diagramm-community:hover {
+  -webkit-transform: translate(-2px, -25px);
+          transform: translate(-2px, -25px);
+}
+
+.diagramm-presale:hover {
+  -webkit-transform: translate(-4px, -25px);
+          transform: translate(-4px, -25px);
+}
+
+.diagramm-sale:hover {
+  -webkit-transform: translate(-15px, -25px);
+          transform: translate(-15px, -25px);
+}
+
+.diagramm-reserve:hover {
+  -webkit-transform: translate(-40px, 43px) rotate(-2deg);
+          transform: translate(-40px, 43px) rotate(-2deg);
+}
+
+.diagramm-team:hover {
+  -webkit-transform: translate(-22px, 5px);
+          transform: translate(-22px, 5px);
+}
+
+.diagramm-coin:hover {
+  -webkit-transform: translate(-5px, 25px);
+          transform: translate(-5px, 25px);
+}
+
+.diagramm-ecosystem:hover {
+  -webkit-transform: translate(-20px, -20px);
+          transform: translate(-20px, -20px);
+}
+
+.diagramm-partners:hover {
+  -webkit-transform: translate(-25px, 0px);
+          transform: translate(-25px, 0px);
+}
+
+.diagramm-liquidity:hover {
+  -webkit-transform: translate(-20px, -15px);
+          transform: translate(-20px, -15px);
+}
+
+.diagramm-marketing:hover {
+  -webkit-transform: translate(-25px, -8px);
+          transform: translate(-25px, -8px);
+}
+
+.game-text-fill {
+  fill: #6D1FD1;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.staking-text-fill {
+  fill: #1F26D1;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.community-text-fill {
+  fill: #1F7BD1;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.presale-text-fill {
+  fill: #1F9CD1;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.sale-text-fill {
+  fill: #28C7A1;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.reserve-text-fill {
+  fill: #D4268F;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.team-text-fill {
+  fill: #FF392D;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.coin-text-fill {
+  fill: #D21C3D;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.ecosystem-text-fill {
+  fill: #31D02E;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.partners-text-fill {
+  fill: #FF8058;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.liquidity-text-fill {
+  fill: #86DC31;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.marketing-text-fill {
+  fill: #CFDE24;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
 }
 
 .proceeds {
