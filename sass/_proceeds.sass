@@ -7,6 +7,7 @@
         flex-basis: 70%
         margin-right: -70px
     &__center
+        position: relative
     &__right
         flex-basis: 65%
         margin-left: -30px
@@ -15,6 +16,7 @@
         font-size: 19px
         line-height: 171%
         margin-bottom: 48px
+        transition: opacity 0.3s ease-in
     &__head
         display: flex
         align-items: center
@@ -44,3 +46,46 @@
         min-width: 290px
         margin-top: 230px
             
+.svg
+    &-build
+        opacity: 0
+        transition: opacity 0.3s ease-in
+        cursor: pointer
+    &-countingency
+        opacity: 0
+        transition: opacity 0.3s ease-in
+        cursor: pointer
+    &-legal
+        opacity: 0
+        transition: opacity 0.3s ease-in
+        cursor: pointer
+    &-marketing
+        opacity: 0
+        transition: opacity 0.3s ease-in
+        cursor: pointer
+    &-operations
+        opacity: 0
+        transition: opacity 0.3s ease-in
+        cursor: pointer
+.svg-show-shadow
+    opacity: 1
+.svg-rotate
+    position: absolute
+    top: 81px
+    left: 87px
+    transform: rotate(0deg)
+    transition: transform 0.3s linear
+    pointer-events: none
+    animation: rotation 3s linear 0s infinite
+.svg-logo
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-52%, -68%)
+    pointer-events: none
+
+@keyframes rotation
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)

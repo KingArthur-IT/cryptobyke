@@ -84,7 +84,7 @@ body {
 
 .fixed-socials {
   position: fixed;
-  right: 0;
+  right: 0px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -92,7 +92,7 @@ body {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 30px 0 0 30px;
-  padding: 38px 30px;
+  padding: 38px 20px 30px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,6 +109,14 @@ body {
 
 .fixed-socials__link:last-child {
   margin-bottom: 0;
+}
+
+.no-events {
+  pointer-events: none;
+}
+
+.opacity-02 {
+  opacity: 0.2;
 }
 
 .header {
@@ -1165,6 +1173,10 @@ body {
   margin-right: -70px;
 }
 
+.proceeds__center {
+  position: relative;
+}
+
 .proceeds__right {
   -ms-flex-preferred-size: 65%;
       flex-basis: 65%;
@@ -1176,6 +1188,8 @@ body {
   font-size: 19px;
   line-height: 171%;
   margin-bottom: 48px;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 
 .proceeds__head {
@@ -1227,6 +1241,91 @@ body {
   min-height: 83px;
   min-width: 290px;
   margin-top: 230px;
+}
+
+.svg-build {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.svg-countingency {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.svg-legal {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.svg-marketing {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.svg-operations {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.svg-show-shadow {
+  opacity: 1;
+}
+
+.svg-rotate {
+  position: absolute;
+  top: 81px;
+  left: 87px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+  pointer-events: none;
+  -webkit-animation: rotation 3s linear 0s infinite;
+          animation: rotation 3s linear 0s infinite;
+}
+
+.svg-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-52%, -68%);
+          transform: translate(-52%, -68%);
+  pointer-events: none;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .team {

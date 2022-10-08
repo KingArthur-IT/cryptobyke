@@ -151,3 +151,22 @@ document.querySelector('.diagramms__table-btn').addEventListener('click', () => 
   document.querySelectorAll('.short-table').forEach((el) => el.classList.toggle('d-none'))
   document.querySelectorAll('.full-table').forEach((el) => el.classList.toggle('d-none'))
 })
+
+//svg animation
+const svgItemsArr = ['build', 'countingency', 'legal', 'marketing', 'operations'];
+svgItemsArr.forEach((item) => {
+  const svgPath = document.querySelector(`.svg-${item}`);
+  if (svgPath){
+
+    svgPath.addEventListener('mouseover', (e) => {
+      svgPath.classList.add('svg-show-shadow');
+      svgItemsArr.filter((i) => i !== item).forEach((el) => document.querySelector(`.item-${el}`).classList.add('opacity-02'))
+    })
+
+    svgPath.addEventListener('mouseleave', (e) => {
+      e.target.classList.remove('svg-show-shadow');
+      svgItemsArr.forEach((el) => document.querySelector(`.item-${el}`).classList.remove('opacity-02'))
+
+    })
+  }
+})
