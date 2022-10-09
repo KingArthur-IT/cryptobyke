@@ -180,6 +180,47 @@ body {
   font-size: 16px;
 }
 
+.header__burger {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  display: block;
+  cursor: pointer;
+  background: transparent;
+  display: none;
+}
+
+@media screen and (max-width: 1120px) {
+  .header__btn {
+    min-width: 0;
+  }
+  .header__logo img {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header__btn {
+    display: none;
+  }
+  .header__nav-list {
+    display: none;
+  }
+  .header__burger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .header__navbar {
+    height: 95px;
+  }
+  .header__logo img {
+    width: 120px;
+  }
+}
+
 .head {
   width: 100%;
   background: url("../assets/img/main-bg.png") no-repeat;
