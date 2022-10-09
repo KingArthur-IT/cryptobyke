@@ -9,19 +9,47 @@
         padding-bottom: 70px
         display: flex
         justify-content: space-between
-        align-items: center
+        align-items: flex-end
     &__logo
-        max-width: 230px
+        flex-basis: 40%
+        & img
+            max-width: 230px
     &__policy
         font-size: 23px
         line-height: 171%
         text-align: center
         color: #FFFFFF
+        padding-bottom: 15px
     &__socials
         display: flex
         align-items: center
+        padding-bottom: 15px
+        flex-basis: 40%
+        justify-content: flex-end
     &__social-link
         margin-right: 35px
         &:last-child
             margin-right: 0
     
+@media screen and (max-width: 1023px)
+    .footer
+        &__hero
+            flex-direction: column
+            align-items: center
+        &__logo
+            margin-bottom: 50px
+        &__policy
+            padding-bottom: 0px
+            margin-bottom: 60px
+        &__socials
+            padding-bottom: 0px
+
+@media screen and (max-width: 425px)
+    .footer
+        &__hero
+            padding: 30px 25px 60px
+        &__socials
+            width: 100%
+            justify-content: space-between
+        &__social-link
+            margin-right: 0px
