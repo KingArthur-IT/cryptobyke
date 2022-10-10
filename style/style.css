@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -465,12 +466,12 @@ body {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   position: relative;
-  padding: 6% 0 10%;
+  padding: 4% 0 10%;
 }
 
 .about__item-bg {
   position: absolute;
-  top: -10%;
+  top: -15%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -547,7 +548,7 @@ body {
   letter-spacing: -0.025em;
   color: #8AEDFF;
   margin-bottom: 40px;
-  margin-top: -5%;
+  margin-top: -10%;
 }
 
 .about__text {
