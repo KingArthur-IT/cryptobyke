@@ -216,9 +216,6 @@ body {
   .header__burger {
     display: block;
   }
-}
-
-@media screen and (max-width: 425px) {
   .header__navbar {
     height: 95px;
   }
@@ -341,7 +338,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .head__bike-img {
-    width: 90vw;
+    width: 70vw;
     right: 40px;
   }
   .head__title {
@@ -351,8 +348,8 @@ body {
     margin-bottom: 40px;
   }
   .head__hero {
-    padding-top: 115vw;
-    padding-bottom: 35px;
+    padding-top: 85vw;
+    padding-bottom: 30vw;
   }
   .head__description {
     font-size: 15px;
@@ -368,6 +365,16 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .head__bike-img {
+    width: 90vw;
+  }
+  .head__hero {
+    padding-top: 115vw;
+    padding-bottom: 33vw;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .head__bike-img {
     width: 110vw;
@@ -375,11 +382,11 @@ body {
   }
   .head__hero {
     padding-top: 125vw;
-    padding-bottom: 35px;
+    padding-bottom: 130px;
   }
   .head__btn {
     min-width: 245px;
-    min-height: 60px;
+    min-height: 70px;
     font-size: 17px;
     margin: auto;
   }
@@ -426,43 +433,15 @@ body {
   background-size: contain;
 }
 
-.details {
-  background: url("../assets/img/details-bg.png") no-repeat;
-  background-color: #0A0011;
-  border-radius: 20%;
-  padding-bottom: 250px;
-  margin-top: -400px;
-}
-
-.details__hands {
-  position: absolute;
-  bottom: -100px;
-  left: 0;
-  right: 0;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-  z-index: 5;
-  width: 100%;
-}
-
-.details:before {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 10%;
-  height: 200px;
-  background: #fff;
-}
-
-.details:after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  right: 0;
-  width: 10%;
-  height: 200px;
-  background: #fff;
+@media screen and (max-width: 600px) {
+  .bikes-ticker__item {
+    padding-top: 10px;
+  }
+  .bikes-ticker__item::before {
+    top: 30px;
+    left: 30px;
+    right: 30px;
+  }
 }
 
 .about {
@@ -470,6 +449,7 @@ body {
 }
 
 .about__item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -482,17 +462,26 @@ body {
 }
 
 .about__img {
-  -ms-flex-preferred-size: 43%;
-      flex-basis: 43%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   position: relative;
-  margin-right: 60px;
+  padding: 10% 0;
+}
+
+.about__item-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .about__video {
   cursor: pointer;
   position: absolute;
-  bottom: 250px;
-  right: 110px;
+  bottom: 310px;
+  right: 260px;
   background: linear-gradient(83deg, #29ACE27D 0%, #AB22FF7D 100%);
   -webkit-box-shadow: 0px -17px 72px rgba(97, 0, 255, 0.23), 0px 84px 85px rgba(0, 0, 0, 0.34);
           box-shadow: 0px -17px 72px rgba(97, 0, 255, 0.23), 0px 84px 85px rgba(0, 0, 0, 0.34);
@@ -544,6 +533,8 @@ body {
 .about__hero {
   -ms-flex-preferred-size: 26%;
       flex-basis: 26%;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
 }
 
 .about__title {
@@ -570,13 +561,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: -130px;
+  margin-top: -150px;
 }
 
 .about__leftline {
   width: 360px;
   height: 1px;
-  margin-right: 40px;
   background: -webkit-gradient(linear, right top, left top, from(#6414FF), to(rgba(100, 19, 255, 0)));
   background: linear-gradient(270deg, #6414FF 0%, rgba(100, 19, 255, 0) 100%);
 }
@@ -602,6 +592,45 @@ body {
   min-height: 71px;
   min-width: 165px;
   min-height: 80px;
+}
+
+.details {
+  background: url("../assets/img/details-bg.png") no-repeat;
+  background-color: #0A0011;
+  border-radius: 20%;
+  padding-bottom: 250px;
+  margin-top: -400px;
+}
+
+.details__hands {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  z-index: 5;
+  width: 100%;
+}
+
+.details:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 10%;
+  height: 200px;
+  background: #fff;
+}
+
+.details:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 10%;
+  height: 200px;
+  background: #fff;
 }
 
 .bikes {
