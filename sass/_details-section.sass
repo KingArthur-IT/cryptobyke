@@ -1,7 +1,8 @@
 .details
     background: url("../assets/img/details-bg.png") no-repeat
+    background-position: center 0
     background-color: #0A0011
-    border-radius: 20%
+    border-radius: 200px
     padding-bottom: 250px
     margin-top: -400px
     &__hands
@@ -125,3 +126,11 @@
     transform: translateX(10%) !important
 .setTransparentsy
     opacity: 0.5
+
+
+@media screen and (max-width: 768px)
+    .details
+        border-radius: 150px
+@media screen and (max-width: 425px)
+    .details
+        border-radius: 100px
