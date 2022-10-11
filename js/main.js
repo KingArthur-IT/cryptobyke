@@ -114,18 +114,52 @@ $(document).ready(function(){
 
 
     //team carousel
-    $('.team__list').owlCarousel({
-      loop: false,
-      slideTransition: 'linear',
-      autoplayTimeout: 2000,
-      autoplaySpeed: 2000,
-      nav: false,
-      dots: false,
-      center: true,
-      items: 6.2
-    });
+    if ( $(window).width() > 1023 ) {
+      startTeamCarousel();
+    } else {
+      $('.team__list').addClass('off');
+    }
 });
 
+$(window).resize(function() {
+  if ( $(window).width() > 1023 ) {
+    startTeamCarousel();
+  } else {
+    stopTeamCarousel();
+  }
+});
+
+function startTeamCarousel(){
+  $('.team__list').owlCarousel({
+    loop: false,
+    slideTransition: 'linear',
+    autoplayTimeout: 2000,
+    autoplaySpeed: 2000,
+    nav: false,
+    dots: false,
+    center: true,
+    items: 6.2,
+    responsive:{
+      0:{
+        items: 3.5
+      },
+      1150:{
+        items: 4.2
+      },
+      1400:{
+        items: 5.2,
+      },
+      1600:{
+        items: 6.2,
+      },
+    }
+  });
+};
+function stopTeamCarousel() {
+  const owl = $('.team__list');
+  owl.trigger('destroy.owl.carousel');
+  owl.addClass('off');
+}
 
 //open modal
 document.querySelector('.about__video').addEventListener('click', () => {
