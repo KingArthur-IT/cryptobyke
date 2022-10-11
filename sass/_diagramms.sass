@@ -4,9 +4,15 @@
     background: url("../assets/img/svg-bg.png") no-repeat
     background-position-y: 105%
     background-size: contain
+    overflow: hidden
     &__hand
         position: absolute
         top: -15%
+        left: 0
+    &__hand-mobile
+        display: none
+        position: absolute
+        top: -4%
         left: 0
     &__title
         margin-bottom: 75px
@@ -125,3 +131,18 @@
 .marketing-text-fill
     fill: #CFDE24
     transition: all 0.15s ease-in
+
+@media screen and (max-width: 768px)
+    .diagramms
+        &__hand
+            display: none
+        &__hand-mobile
+            display: block
+@media screen and (max-width: 600px)
+    .diagramms
+        &__title
+            margin-bottom: 50px
+@media screen and (max-width: 425px)
+    .diagramms
+        &__title
+            margin-bottom: 30px

@@ -1,16 +1,17 @@
 .proceeds
     padding-top: 170px
+    overflow: hidden
     &__list
         display: flex
         justify-content: space-between
     &__left
-        flex-basis: 70%
-        margin-right: -70px
+        flex-basis: 25%
     &__center
-        position: relative
+        position: absolute
+        left: 50%
+        transform: translate(-50%, -10%)
     &__right
-        flex-basis: 65%
-        margin-left: -30px
+        flex-basis: 20%
     &__item
         color: #FFFFFF
         font-size: 19px
@@ -69,10 +70,12 @@
         cursor: pointer
 .svg-show-shadow
     opacity: 1
-.svg-rotate
+.svg-rotate-wrap
     position: absolute
     top: 81px
     left: 87px
+    pointer-events: none
+.svg-rotate
     transform: rotate(0deg)
     transition: transform 0.3s linear
     pointer-events: none
@@ -89,3 +92,70 @@
         transform: rotate(0deg)
     100%
         transform: rotate(360deg)
+
+
+@media screen and (max-width: 1240px)
+    .proceeds
+        &__center
+            position: relative
+            flex-basis: 100%
+            & svg
+                margin: auto
+                display: block
+            & .svg-rotate-wrap
+                left: 50%
+                transform: translate(-50%, 0)
+        &__list
+            flex-wrap: wrap
+            justify-content: center
+        &__left
+            flex-basis: 40%
+            margin-top: -200px
+            padding-left: 50px
+        &__right
+            flex-basis: 35%
+            margin-top: -200px
+            padding-left: 150px
+        &__btn
+            margin-top: 120px
+@media screen and (max-width: 860px)
+    .proceeds
+        &__left
+            flex-basis: 40%
+            padding-left: 0
+        &__right
+            padding-left: 50px
+@media screen and (max-width: 768px)
+    .proceeds
+        overflow: hidden
+        margin-bottom: 60px
+        &__left
+            flex-basis: 100%
+        &__right
+            padding-left: 0px
+            flex-basis: 100%
+            margin-top: 0
+        &__btn
+            margin: auto
+            margin-top: 70px
+        &__head
+            margin-bottom: 13px
+        &__center
+            & svg 
+                width: 100%
+                height: fit-content
+            & .svg-logo
+                width: 58%
+            & .svg-rotate
+                width: 100%
+            & .svg-rotate-wrap
+                width: 77%
+                top: 10%
+@media screen and (max-width: 600px)
+    .proceeds
+        &__left
+            margin-top: -100px
+@media screen and (max-width: 375px)
+    .proceeds
+        &__left
+            margin-top: -60px
