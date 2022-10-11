@@ -248,7 +248,7 @@ body {
   width: 100%;
   background: url("../assets/img/main-bg.png") no-repeat;
   background-position: center 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .head__hero {
@@ -304,16 +304,31 @@ body {
           transform: translateX(21%);
 }
 
+.head__bike-gif {
+  position: absolute;
+  top: 6%;
+  right: 0;
+  width: 620px;
+  -webkit-transform: translateX(39.5%);
+          transform: translateX(39.5%);
+}
+
 @media screen and (max-width: 1330px) {
   .head__bike-img {
     width: 600px;
     right: 40px;
   }
+  .head__bike-gif {
+    top: 10%;
+    width: 500px;
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .head__hero {
-    padding: 200px 0 200px;
+    padding: 180px 0 200px;
   }
   .head__title {
     font-size: 60px;
@@ -321,11 +336,22 @@ body {
   .head__bike-img {
     width: 50vw;
   }
+  .head__bike-gif {
+    width: 42vw;
+  }
 }
 
-@media screen and (max-width: 1200px) {
-  .head__hero {
-    padding-top: 180px;
+@media screen and (max-width: 1075px) {
+  .head__bike-gif {
+    -webkit-transform: translateX(24%);
+            transform: translateX(24%);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .head__bike-gif {
+    -webkit-transform: translateX(23%);
+            transform: translateX(23%);
   }
 }
 
@@ -345,6 +371,10 @@ body {
     width: 55vw;
     right: 10px;
   }
+  .head__bike-gif {
+    -webkit-transform: translateX(24%);
+            transform: translateX(24%);
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -353,6 +383,11 @@ body {
   }
   .head__bike-img {
     width: 48vw;
+  }
+  .head__bike-gif {
+    -webkit-transform: translateX(33%);
+            transform: translateX(33%);
+    top: 6%;
   }
 }
 
@@ -383,6 +418,13 @@ body {
     font-size: 17px;
     margin: auto;
   }
+  .head__bike-gif {
+    -webkit-transform: translateX(34%);
+            transform: translateX(34%);
+    top: 7%;
+    width: 59vw;
+    right: 40px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -393,12 +435,19 @@ body {
     padding-top: 115vw;
     padding-bottom: 33vw;
   }
+  .head__bike-gif {
+    width: 76vw;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .head__bike-img {
     width: 110vw;
     top: -30px;
+  }
+  .head__bike-gif {
+    width: 93vw;
+    top: 4%;
   }
   .head__hero {
     padding-top: 125vw;
@@ -2591,12 +2640,27 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .team__img {
   margin-bottom: 35px;
-  border-radius: 50%;
   overflow: hidden;
+}
+
+.team__img img {
+  margin: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .team__name {
@@ -2820,18 +2884,26 @@ body {
   .team__img {
     margin-bottom: 10px;
   }
+  .team__item {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    width: 30%;
+  }
   .partners__item-wrapper {
     -ms-flex-preferred-size: 33%;
         flex-basis: 33%;
   }
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 600px) {
   .team__item {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
-    width: 20%;
+    -ms-flex-preferred-size: 29%;
+        flex-basis: 29%;
+    width: 29%;
   }
+}
+
+@media screen and (max-width: 675px) {
   .team__job {
     font-size: 10px;
   }
