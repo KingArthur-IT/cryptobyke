@@ -4,7 +4,7 @@
     background: url("../assets/img/svg-bg.png") no-repeat
     background-position-y: 105%
     background-size: contain
-    overflow: hidden
+    overflow-x: hidden
     &__hand
         position: absolute
         top: -15%
@@ -26,6 +26,7 @@
         filter: drop-shadow(0px 65.9501px 125.518px rgba(152, 152, 152, 0.76))
         border-radius: 14px
         margin-bottom: 60px
+        overflow: hidden
         & span
             font-weight: 400
             display: block
@@ -136,6 +137,47 @@
     .diagramm
         width: 100%
         height: fit-content
+@media screen and (max-width: 1024px)
+    .diagramms
+        &__table-row
+            padding: 50px 50px
+@media screen and (max-width: 900px)
+    .diagramms
+        &__table-row
+            border-bottom: none
+        &__table-row
+            align-items: flex-start
+            flex-direction: column
+            padding: 0
+        &__table-title
+            padding: 13px 0 17px 23px
+            width: 100%
+        &__table-text
+            padding: 17px 23px 42px
+    .game-table-title-bg
+        background: #6D1FD1
+    .staking-table-title-bg
+        background: #1F26D1
+    .community-table-title-bg
+        background: #1F7BD1
+    .presale-table-title-bg
+        background: #1F9CD1
+    .sale-table-title-bg
+        background: #28C7A1
+    .reserve-table-title-bg
+        background: #D4268F
+    .team-table-title-bg
+        background: #FF392D
+    .coin-table-title-bg
+        background: #D21C3D
+    .ecosystem-table-title-bg
+        background: #31D02E
+    .partners-table-title-bg
+        background: #FF8058
+    .liquidity-table-title-bg
+        background: #86DC31
+    .marketing-table-title-bg
+        background: #CFDE24
 @media screen and (max-width: 768px)
     .diagramms
         &__hand
