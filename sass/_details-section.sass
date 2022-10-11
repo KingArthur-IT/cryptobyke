@@ -49,10 +49,10 @@
         &:before
             content: ""
             position: absolute
-            left: 50px
+            left: 15%
             top: 0
             bottom: 0
-            right: 50px
+            right: 16%
             background: url("../assets/img/details-bikes-carousel/bg.png") no-repeat
             background-position: center 0
             background-size: contain
@@ -74,7 +74,7 @@
         cursor: pointer
         color: #E1E1E1
         border-radius: 66px
-        padding: 10px 40px
+        padding: 14px 40px
         font-weight: bold
         font-size: 13px
         position: relative
@@ -94,6 +94,11 @@
             background: #000
             z-index: -1
             opacity: 1
+    &__swipe-hand
+        display: none
+        animation: swipeShake 1s ease-in 0s infinite
+    &__swipe-text
+        display: none
 
 .bikes__carousel.owl-carousel .owl-stage-outer
     overflow: inherit !important
@@ -108,7 +113,9 @@
         color: #0A0011
         background: linear-gradient(270deg, #dcdcdc80 0%, #e1e1e193 100%)
         opacity: 1
-        padding: 15px 40px
+        padding: 15px 42px
+        min-width: 166px
+        min-height: 50px
         &::after
             top: 5px
             bottom: 5px
@@ -119,7 +126,6 @@
         background: url("../assets/img/details-bikes-carousel/center-bg.png") no-repeat
         background-position: center 0
         background-size: contain
-        transform: translateY(-15px)
 .leftTransform
     transform: translateX(-10%) !important
 .rightTransform
@@ -127,10 +133,124 @@
 .setTransparentsy
     opacity: 0.5
 
+@media screen and (max-width: 1600px)
+    .bikes__carousel .owl-item.active.center
+        & .bikes__name
+            margin-top: -30px
+        & .bikes__item:before
+            transform: translateY(-5px)
+@media screen and (max-width: 1400px)
+    .bikes__carousel .owl-item.active.center
+        & .bikes__name
+            margin-top: -30px
+        & .bikes__item:before
+            transform: translateY(5px)
+@media screen and (max-width: 1200px)
+    .bikes__carousel .owl-item.active.center
+        & .bikes__name
+            margin-top: -20px
+        & .bikes__item:before
+            transform: translateY(10px)
+    .bikes
+        &__title
+            font-size: 60px
+        &__name
+            font-size: 22px
+@media screen and (max-width: 1099px)
+    .bikes
+        &__name
+            margin-top: -40px
+    .bikes__carousel .owl-item.active.center
+        & .bikes__name
+            margin-top: -40px
+        & .bikes__item
+            & .bikes__img img
+                transform: translateY(-10px)
+            &:before
+                transform: translateY(0px)
 
 @media screen and (max-width: 768px)
     .details
         border-radius: 150px
+    .bikes
+        &__title
+            margin-bottom: 150px
+        &__name
+            margin-top: -30px
+        &__swipe-hand
+            display: block
+            margin: auto
+        &__swipe-text
+            display: block
+            margin: auto
+            margin-top: -50px
+    .bikes__carousel .owl-item.active.center .bikes__name
+        margin-top: -20px
+        margin-bottom: 20px
+
+@media screen and (max-width: 600px)
+    .bikes
+        &__title
+            margin-bottom: 100px
+            font-size: 40px
+        &__name
+            margin-top: -10px
+            font-size: 16px
+            margin-bottom: 10px
+        &__btn
+                padding: 10px 30px
+                font-size: 10px
+    .bikes__carousel .owl-item.leftTransform
+        transform: translateX(-16%) scale(0.9) !important
+    .bikes__carousel .owl-item.rightTransform
+        transform: translateX(16%) scale(0.9) !important
+    .bikes__carousel .owl-item.active.center
+        transform: translateY(10%) scale(1.5) !important
+        & .bikes
+            &__name
+                font-size: 22px
+            &__btn
+                min-width: 0px
+                min-height: 0px
+            &__item
+                & .bikes__img img
+                    transform: translateY(0px)
+
+@media screen and (max-width: 475px)
+    .bikes
+        padding-bottom: 80px
+        &__title
+            margin-bottom: 80px
+        &__name
+            font-size: 10px
 @media screen and (max-width: 425px)
     .details
         border-radius: 100px
+    .bikes
+        &__btn
+            padding: 10px 12px
+    .bikes__carousel .owl-item.active.center
+        & .bikes
+            &__btn
+                font-size: 8px
+            &__name
+                margin-top: -10px
+@media screen and (max-width: 360px)
+    .bikes__carousel .owl-item.active.center
+        & .bikes
+            &__btn
+                padding: 15px 35px
+            &__name
+                font-size: 19px
+                margin-top: 0
+        
+
+@keyframes swipeShake
+    0%
+        transform: rotate(0deg)
+    20%
+        transform: rotate(5deg)
+    40%
+        transform: rotate(-5deg)
+    50%
+        transform: rotate(0deg)

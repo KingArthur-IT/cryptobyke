@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    //bikes ticker
     $('.bikes-ticker__carousel').owlCarousel({
       loop: true,
       autoplay: true,
@@ -28,6 +29,7 @@ $(document).ready(function(){
       }
     });
 
+    //about carousel
     var aboutOwl = $('.about__carousel').owlCarousel({
         loop: true,
         autoplay: false,
@@ -47,6 +49,7 @@ $(document).ready(function(){
     })
 
 
+    //bikes
     $('.bikes__carousel').owlCarousel({
         loop: true,
         autoplay: false,
@@ -56,8 +59,38 @@ $(document).ready(function(){
         nav: false,
         dots: false,
         items: 5,
-        center: true
+        center: true,
+        responsive:{
+          0:{
+            items: 3
+          },
+          1100:{
+            items: 5,
+          },
+        }
     });
+
+    const stylesChange = (i, item) => {
+      if (window.innerWidth >= 1100){
+        if (i === 0)
+          item.addClass('setTransparentsy');
+        if (i === 1)
+          item.addClass('leftTransform');
+        if (i === 3)
+          item.addClass('rightTransform');
+        if (i === 4)
+          item.addClass('setTransparentsy');
+      } else {
+        if (i === 0){
+          item.addClass('setTransparentsy');
+          item.addClass('leftTransform');
+        }
+        if (i === 2){
+          item.addClass('rightTransform');
+          item.addClass('setTransparentsy');
+        }
+      }
+    }
 
     $('.bikes__carousel').on('changed.owl.carousel', (e) => {
       setTimeout(() => {
@@ -66,14 +99,7 @@ $(document).ready(function(){
           $( this ).removeClass('rightTransform');
           $( this ).removeClass('setTransparentsy');
   
-          if (i === 0)
-            $( this ).addClass('setTransparentsy');
-          if (i === 1)
-            $( this ).addClass('leftTransform');
-          if (i === 3)
-            $( this ).addClass('rightTransform');
-          if (i === 4)
-            $( this ).addClass('setTransparentsy');
+          stylesChange(i, $( this ))
         })
       }, 10);
     });
@@ -81,15 +107,9 @@ $(document).ready(function(){
       $('.bikes__carousel').trigger('to.owl.carousel', $(this).data( 'position' ) ); 
     });
 
+
     $('.bikes__carousel .owl-item.active').each(function(i){
-      if (i === 0)
-        $( this ).addClass('setTransparentsy');
-      if (i === 1)
-        $( this ).addClass('leftTransform');
-      if (i === 3)
-        $( this ).addClass('rightTransform');
-      if (i === 4)
-        $( this ).addClass('setTransparentsy');
+      stylesChange(i, $( this ))
     })
 
 
