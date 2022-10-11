@@ -66,6 +66,8 @@
             font-size: 20px
             line-height: 171%
             color: #0A0010
+        & svg
+            display: none
     &__item-mobile
         display: none
     &__head
@@ -99,6 +101,7 @@
             right: -10%
 @media screen and (max-width: 1550px)
     .metaworld
+        border-radius: 0 0 100px 100px
         &__left-design
             left: -15%
         &__right-design
@@ -126,14 +129,28 @@
         &__item
             max-width: 100%
             flex-basis: 49%
+@media screen and (max-width: 1200px)
+    .metaworld
+        &__title
+            font-size: 60px
+@media screen and (max-width: 1024px)
+    .metaworld
+        padding-top: 400px
 @media screen and (max-width: 768px)
     .metaworld
+        padding-top: 36%
+        border-radius: 0 0 60px 60px
+        &__title
+            font-size: 40px
         &__items
             flex-direction: column
         &__item
             flex-basis: 100%
             &:first-child
                 margin-bottom: 20px
+            & svg 
+                display: block
+                margin-bottom: 11px
         &__second-wrap
             border: 1px solid #A1A1A1
             border-radius: 14px
@@ -144,7 +161,7 @@
                 display: none
         &__item-mobile
             display: block
-            padding: 38px 40px 45px 50px
+            padding: 38px
             & h3
                 font-weight: 700
                 font-size: 31px
@@ -159,6 +176,11 @@
 @media screen and (max-width: 425px)
     .metaworld
         &__item
+            & h3
+                font-size: 30px
+            & p
+                font-size: 15px
+        &__item-mobile
             & h3
                 font-size: 30px
             & p

@@ -139,12 +139,23 @@
             margin-top: -30px
         & .bikes__item:before
             transform: translateY(-5px)
+    .details
+        &:before
+            display: none
+        &:after
+            display: none 
 @media screen and (max-width: 1400px)
     .bikes__carousel .owl-item.active.center
         & .bikes__name
             margin-top: -30px
         & .bikes__item:before
             transform: translateY(5px)
+    .details
+        padding-bottom: 10%
+@media screen and (max-width: 1300px)
+    .details
+        &__hands
+            bottom: -77px
 @media screen and (max-width: 1200px)
     .bikes__carousel .owl-item.active.center
         & .bikes__name
@@ -168,10 +179,16 @@
                 transform: translateY(-10px)
             &:before
                 transform: translateY(0px)
-
+@media screen and (max-width: 1024px)
+    .details
+        &__hands
+            bottom: -60px
 @media screen and (max-width: 768px)
     .details
         border-radius: 150px
+        padding-bottom: 20%
+        &__hands
+            bottom: -50px
     .bikes
         &__title
             margin-bottom: 150px
@@ -187,7 +204,10 @@
     .bikes__carousel .owl-item.active.center .bikes__name
         margin-top: -20px
         margin-bottom: 20px
-
+@media screen and (max-width: 650px)
+    .details
+        &__hands
+            bottom: -38px
 @media screen and (max-width: 600px)
     .bikes
         &__title
@@ -215,7 +235,10 @@
             &__item
                 & .bikes__img img
                     transform: translateY(0px)
-
+@media screen and (max-width: 500px)
+    .details
+        &__hands
+            bottom: -30px
 @media screen and (max-width: 475px)
     .bikes
         padding-bottom: 80px
@@ -225,7 +248,8 @@
             font-size: 10px
 @media screen and (max-width: 425px)
     .details
-        border-radius: 100px
+        &__hands
+            bottom: -25px
     .bikes
         &__btn
             padding: 10px 12px
