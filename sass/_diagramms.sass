@@ -132,16 +132,30 @@
     fill: #CFDE24
     transition: all 0.15s ease-in
 
+@media screen and (max-width: 1240px)
+    .diagramm
+        width: 100%
+        height: fit-content
 @media screen and (max-width: 768px)
     .diagramms
         &__hand
             display: none
         &__hand-mobile
             display: block
+    .diagramm
+        width: 114%
+        transform: translateX(-6%)
 @media screen and (max-width: 600px)
     .diagramms
         &__title
             margin-bottom: 50px
+    .diagramm
+        width: 120%
+        transform: translateX(-8%)
+@media screen and (max-width: 475px)
+    .diagramm
+        width: 134%
+        transform: translateX(-12%)
 @media screen and (max-width: 425px)
     .diagramms
         &__title

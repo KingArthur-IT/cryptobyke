@@ -2153,6 +2153,15 @@ body {
   transition: all 0.15s ease-in;
 }
 
+@media screen and (max-width: 1240px) {
+  .diagramm {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .diagramms__hand {
     display: none;
@@ -2160,11 +2169,29 @@ body {
   .diagramms__hand-mobile {
     display: block;
   }
+  .diagramm {
+    width: 114%;
+    -webkit-transform: translateX(-6%);
+            transform: translateX(-6%);
+  }
 }
 
 @media screen and (max-width: 600px) {
   .diagramms__title {
     margin-bottom: 50px;
+  }
+  .diagramm {
+    width: 120%;
+    -webkit-transform: translateX(-8%);
+            transform: translateX(-8%);
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .diagramm {
+    width: 134%;
+    -webkit-transform: translateX(-12%);
+            transform: translateX(-12%);
   }
 }
 
