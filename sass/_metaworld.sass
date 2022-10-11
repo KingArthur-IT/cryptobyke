@@ -2,6 +2,7 @@
     background-color: #fff
     padding: 500px 0 80px
     border-radius: 0 0 10% 10%
+    overflow: hidden
     &__title
         font-weight: 700
         font-size: 70px
@@ -10,14 +11,15 @@
         letter-spacing: -0.025em
         color: #0A0011
     &__first-wrap
-        display: flex
-        justify-content: space-between
         margin-top: 116px
         margin-bottom: 20px
         & .metaworld__item
             border: 1px solid #A1A1A1
             border-radius: 14px
             padding: 38px
+    &__items
+        display: flex
+        justify-content: space-between
     &__second-wrap
         max-width: 885px
         margin: auto
@@ -51,7 +53,7 @@
             text-align: center
             max-width: 100%
     &__item
-        max-width: 390px
+        max-width: 370px
         z-index: 5
         & h3
             font-weight: 700
@@ -64,6 +66,8 @@
             font-size: 20px
             line-height: 171%
             color: #0A0010
+    &__item-mobile
+        display: none
     &__head
         position: absolute
         left: 50%
@@ -81,3 +85,81 @@
         bottom: 25%
         z-index: 0
 
+@media screen and (max-width: 1850px)
+    .metaworld
+        &__left-design
+            left: -5%
+        &__right-design
+            right: -5%
+@media screen and (max-width: 1650px)
+    .metaworld
+        &__left-design
+            left: -10%
+        &__right-design
+            right: -10%
+@media screen and (max-width: 1550px)
+    .metaworld
+        &__left-design
+            left: -15%
+        &__right-design
+            right: -15%
+@media screen and (max-width: 1400px)
+    .metaworld
+        &__left-design
+            display: none
+        &__right-design
+            display: none
+@media screen and (max-width: 1250px)
+    .metaworld
+        &__head
+            position: relative
+            left: 0
+            top: 0px
+            transform: translateX(0%)
+            margin: auto
+            display: block
+            width: 100%
+        &__first-wrap
+            margin-top: 20px
+        &__items
+            margin-top: -20%
+        &__item
+            max-width: 100%
+            flex-basis: 49%
+@media screen and (max-width: 768px)
+    .metaworld
+        &__items
+            flex-direction: column
+        &__item
+            flex-basis: 100%
+            &:first-child
+                margin-bottom: 20px
+        &__second-wrap
+            border: 1px solid #A1A1A1
+            border-radius: 14px
+            flex-direction: column
+            &::before
+                display: none
+            & .metaworld__item
+                display: none
+        &__item-mobile
+            display: block
+            padding: 38px 40px 45px 50px
+            & h3
+                font-weight: 700
+                font-size: 31px
+                line-height: 123.4%
+                letter-spacing: -0.025em
+                color: #0A0010
+                margin-bottom: 20px
+            & p
+                font-size: 20px
+                line-height: 171%
+                color: #0A0010
+@media screen and (max-width: 425px)
+    .metaworld
+        &__item
+            & h3
+                font-size: 30px
+            & p
+                font-size: 15px
