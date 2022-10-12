@@ -315,7 +315,21 @@ body {
 
 @media screen and (max-width: 1550px) {
   .head__hero {
-    padding: 200px 0 220px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 245px 0 320px;
   }
   .head__bike-img {
     position: absolute;
