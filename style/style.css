@@ -329,7 +329,7 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 245px 0 320px;
+    padding: 200px 0 260px;
   }
   .head__bike-img {
     position: absolute;
@@ -338,15 +338,15 @@ body {
     width: 600px;
     -webkit-transform: translateX(12%);
             transform: translateX(12%);
-    height: 92%;
+    height: 95%;
   }
   .head__bike-gif {
     position: absolute;
-    top: 6%;
+    top: 6.5%;
     right: 0;
-    width: 570px;
-    -webkit-transform: translateX(32%);
-            transform: translateX(32%);
+    width: 530px;
+    -webkit-transform: translateX(26.8%);
+            transform: translateX(26.8%);
   }
 }
 
