@@ -166,10 +166,16 @@ document.querySelector('.about__video').addEventListener('click', () => {
   document.querySelector('.modal').classList.add('modal-display');
   setTimeout(() => {
     document.querySelector('.modal').classList.add('modal-visible');
+    const videElem = document.querySelector('.modal__video');
+    if (videElem){
+      videElem.currentTime = 0;
+      videElem.play();
+    }
   }, 100);
 });
 //close modal
 const closeModal = () => {
+  document.querySelector('.modal__video')?.pause();
   document.querySelector('.modal').classList.remove('modal-visible');
   setTimeout(() => {
     document.querySelector('.modal').classList.remove('modal-display');

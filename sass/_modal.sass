@@ -19,8 +19,20 @@
     transition: opacity 0.3s ease
     &__container
     &__hero
-        background: #FFFFFF
-        border-radius: 50px
-        padding: 15px 17px 15px 54px
+        background: #000
+        border-radius: 20px
+        padding: 0
         display: flex
+    &__video
+        border-radius: 20px
+        overflow: hidden
+        width: calc(100vw - 100px)
+
+@media screen and (max-width: 768px)
+    .modal
+        &__container
+            padding: 0
+        &__video
+            width: calc(100vw - 40px)
+
     

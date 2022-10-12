@@ -3129,10 +3129,25 @@ body {
 }
 
 .modal__hero {
-  background: #FFFFFF;
-  border-radius: 50px;
-  padding: 15px 17px 15px 54px;
+  background: #000;
+  border-radius: 20px;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.modal__video {
+  border-radius: 20px;
+  overflow: hidden;
+  width: calc(100vw - 100px);
+}
+
+@media screen and (max-width: 768px) {
+  .modal__container {
+    padding: 0;
+  }
+  .modal__video {
+    width: calc(100vw - 40px);
+  }
 }
