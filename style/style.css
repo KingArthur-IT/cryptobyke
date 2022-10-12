@@ -2372,14 +2372,12 @@ body {
 }
 
 .diagramm-section {
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: opacity 0.1s ease-in, -webkit-transform 0.4s ease-in;
   transition: opacity 0.1s ease-in, -webkit-transform 0.4s ease-in;
   transition: opacity 0.1s ease-in, transform 0.4s ease-in;
   transition: opacity 0.1s ease-in, transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
   cursor: pointer;
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
 }
 
 .diagramm-bg {
@@ -2784,13 +2782,9 @@ body {
 .svg-rotate {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: -webkit-transform 0.3s linear;
-  transition: -webkit-transform 0.3s linear;
-  transition: transform 0.3s linear;
-  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
   pointer-events: none;
-  -webkit-animation: rotation 3s linear 0s infinite;
-          animation: rotation 3s linear 0s infinite;
+  -webkit-animation: rotation 3s linear 0s infinite normal;
+          animation: rotation 3s linear 0s infinite normal;
 }
 
 .svg-logo {
@@ -2808,8 +2802,8 @@ body {
             transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
 
@@ -2819,8 +2813,8 @@ body {
             transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
 
