@@ -1,5 +1,6 @@
 .proceeds
     padding-top: 170px
+    padding-bottom: 100px
     overflow: hidden
     &__list
         display: flex
@@ -118,6 +119,10 @@
             padding-left: 150px
         &__btn
             margin-top: 120px
+
+@media screen and (max-width: 1240px)
+    .proceeds
+        padding-bottom: 80px
 @media screen and (max-width: 860px)
     .proceeds
         &__left
@@ -128,7 +133,7 @@
 @media screen and (max-width: 768px)
     .proceeds
         overflow: hidden
-        margin-bottom: 60px
+        padding-bottom: 60px
         &__left
             flex-basis: 100%
         &__right
