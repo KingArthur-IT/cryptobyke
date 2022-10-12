@@ -17,8 +17,8 @@ window.addEventListener('wheel', (e) => {
   const isDownDirection = e.wheelDeltaY < 0;
 
   //lock on scroll
-  if ((isOnPosition && groupsCarouselTransform <= 0 && isDownDirection) || 
-      (!isOnPosition && groupsCarouselTransform >= maxTransform && !isDownDirection)
+  if ((isOnPosition && groupsCarouselTransform <= 0 && isDownDirection && !isOnSection) || 
+      (!isOnPosition && groupsCarouselTransform >= maxTransform && !isDownDirection && !isOnSection)
   ){
       document.querySelector('body').classList.add('stop-scrolling');
       isLocked = true;

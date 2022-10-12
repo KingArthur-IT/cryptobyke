@@ -13,11 +13,11 @@ window.addEventListener('wheel', (e) => {
   if (window.innerWidth < 1024 || isRoadmapTransforming) return;
   const isOnPosition = roadmapCarousel.getBoundingClientRect().top - topOffset < 0;
   const isDownDirection = e.wheelDeltaY < 0;
-  // const isOnSection = roadmapCarousel.getBoundingClientRect().top - topOffset + groupsCarousel.getBoundingClientRect().height > 0;
+  const isOnSection = roadmapCarousel.getBoundingClientRect().top - topOffset + roadmapCarousel.getBoundingClientRect().height > 0;
 
   //lock on scroll
-  if ((isOnPosition && roadmapCarouselTransform <= 0 && isDownDirection) || 
-      (!isOnPosition && roadmapCarouselTransform >= maxRoadmapTransform && !isDownDirection)
+  if ((isOnPosition && roadmapCarouselTransform <= 0 && isDownDirection && isOnSection) || 
+      (!isOnPosition && roadmapCarouselTransform >= maxRoadmapTransform && !isDownDirection && isOnSection)
   ){
       document.querySelector('body').classList.add('stop-scrolling');
       isRoadmapLocked = true;
