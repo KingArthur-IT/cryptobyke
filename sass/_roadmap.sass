@@ -14,7 +14,7 @@
         margin-left: calc(15% - 150px)
     &__line
         position: absolute
-        top: 290px
+        top: 245px
         left: 130px
         right: 0
         width: 110%
@@ -44,8 +44,8 @@
         display: flex
         justify-content: center
         align-items: center
-        width: 243px
-        height: 243px
+        width: 200px
+        height: 200px
         font-weight: 700
         font-size: 32px
         line-height: 123.4%
@@ -88,7 +88,8 @@
             font-size: 20px
             line-height: 171%
             color: #FFFFFF
-
+    &__owl-carousel
+        display: none
 
 .roadmap
     &__quater-item.active
@@ -98,3 +99,26 @@
             opacity: 1
         & .roadmap__circle
             border: 1px solid #4ABCFD
+
+@media screen and (max-width: 1023px)
+    .roadmap
+        &__owl-carousel
+            display: block
+        &__quater-wrapper
+            display: none
+    .roadmap
+        &__owl-carousel.owl-carousel .owl-stage-outer .owl-stage
+            margin-left: 60px
+
+@media screen and (max-width: 1023px)
+    .roadmap
+        &__item
+            & p
+                font-size: 15px
+        &__head-circle
+            font-size: 18px
+            width: 140px
+            height: 140px
+    .roadmap
+        &__owl-carousel.owl-carousel .owl-stage-outer .owl-stage
+            margin-left: 20px

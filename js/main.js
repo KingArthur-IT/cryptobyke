@@ -115,8 +115,10 @@ $(document).ready(function(){
     //stages carousel
     if ( $(window).width() < 1024 ) {
       startStagesCarousel();
+      startRoadmapCarousel();
     } else {
       $('.groups__owl-carousel').addClass('off');
+      $('.roadmap__owl-carousel').addClass('off');
     }
 
     //team carousel
@@ -131,9 +133,11 @@ $(window).resize(function() {
   if ( $(window).width() > 1023 ) {
     startTeamCarousel();
     stopStagesCarousel();
+    stopRoadmapCarousel();
   } else {
     stopTeamCarousel();
     startStagesCarousel();
+    startRoadmapCarousel();
   }
 });
 
@@ -180,6 +184,30 @@ function startStagesCarousel(){
 };
 function stopStagesCarousel() {
   const owl = $('.groups__owl-carousel');
+  owl.trigger('destroy.owl.carousel');
+  owl.addClass('off');
+}
+
+
+function startRoadmapCarousel(){
+  $('.roadmap__owl-carousel').owlCarousel({
+    loop: true,
+    slideTransition: 'ease',
+    nav: false,
+    dots: false,
+    items: 1.3,
+    responsive:{
+      0:{
+        items: 1.3
+      },
+      768:{
+        items: 2.3,
+      },
+    }
+  });
+};
+function stopRoadmapCarousel() {
+  const owl = $('.roadmap__owl-carousel');
   owl.trigger('destroy.owl.carousel');
   owl.addClass('off');
 }
