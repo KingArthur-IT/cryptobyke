@@ -67,6 +67,10 @@
         </div>
         <!-- head section -->
         <section class="section head">
+            <div class="head__video-wrap">
+                <video src="./assets/video/head-bg.mp4" muted="muted" autoplay="true" loop playsinline webkit-playsinline class="head__video-bg"></video>
+                <div class="head__video-upper-bg"></div>
+            </div>
             <div class="container">
                 <div class="head__hero">
                     <h1 class="head__title">Crypto Bike NFT <br> Game Project</h1>
@@ -1974,11 +1978,23 @@
             </div>
         </div>
     </div>
+    <script>
+        const headVideoEl = document.querySelector('.head__video-bg');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (headVideoEl){
+                headVideoEl.play();
+            }
+        })
+        document.addEventListener('click', () => {
+            headVideoEl.muted = false;
+        }, {once: true})
+    </script>
     <script src="./js/jquery.slim.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/scrollAnimation.js"></script>
-    <script src="./js/scroll-stages.js"></script>
-    <script src="./js/scroll-roadmap.js"></script>
+    <!-- <script src="./js/scroll-stages.js"></script>
+    <script src="./js/scroll-roadmap.js"></script> -->
 </body>
 </html>
