@@ -33,6 +33,18 @@
     
 @media screen and (max-width: 1024px)
     .footer
+        background: none
+        &::before
+            content: ""
+            position: absolute
+            top: -10%
+            left: 50%
+            transform: translateX(-50%)
+            background: #A52BFF
+            filter: blur(156.5px)
+            width: 250px
+            height: 250px
+            z-index: -1
         &__hero
             flex-direction: column
             align-items: center

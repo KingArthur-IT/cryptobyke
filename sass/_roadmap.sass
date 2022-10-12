@@ -91,6 +91,11 @@
             color: #FFFFFF
     &__owl-carousel
         display: none
+    &__swipe-hand
+        display: none
+        animation: swipeShake 1s ease-in 0s infinite
+    &__swipe-text
+        display: none
 
 .roadmap
     &__quater-item.active
@@ -107,11 +112,31 @@
             display: block
         &__quater-wrapper
             display: none
+        &__owl-carousel .owl-stage .owl-item.active
+            & .roadmap__head
+                opacity: 1
+            & .roadmap__list
+                opacity: 1
     .roadmap
         &__owl-carousel.owl-carousel .owl-stage-outer .owl-stage
             margin-left: 60px
 
-@media screen and (max-width: 1023px)
+@media screen and (max-width: 768px)
+    .roadmap
+        &__swipe-hand
+            display: block
+            margin: auto
+        &__swipe-text
+            display: block
+            margin: auto
+            margin-top: -50px
+        &__title
+            margin-bottom: 50px
+        &__svg
+            margin-bottom: 50px
+
+
+@media screen and (max-width: 600px)
     .roadmap
         &__item
             & p

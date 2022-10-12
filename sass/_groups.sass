@@ -10,7 +10,9 @@
         margin: auto
         margin-bottom: 70px
         max-width: 860px
+        padding: 0 20px
     &__owl-carousel
+        position: relative
         display: none
     &__carousel
         margin-bottom: 80px
@@ -122,6 +124,8 @@
             & img
                 margin-left: -40%
 @media screen and (max-width: 1023px)
+    .groups-and-roadmap
+        background-size: cover
     .groups
         &__carousel
             display: none
@@ -149,6 +153,17 @@
         &__btn
             margin-top: 30px
 @media screen and (max-width: 600px)
+    .groups-and-roadmap
+        background: none
+        &::before
+            content: ""
+            position: absolute
+            bottom: -60px
+            right: 0
+            background: #A52BFF
+            filter: blur(156.5px)
+            width: 250px
+            height: 250px
     .groups
         &__title
             font-size: 40px
@@ -162,3 +177,14 @@
             min-height: 100px
             & span
                 margin-bottom: -7px
+        &__owl-carousel
+            &::before
+                content: ""
+                position: absolute
+                top: 0
+                left: 50%
+                transform: translateX(-50%)
+                background: #A52BFF
+                filter: blur(156.5px)
+                width: 250px
+                height: 250px

@@ -191,6 +191,16 @@
     .diagramms
         &__title
             margin-bottom: 50px
+        &__container
+            &::before
+                content: ""
+                position: absolute
+                top: 0
+                left: 5%
+                background: #A52BFF
+                filter: blur(156.5px)
+                width: 250px
+                height: 250px
     .diagramm
         width: 120%
         transform: translateX(-8%)
