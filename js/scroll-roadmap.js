@@ -1,12 +1,16 @@
 // //stages - scroll to left
 const roadmapCarousel = document.querySelector('.roadmap__quater-list');
 // const topOffset = 150;
-var roadmapCarouselTransform = 0;
-const transformRoadmapStep = 0.5;
-const maxRoadmapTransform = 75;
+let roadmapCarouselTransform = 0;
+const transformRoadmapStep = 20;
+const maxRoadmapTransform = 60;
 var activeRoadmapItem = 1;
+let isRoadmapTransforming = false;
+let isRoadmapLocked = false;
 
 window.addEventListener('wheel', (e) => {
+
+  if (window.innerWidth < 1024 || isRoadmapTransforming) return;
   const isOnPosition = roadmapCarousel.getBoundingClientRect().top - topOffset < 0;
   const isDownDirection = e.wheelDeltaY < 0;
   // const isOnSection = roadmapCarousel.getBoundingClientRect().top - topOffset + groupsCarousel.getBoundingClientRect().height > 0;
@@ -16,9 +20,7 @@ window.addEventListener('wheel', (e) => {
       (!isOnPosition && roadmapCarouselTransform >= maxRoadmapTransform && !isDownDirection)
   ){
       document.querySelector('body').classList.add('stop-scrolling');
-      const sign = isDownDirection ? 1 : -1;
-      roadmapCarouselTransform += sign * transformRoadmapStep;
-      roadmapCarousel.style["transform"] = `translateX(-${roadmapCarouselTransform}%)`
+      isRoadmapLocked = true;
   }
 
   //unlock on scroll
@@ -26,13 +28,18 @@ window.addEventListener('wheel', (e) => {
       (roadmapCarouselTransform <= 0 && !isDownDirection && roadmapCarousel.getBoundingClientRect().top - topOffset < 100)
   ){
     document.querySelector('body').classList.remove('stop-scrolling');
+    isRoadmapLocked = false;
   }
 
   //scroll left-right
-  if (roadmapCarouselTransform > 0 && roadmapCarouselTransform < maxRoadmapTransform){
-      const direction = isDownDirection ? 1 : -1;
-      roadmapCarouselTransform += direction * transformRoadmapStep;
-      roadmapCarousel.style["transform"] = `translateX(-${roadmapCarouselTransform}%)`
+  if (isRoadmapLocked && !isRoadmapTransforming){
+    isRoadmapTransforming = true;
+    const direction = isDownDirection ? 1 : -1;
+    roadmapCarouselTransform += direction * transformRoadmapStep;
+    roadmapCarousel.style["transform"] = `translateX(-${roadmapCarouselTransform}%)`;
+    setTimeout(() => {
+      isRoadmapTransforming = false;
+    }, 1000);
   }
 
   if (roadmapCarouselTransform < 10)

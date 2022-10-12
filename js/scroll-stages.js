@@ -1,12 +1,17 @@
 // //stages - scroll to left
 const groupsCarousel = document.querySelector('.groups__carousel-content');
-const topOffset = 150;
-var groupsCarouselTransform = 0;
-const transformStep = 0.3;
+const topOffset = 20;
+let groupsCarouselTransform = 0;
+const transformStep = 33;
 const maxTransform = 66;
-var activeItem = 1;
+let activeItem = 1;
+let isTransforming = false;
+let isLocked = false;
 
 window.addEventListener('wheel', (e) => {
+  
+  if (window.innerWidth < 1024 || isTransforming) return;
+
   const isOnPosition = groupsCarousel.getBoundingClientRect().top - topOffset < 0;
   const isOnSection = groupsCarousel.getBoundingClientRect().top - topOffset + groupsCarousel.getBoundingClientRect().height < 0;
   const isDownDirection = e.wheelDeltaY < 0;
@@ -16,9 +21,7 @@ window.addEventListener('wheel', (e) => {
       (!isOnPosition && groupsCarouselTransform >= maxTransform && !isDownDirection)
   ){
       document.querySelector('body').classList.add('stop-scrolling');
-      const sign = isDownDirection ? 1 : -1;
-      groupsCarouselTransform += sign * transformStep;
-      groupsCarousel.style["transform"] = `translateX(-${groupsCarouselTransform}%)`
+      isLocked = true;
   }
 
   //unlock on scroll
@@ -26,13 +29,18 @@ window.addEventListener('wheel', (e) => {
       (groupsCarouselTransform <= 0 && !isDownDirection)
   ){
     document.querySelector('body').classList.remove('stop-scrolling');
+    isLocked = false;
   }
 
   //scroll left-right
-  if (groupsCarouselTransform > 0 && groupsCarouselTransform < maxTransform){
-      const direction = isDownDirection ? 1 : -1;
-      groupsCarouselTransform += direction * transformStep;
-      groupsCarousel.style["transform"] = `translateX(-${groupsCarouselTransform}%)`
+  if (isLocked && !isTransforming){
+    isTransforming = true;
+    const direction = isDownDirection ? 1 : -1;
+    groupsCarouselTransform += direction * transformStep;
+    groupsCarousel.style["transform"] = `translateX(-${groupsCarouselTransform}%)`;
+    setTimeout(() => {
+      isTransforming = false;
+    }, 1200);
   }
 
   if (groupsCarouselTransform < 20)
@@ -48,4 +56,4 @@ window.addEventListener('wheel', (e) => {
       el.classList.add('active');
   })
     
-})
+}, { passive: false })
