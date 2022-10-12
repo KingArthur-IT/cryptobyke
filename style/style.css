@@ -1650,6 +1650,10 @@ body {
   max-width: 860px;
 }
 
+.groups__owl-carousel {
+  display: none;
+}
+
 .groups__carousel {
   margin-bottom: 80px;
   width: 100%;
@@ -1733,9 +1737,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.groups__content {
+  padding: 30px 0;
 }
 
 .groups__content h3 {
@@ -1756,15 +1764,106 @@ body {
   right: 10px;
 }
 
+@media screen and (max-width: 1600px) {
+  .groups__label {
+    margin-bottom: 60px;
+  }
+  .groups__carousel-content {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .groups__item {
+    max-width: 75vw;
+  }
+  .groups__card {
+    background-size: cover;
+    background-position-x: center;
+    padding-right: 40px;
+  }
+  .groups__card img {
+    height: 100%;
+    margin-left: -25%;
+    margin-top: auto;
+  }
+  .groups__content h3 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .groups__item {
+    max-width: 85vw;
+  }
+  .groups__carousel-content {
+    margin-left: 40px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .groups__title {
     font-size: 60px;
   }
 }
 
+@media screen and (max-width: 1150px) {
+  .groups__card img {
+    margin-left: -30%;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .groups__card img {
+    margin-left: -40%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .groups__carousel {
+    display: none;
+  }
+  .groups__owl-carousel {
+    display: block;
+  }
+  .groups__label {
+    margin: auto;
+    max-width: 275px;
+    min-height: 125px;
+    margin-bottom: 50px;
+  }
+  .groups__label span {
+    font-size: 30px;
+  }
+  .groups__owl-item {
+    padding: 0 40px;
+    margin-bottom: 30px;
+  }
+  .groups__owl-item h3 {
+    color: #fff;
+    margin-bottom: 28px;
+  }
+  .groups__owl-img {
+    border-radius: 22px;
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .groups__btn {
+    margin-top: 30px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .groups__title {
     font-size: 40px;
+  }
+  .groups__owl-item {
+    padding: 0 20px;
+  }
+  .groups__owl-item p {
+    font-size: 15px;
   }
 }
 

@@ -112,6 +112,12 @@ $(document).ready(function(){
       stylesChange(i, $( this ))
     })
 
+    //stages carousel
+    if ( $(window).width() < 1024 ) {
+      startStagesCarousel();
+    } else {
+      $('.groups__owl-carousel').addClass('off');
+    }
 
     //team carousel
     if ( $(window).width() > 1023 ) {
@@ -124,8 +130,10 @@ $(document).ready(function(){
 $(window).resize(function() {
   if ( $(window).width() > 1023 ) {
     startTeamCarousel();
+    stopStagesCarousel();
   } else {
     stopTeamCarousel();
+    startStagesCarousel();
   }
 });
 
@@ -160,6 +168,22 @@ function stopTeamCarousel() {
   owl.trigger('destroy.owl.carousel');
   owl.addClass('off');
 }
+
+function startStagesCarousel(){
+  $('.groups__owl-carousel').owlCarousel({
+    loop: false,
+    slideTransition: 'ease',
+    nav: false,
+    dots: true,
+    items: 1,
+  });
+};
+function stopStagesCarousel() {
+  const owl = $('.groups__owl-carousel');
+  owl.trigger('destroy.owl.carousel');
+  owl.addClass('off');
+}
+
 
 //open modal
 document.querySelector('.about__video').addEventListener('click', () => {
