@@ -1,8 +1,8 @@
-//open modal
+//open video modal
 document.querySelector('.about__video').addEventListener('click', () => {
-  document.querySelector('.modal').classList.add('modal-display');
+  document.querySelector('.video-modal').classList.add('modal-display');
   setTimeout(() => {
-    document.querySelector('.modal').classList.add('modal-visible');
+    document.querySelector('.video-modal').classList.add('modal-visible');
     const videElem = document.querySelector('.modal__video');
     if (videElem){
       videElem.currentTime = 0;
@@ -10,16 +10,37 @@ document.querySelector('.about__video').addEventListener('click', () => {
     }
   }, 100);
 });
+
+const bikesArr = ['1', '2', '3', '4', '5', '6']
+
+bikesArr.forEach(index => {
+  document.querySelector(`.show-modal-bike-${index}`).addEventListener('click', () => {
+    const modal = document.querySelector(`.modal-bike-${index}`);
+    modal.classList.add('modal-display');
+    setTimeout(() => {
+      modal.classList.add('modal-visible');
+    }, 100);
+  })
+})
+
 //close modal
-const closeModal = () => {
+const closeVideoModal = () => {
   document.querySelector('.modal__video')?.pause();
-  document.querySelector('.modal').classList.remove('modal-visible');
+  document.querySelector('.video-modal').classList.remove('modal-visible');
   setTimeout(() => {
-    document.querySelector('.modal').classList.remove('modal-display');
+    document.querySelector('.video-modal').classList.remove('modal-display');
   }, 300);
 }
-document.querySelector('.modal').addEventListener('click', () => closeModal());
-document.querySelector('.modal__hero').addEventListener('click', (e) => e.stopPropagation());
+const close3DModal = (index) => {
+  const modal = document.querySelector(`.modal-bike-${index}`);
+  modal.classList.remove('modal-visible');
+  setTimeout(() => {
+    modal.classList.remove('modal-display');
+  }, 300);
+}
+document.querySelector('.video-modal').addEventListener('click', () => closeVideoModal());
+bikesArr.forEach(index => document.querySelector(`.modal-bike-${index}`).addEventListener('click', () => close3DModal(index)))
+document.querySelectorAll('.modal__hero').forEach(el => el.addEventListener('click', (e) => e.stopPropagation()));
 
 //tabs
 const daoTab = document.querySelector('tab-dao');
