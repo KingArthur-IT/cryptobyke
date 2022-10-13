@@ -1935,8 +1935,8 @@ body {
 
 .roadmap__line {
   position: absolute;
-  top: 245px;
-  left: 130px;
+  top: 216px;
+  left: 110px;
   right: 0;
   width: 110%;
   opacity: 0.6;
@@ -1994,10 +1994,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 175px;
+  height: 175px;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 123.4%;
   letter-spacing: -0.025em;
   color: #FFFFFF;
@@ -2005,8 +2005,8 @@ body {
 
 .roadmap__circle {
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   background: #13021F;
   border: 1px solid #4ABCFD99;
   margin: auto;
@@ -2033,7 +2033,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .roadmap__item svg {
@@ -2045,8 +2045,8 @@ body {
 }
 
 .roadmap__item p {
-  font-size: 20px;
-  line-height: 171%;
+  font-size: 16px;
+  line-height: 1.4;
   color: #FFFFFF;
 }
 
