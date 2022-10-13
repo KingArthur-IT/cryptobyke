@@ -2023,18 +2023,10 @@ body {
   position: absolute;
   content: "";
   top: 5px;
-  bottom: 60px;
+  bottom: 0px;
   left: 9.5px;
   width: 1px;
   background: #AB22FF;
-}
-
-.roadmap__list.three-line::before {
-  bottom: 90px;
-}
-
-.roadmap__list.one-line::before {
-  bottom: 30px;
 }
 
 .roadmap__item {
@@ -2056,6 +2048,10 @@ body {
   font-size: 20px;
   line-height: 171%;
   color: #FFFFFF;
+}
+
+.roadmap__item:last-child {
+  background: #0a0011;
 }
 
 .roadmap__owl-carousel {

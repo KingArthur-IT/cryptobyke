@@ -68,14 +68,11 @@
             position: absolute
             content: ""
             top: 5px
-            bottom: 60px
+            bottom: 0px
             left: 9.5px
             width: 1px
             background: #AB22FF
-        &.three-line::before
-            bottom: 90px
-        &.one-line::before
-            bottom: 30px
+        
     &__item
         display: flex
         margin-bottom: 25px
@@ -89,6 +86,8 @@
             font-size: 20px
             line-height: 171%
             color: #FFFFFF
+        &:last-child
+            background: #0a0011
     &__owl-carousel
         display: none
     &__swipe-hand
