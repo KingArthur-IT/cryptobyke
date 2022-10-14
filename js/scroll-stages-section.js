@@ -1,6 +1,6 @@
 // //stages - scroll to left
 const groupsCarousel = document.querySelector('.groups__carousel-content');
-const topOffset = 20;
+const topOffset = 250;
 let groupsCarouselTransform = 0;
 const transformStep = 33;
 const maxTransform = 66;

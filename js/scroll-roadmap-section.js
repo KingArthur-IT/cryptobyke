@@ -1,9 +1,9 @@
 // //stages - scroll to left
 const roadmapCarousel = document.querySelector('.roadmap__quater-list');
-// const topOffset = 150;
+const topRoadmapOffset = 20;
 let roadmapCarouselTransform = 0;
-const transformRoadmapStep = 20;
-const maxRoadmapTransform = 60;
+const transformRoadmapStep = 25;
+const maxRoadmapTransform = 75;
 var activeRoadmapItem = 1;
 let isRoadmapTransforming = false;
 let isRoadmapLocked = false;
@@ -11,9 +11,9 @@ let isRoadmapLocked = false;
 window.addEventListener('wheel', (e) => {
 
   if (window.innerWidth < 1024 || isRoadmapTransforming) return;
-  const isOnPosition = roadmapCarousel.getBoundingClientRect().top - topOffset < 0;
+  const isOnPosition = roadmapCarousel.getBoundingClientRect().top - topRoadmapOffset < 0;
   const isDownDirection = e.wheelDeltaY < 0;
-  const isOnSection = roadmapCarousel.getBoundingClientRect().top - topOffset + roadmapCarousel.getBoundingClientRect().height > 0;
+  const isOnSection = roadmapCarousel.getBoundingClientRect().top - topRoadmapOffset + roadmapCarousel.getBoundingClientRect().height > 0;
 
   //lock on scroll
   if ((isOnPosition && roadmapCarouselTransform <= 0 && isDownDirection && isOnSection) || 
@@ -25,7 +25,7 @@ window.addEventListener('wheel', (e) => {
 
   //unlock on scroll
   if ((roadmapCarouselTransform >= maxRoadmapTransform && isDownDirection) ||
-      (roadmapCarouselTransform <= 0 && !isDownDirection && roadmapCarousel.getBoundingClientRect().top - topOffset < 100)
+      (roadmapCarouselTransform <= 0 && !isDownDirection && roadmapCarousel.getBoundingClientRect().top - topRoadmapOffset < 100)
   ){
     document.querySelector('body').classList.remove('stop-scrolling');
     isRoadmapLocked = false;
@@ -46,7 +46,7 @@ window.addEventListener('wheel', (e) => {
     activeRoadmapItem = 1
   else if (roadmapCarouselTransform < 30)
     activeRoadmapItem = 2
-    else if (roadmapCarouselTransform < 50)
+    else if (roadmapCarouselTransform < 60)
       activeRoadmapItem = 3;
       else activeRoadmapItem = 4;
 

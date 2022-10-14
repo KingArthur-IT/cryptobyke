@@ -1690,7 +1690,25 @@ body {
   opacity: 1;
 }
 
+.groups__label-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.groups__label-wrap.anim-active .groups__label {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
 .groups__label {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   color: #FFFFFF;
   text-align: center;
   font-weight: 500;
@@ -1712,6 +1730,13 @@ body {
   background: url("../assets/img/bikes/bg.png") no-repeat;
   background-size: 100% 100%;
   min-height: 158px;
+  margin-left: -140px;
+  -webkit-transform: translateX(400%);
+          transform: translateX(400%);
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 
 .groups__label span {
@@ -1721,6 +1746,30 @@ body {
   letter-spacing: -0.025em;
   margin-bottom: -15px;
   display: block;
+}
+
+.groups__label:nth-child(1) {
+  margin-left: calc(15% + 34px);
+}
+
+.groups__label:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.groups__label:nth-child(3) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.groups__label:nth-child(4) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.groups__label:nth-child(5) {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
 }
 
 .groups__card {
@@ -1774,6 +1823,9 @@ body {
   .groups__label {
     margin-bottom: 60px;
   }
+  .groups__label:nth-child(1) {
+    margin-left: calc(10% + 34px);
+  }
   .groups__carousel-content {
     margin-left: 10%;
   }
@@ -1796,6 +1848,10 @@ body {
   .groups__content h3 {
     font-size: 60px;
   }
+  .groups__label {
+    -ms-flex-preferred-size: 22%;
+        flex-basis: 22%;
+  }
 }
 
 @media screen and (max-width: 1250px) {
@@ -1804,6 +1860,14 @@ body {
   }
   .groups__carousel-content {
     margin-left: 40px;
+  }
+  .groups__label {
+    margin-bottom: 40px;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+  .groups__label:nth-child(1) {
+    margin-left: calc(40px + 34px);
   }
 }
 
@@ -1835,14 +1899,27 @@ body {
   .groups__owl-carousel {
     display: block;
   }
-  .groups__label {
-    margin: auto;
-    max-width: 275px;
-    min-height: 125px;
+  .groups__label-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-bottom: 50px;
+  }
+  .groups__label {
+    min-width: 260px;
+    min-height: 125px;
+    margin: auto;
+    margin-bottom: 20px;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
   }
   .groups__label span {
     font-size: 30px;
+  }
+  .groups__label:nth-child(1) {
+    margin: auto;
+    margin-bottom: 20px;
   }
   .groups__owl-item {
     padding: 0 40px;
@@ -1890,7 +1967,7 @@ body {
   }
   .groups__label {
     font-size: 13px;
-    max-width: 200px;
+    min-width: 200px;
     min-height: 100px;
   }
   .groups__label span {
@@ -1960,7 +2037,7 @@ body {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   padding-right: 100px;
-  min-width: 37%;
+  min-width: 45%;
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
@@ -2033,7 +2110,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .roadmap__item svg {
