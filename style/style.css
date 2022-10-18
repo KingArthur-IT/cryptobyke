@@ -242,7 +242,7 @@ a.btn {
 
 @media screen and (max-width: 1024px) {
   .header__btn {
-    display: none;
+    display: none !important;
   }
   .header__nav-list {
     display: none;
@@ -343,17 +343,17 @@ a.btn {
   top: 0;
   right: 0;
   width: 670px;
-  -webkit-transform: translateX(19%);
-          transform: translateX(19%);
+  -webkit-transform: translateX(8vw);
+          transform: translateX(8vw);
 }
 
 .head__bike-gif {
   position: absolute;
-  top: 6%;
-  right: 0;
+  top: 5%;
+  right: -1px;
   width: 620px;
-  -webkit-transform: translateX(37.5%);
-          transform: translateX(37.5%);
+  -webkit-transform: translateX(8vw) translateX(105px);
+          transform: translateX(8vw) translateX(105px);
 }
 
 @media screen and (max-width: 1550px) {
@@ -379,17 +379,17 @@ a.btn {
     top: 0;
     right: 0;
     width: 600px;
-    -webkit-transform: translateX(12%);
-            transform: translateX(12%);
     height: 95%;
+    -webkit-transform: translateX(6vw);
+            transform: translateX(6vw);
   }
   .head__bike-gif {
     position: absolute;
-    top: 6.5%;
+    top: 5%;
     right: 0;
     width: 530px;
-    -webkit-transform: translateX(26.8%);
-            transform: translateX(26.8%);
+    -webkit-transform: translateX(6vw) translateX(70px);
+            transform: translateX(6vw) translateX(70px);
   }
 }
 
@@ -398,14 +398,12 @@ a.btn {
     width: 560px;
     right: 40px;
     height: auto;
-    -webkit-transform: translateX(13%);
-            transform: translateX(13%);
   }
   .head__bike-gif {
     top: 10%;
     width: 450px;
-    -webkit-transform: translateX(11.5%);
-            transform: translateX(11.5%);
+    -webkit-transform: translateX(6vw) translateX(-20px);
+            transform: translateX(6vw) translateX(-20px);
   }
 }
 
@@ -416,36 +414,19 @@ a.btn {
   .head__title {
     font-size: 60px;
   }
-  .head__bike-img {
-    width: 50vw;
-  }
-  .head__bike-gif {
-    width: 40vw;
-  }
-}
-
-@media screen and (max-width: 1075px) {
-  .head__bike-gif {
-    -webkit-transform: translateX(11%);
-            transform: translateX(11%);
-  }
 }
 
 @media screen and (max-width: 1024px) {
-  .head__bike-gif {
-    -webkit-transform: translateX(10.5%);
-            transform: translateX(10.5%);
-  }
-}
-
-@media screen and (max-width: 950px) {
-  .head__bike-gif {
-    -webkit-transform: translateX(11%);
-            transform: translateX(11%);
-  }
   .head__bike-img {
-    -webkit-transform: translateX(14%);
-            transform: translateX(14%);
+    width: 400px;
+    -webkit-transform: translateX(5vw) translateX(3px);
+            transform: translateX(5vw) translateX(3px);
+  }
+  .head__bike-gif {
+    width: 350px;
+    -webkit-transform: translateX(5vw) translateX(6px);
+            transform: translateX(5vw) translateX(6px);
+    top: 6%;
   }
 }
 
@@ -462,13 +443,16 @@ a.btn {
     font-size: 17px;
   }
   .head__bike-img {
-    width: 55vw;
-    right: 10px;
+    width: 300px;
+    height: 500px;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
   }
   .head__bike-gif {
-    -webkit-transform: translateX(10.5%);
-            transform: translateX(10.5%);
-    top: 15%;
+    width: 250px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    top: 10%;
   }
 }
 
@@ -477,19 +461,35 @@ a.btn {
     padding-top: 150px;
   }
   .head__bike-img {
-    width: 48vw;
+    width: 260px;
+    height: 420px;
+    -webkit-transform: translateX(65px);
+            transform: translateX(65px);
   }
   .head__bike-gif {
-    -webkit-transform: translateX(21%);
-            transform: translateX(21%);
-    top: 6%;
+    width: 200px;
+    -webkit-transform: translateX(26px);
+            transform: translateX(26px);
   }
 }
 
 @media screen and (max-width: 600px) {
   .head__bike-img {
-    width: 70vw;
-    right: 40px;
+    width: 400px;
+    height: 550px;
+    right: auto;
+    left: 0;
+    top: 5%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .head__bike-gif {
+    top: 7%;
+    width: 330px;
+    right: auto;
+    left: 93px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   .head__title {
     font-size: 40px;
@@ -498,7 +498,7 @@ a.btn {
     margin-bottom: 40px;
   }
   .head__hero {
-    padding-top: 85vw;
+    padding-top: 500px;
     padding-bottom: 30vw;
   }
   .head__description {
@@ -513,40 +513,37 @@ a.btn {
     font-size: 17px;
     margin: auto;
   }
-  .head__bike-gif {
-    -webkit-transform: translateX(25.5%);
-            transform: translateX(25.5%);
-    top: 7%;
-    width: 59vw;
-    right: 40px;
-  }
 }
 
 @media screen and (max-width: 500px) {
   .head__bike-img {
-    width: 90vw;
-  }
-  .head__hero {
-    padding-top: 115vw;
-    padding-bottom: 33vw;
+    width: 430px;
+    height: 560px;
+    right: auto;
+    left: -30px;
+    top: 5%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   .head__bike-gif {
-    width: 76vw;
+    top: 8%;
+    width: 330px;
+    right: auto;
+    left: 70px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 @media screen and (max-width: 425px) {
   .head__bike-img {
-    width: 110vw;
-    top: -30px;
+    width: 400px;
+    height: 530px;
+    left: -50px;
   }
   .head__bike-gif {
-    width: 93vw;
-    top: 4%;
-  }
-  .head__hero {
-    padding-top: 125vw;
-    padding-bottom: 130px;
+    top: 7%;
+    left: 43px;
   }
   .head__btn {
     min-width: 245px;
@@ -568,6 +565,18 @@ a.btn {
 @media screen and (max-width: 375px) {
   .head__title {
     font-size: 34px;
+  }
+  .head__bike-img {
+    width: 350px;
+    height: 480px;
+    left: -50px;
+  }
+  .head__bike-gif {
+    width: 290px;
+    left: 32px;
+  }
+  .head__hero {
+    padding-top: 450px;
   }
 }
 
