@@ -1112,6 +1112,7 @@ a.btn {
   text-align: center;
   letter-spacing: -0.025em;
   color: #FFFFFF;
+  text-transform: uppercase;
 }
 
 .bikes__btn {
