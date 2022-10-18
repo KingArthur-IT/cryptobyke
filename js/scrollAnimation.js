@@ -1,7 +1,7 @@
 const animItems = document.querySelectorAll('.anim-item');
 
 if (animItems.length > 0) {
-    window.addEventListener('scroll', animOnScroll);
+    window.addEventListener('scroll', animOnScroll, {passive: true});
     function animOnScroll() {
         //animations
         for (let index = 0; index < animItems.length; index++) {

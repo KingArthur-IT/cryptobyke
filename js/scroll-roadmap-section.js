@@ -57,4 +57,4 @@ window.addEventListener('wheel', (e) => {
       el.classList.add('active');
   })
     
-})
+}, {passive: true})
