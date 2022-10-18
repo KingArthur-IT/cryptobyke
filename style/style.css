@@ -3606,3 +3606,62 @@ a.btn {
     width: calc(100vw - 40px);
   }
 }
+
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 350px;
+  background: #000;
+  z-index: 999;
+  padding: 48px 40px 38px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+}
+
+.menu.opened {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu__anchor {
+  font-weight: 600;
+}
+
+.menu__item {
+  margin-bottom: 16px;
+}
+
+.menu__logo {
+  margin-bottom: 16px;
+}
+
+.menu__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.menu__close svg {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .menu {
+    width: 250px;
+  }
+}
