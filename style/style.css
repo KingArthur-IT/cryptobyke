@@ -54,6 +54,7 @@ body {
   font-weight: bold;
   font-size: 20px;
   z-index: 1;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .btn::before {
@@ -66,6 +67,19 @@ body {
   position: absolute;
   background: linear-gradient(264.04deg, #8AEDFF 5.93%, #6100FF 97.24%);
   z-index: -1;
+}
+
+a.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #140124;
 }
 
 .text {
@@ -1809,7 +1823,7 @@ body {
 .groups__btn {
   margin: auto;
   min-height: 90px;
-  min-width: 290px;
+  width: 290px;
 }
 
 .groups__btn::before {
