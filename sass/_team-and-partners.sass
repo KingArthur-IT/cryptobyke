@@ -179,11 +179,11 @@
     .partners
         &__item-wrapper
             flex-basis: 33%
-// @media screen and (max-width: 600px)
-//     .team
-//         &__item
-//             flex-basis: 29%
-//             width: 29%
+@media screen and (max-width: 600px)
+    .team
+        &__img
+            & img
+                padding: 0
 @media screen and (max-width: 675px)
     .team
         &__job
@@ -209,3 +209,8 @@
             font-size: 8px
         &__name
             font-size: 13px
+@media screen and (max-width: 400px)
+    .team
+        &__item
+            flex-basis: 18%
+            width: 18%

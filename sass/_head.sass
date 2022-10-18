@@ -62,6 +62,8 @@
         right: -1px
         width: 620px
         transform: translateX(8vw) translateX(+105px)
+    &__bike-mobile
+        display: none
 
 @media screen and (max-width: 1550px)
     .head
@@ -150,19 +152,22 @@
             left: 0
             top: 5%
             transform: translateX(0)
+            display: none
         &__bike-gif
             top: 7%
             width: 330px
             right: auto
             left: 93px
             transform: translateX(0)
+            display: none
         &__title
             font-size: 40px
             text-align: center
             margin: auto
             margin-bottom: 40px
+            margin-top: -25vw
         &__hero
-            padding-top: 500px
+            padding-top: 0px
             padding-bottom: 30vw
         &__description
             font-size: 15px
@@ -174,6 +179,10 @@
             min-height: 60px
             font-size: 17px
             margin: auto
+        &__bike-mobile
+            display: block
+            width: 80vw
+            margin-left: -30px
 @media screen and (max-width: 500px)
     .head
         &__bike-img
@@ -210,6 +219,8 @@
             font-size: 15px
             text-align: center
             margin-bottom: 40px
+        &__hero
+            padding-bottom: 40vw
 @media screen and (max-width: 375px)
     .head
         &__title
@@ -221,5 +232,5 @@
         &__bike-gif
             width: 290px
             left: 32px
-        &__hero
-            padding-top: 450px
+        // &__hero
+        //     padding-top: 450px
