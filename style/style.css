@@ -3658,6 +3658,13 @@ a.btn {
   transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .menu.opened {
@@ -3690,14 +3697,37 @@ a.btn {
   cursor: pointer;
 }
 
+.menu__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: auto;
+}
+
+.menu__social-link img {
+  width: 32px;
+  height: 32px;
+}
+
 @media screen and (max-width: 768px) {
   .menu {
     width: 300px;
+  }
+  .menu__social-link img {
+    width: 28px;
+    height: 28px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .menu {
     width: 250px;
+  }
+  .menu__social-link img {
+    width: 20px;
+    height: 20px;
   }
 }

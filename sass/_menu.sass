@@ -9,6 +9,8 @@
     padding: 48px 40px 38px
     transform: translateX(100%)
     transition: transform 0.6s ease-in-out
+    display: flex
+    flex-direction: column
     &.opened
         transform: translateX(0) !important
     &__anchor
@@ -26,11 +28,28 @@
             width: 22px
             height: 22px
             cursor: pointer
+    &__socials
+        display: flex
+        justify-content: space-between
+        margin-top: auto
+    &__social-link
+        & img
+            width: 32px
+            height: 32px
 
 @media screen and (max-width: 768px)
     .menu
         width: 300px
+        &__social-link
+            & img
+                width: 28px
+                height: 28px
+
 
 @media screen and (max-width: 425px)
     .menu
         width: 250px
+        &__social-link
+            & img
+                width: 20px
+                height: 20px
