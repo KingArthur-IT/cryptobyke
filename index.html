@@ -22,6 +22,15 @@
     </style>
 </head>
 <body>
+    <div class="preloader">
+        <div class="preloader__hero">
+            <img src="./assets/img/logo.svg" alt="Cryptobike" class="preloader__logo">
+            <div class="preloader__rotate-wrap">
+                <img src="./assets/img/svg-rotate.png" class="preloader__rotate">
+                <div class="preloader__text">Loading</div>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="container">
             <nav class="header__navbar">
@@ -2716,7 +2725,7 @@
     <script defer src="./js/scroll-roadmap-section.js"></script>
     <script>
         window.addEventListener('load', () => {
-            console.log('start');
+            document.querySelector('.preloader')?.classList.add('d-none');
         })
     </script>
 </body>
