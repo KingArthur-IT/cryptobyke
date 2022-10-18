@@ -149,20 +149,18 @@ function startTeamCarousel(){
     autoplaySpeed: 2000,
     nav: false,
     dots: false,
-    center: true,
-    items: 6.2,
     responsive:{
       0:{
-        items: 3.5
+        items: 3
       },
       1150:{
-        items: 4.2
+        items: 4
       },
       1400:{
-        items: 5.2,
+        items: 5,
       },
       1600:{
-        items: 6.2,
+        items: 6,
       },
     }
   });
