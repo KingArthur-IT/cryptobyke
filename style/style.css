@@ -3181,7 +3181,7 @@ a.btn {
 }
 
 .team__list .owl-stage {
-  padding-left: calc(50vw - 590px);
+  margin-left: calc(50vw - 590px);
 }
 
 .partners {
