@@ -3184,6 +3184,12 @@ a.btn {
   margin-left: calc(50vw - 590px);
 }
 
+@media screen and (max-width: 1200px) {
+  .team__list .owl-stage {
+    margin-left: 30px;
+  }
+}
+
 .partners {
   padding-bottom: 50px;
 }

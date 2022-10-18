@@ -151,13 +151,13 @@ function startTeamCarousel(){
     dots: false,
     responsive:{
       0:{
-        items: 3
+        items: 5
       },
       1150:{
-        items: 4
+        items: 5
       },
       1400:{
-        items: 5,
+        items: 6,
       },
       1600:{
         items: 6,
