@@ -2462,13 +2462,13 @@ a.btn {
   background: url("../assets/img/svg-bg.png") no-repeat;
   background-position-y: 105%;
   background-size: contain;
-  overflow-x: hidden;
 }
 
 .diagramms__hand {
   position: absolute;
-  top: -15%;
+  top: -10%;
   left: 0;
+  z-index: -1;
 }
 
 .diagramms__hand-mobile {
@@ -2482,6 +2482,10 @@ a.btn {
   margin-bottom: 75px;
   color: #fff;
   text-align: center;
+}
+
+.diagramms__diagramm {
+  overflow-x: hidden;
 }
 
 .diagramms__table {
@@ -2703,6 +2707,13 @@ a.btn {
   transition: all 0.15s ease-in;
 }
 
+@media screen and (max-width: 1600px) {
+  .diagramms__hand {
+    width: 600px;
+    top: -5%;
+  }
+}
+
 @media screen and (max-width: 1240px) {
   .diagramm {
     width: 100%;
@@ -2715,6 +2726,10 @@ a.btn {
 @media screen and (max-width: 1024px) {
   .diagramms__table-row {
     padding: 50px 50px;
+  }
+  .diagramms__hand {
+    width: 500px;
+    top: -5%;
   }
 }
 
@@ -2798,13 +2813,13 @@ a.btn {
   .diagramms__container::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 100px;
     left: 5%;
     background: #A52BFF;
-    -webkit-filter: blur(156.5px);
-            filter: blur(156.5px);
-    width: 250px;
-    height: 250px;
+    -webkit-filter: blur(150px);
+            filter: blur(150px);
+    width: 150px;
+    height: 150px;
   }
   .diagramm {
     width: 120%;
