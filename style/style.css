@@ -2023,7 +2023,7 @@ a.btn {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   .groups__label {
     min-width: 260px;
@@ -2119,9 +2119,6 @@ a.btn {
   }
   .groups__owl-img {
     padding-top: 40px;
-  }
-  .groups__label-wrap {
-    margin-bottom: 20px;
   }
 }
 
