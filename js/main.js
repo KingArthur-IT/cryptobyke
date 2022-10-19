@@ -38,8 +38,8 @@ const close3DModal = (index) => {
     modal.classList.remove('modal-display');
   }, 300);
 }
-document.querySelector('.video-modal').addEventListener('click', () => closeVideoModal());
-bikesArr.forEach(index => document.querySelector(`.modal-bike-${index}`).addEventListener('click', () => close3DModal(index)))
+document.querySelector('.video-modal')?.addEventListener('click', () => closeVideoModal());
+bikesArr.forEach(index => document.querySelector(`.modal-bike-${index}`)?.addEventListener('click', () => close3DModal(index)))
 document.querySelectorAll('.modal__hero').forEach(el => el.addEventListener('click', (e) => e.stopPropagation()));
 
 //tabs
