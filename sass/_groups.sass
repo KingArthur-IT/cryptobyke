@@ -163,7 +163,7 @@
             display: block
         &__label-wrap
             flex-direction: column
-            margin-bottom: 50px
+            margin-bottom: 40px
         &__label
             min-width: 260px
             min-height: 125px
@@ -182,11 +182,21 @@
                 color: #fff
                 margin-bottom: 28px
         &__owl-img
+            position: relative
             border-radius: 22px
-            overflow: hidden
+            overflow-x: hidden
             width: 100%
             margin: auto
             margin-bottom: 40px
+            padding-top: 100px
+        &__owl-img-main
+            position: absolute
+            bottom: 0
+            left: 0
+        &__owl-img-bg
+            border-radius: 22px
+            width: 100%
+            z-index: -1
         &__btn
             margin-top: 30px
 @media screen and (max-width: 600px)
@@ -225,3 +235,7 @@
                 filter: blur(156.5px)
                 width: 250px
                 height: 250px
+        &__owl-img
+            padding-top: 40px
+        &__label-wrap
+            margin-bottom: 20px

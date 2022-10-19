@@ -2023,7 +2023,7 @@ a.btn {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
   .groups__label {
     min-width: 260px;
@@ -2049,11 +2049,23 @@ a.btn {
     margin-bottom: 28px;
   }
   .groups__owl-img {
+    position: relative;
     border-radius: 22px;
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100%;
     margin: auto;
     margin-bottom: 40px;
+    padding-top: 100px;
+  }
+  .groups__owl-img-main {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .groups__owl-img-bg {
+    border-radius: 22px;
+    width: 100%;
+    z-index: -1;
   }
   .groups__btn {
     margin-top: 30px;
@@ -2104,6 +2116,12 @@ a.btn {
             filter: blur(156.5px);
     width: 250px;
     height: 250px;
+  }
+  .groups__owl-img {
+    padding-top: 40px;
+  }
+  .groups__label-wrap {
+    margin-bottom: 20px;
   }
 }
 
