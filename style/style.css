@@ -2301,8 +2301,26 @@ a.btn {
   .roadmap__quater-item {
     padding-top: 100px;
   }
+  .roadmap__line {
+    top: 186px;
+    left: 70px;
+    width: 308vw;
+  }
   .roadmap__owl-carousel.owl-carousel .owl-stage-outer .owl-stage {
     margin-left: 60px;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .roadmap__line {
+    width: 304vw;
+    left: 75px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .roadmap__line {
+    width: 299vw;
   }
 }
 
@@ -2324,6 +2342,18 @@ a.btn {
   }
 }
 
+@media screen and (max-width: 700px) {
+  .roadmap__line {
+    width: 295vw;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .roadmap__line {
+    width: 290vw;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .roadmap__item p {
     font-size: 15px;
@@ -2333,14 +2363,51 @@ a.btn {
     width: 140px;
     height: 140px;
   }
+  .roadmap__line {
+    top: 176px;
+    width: 560vw;
+  }
   .roadmap__owl-carousel.owl-carousel .owl-stage-outer .owl-stage {
     margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .roadmap__line {
+    width: 550vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .roadmap__line {
+    width: 538vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .roadmap__line {
+    width: 523vw;
   }
 }
 
 @media screen and (max-width: 425px) {
   .roadmap__quater-item {
     padding-right: 50px;
+  }
+  .roadmap__line {
+    width: 513vw;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .roadmap__line {
+    width: 500vw;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .roadmap__line {
+    width: 483vw;
   }
 }
 
@@ -2510,6 +2577,10 @@ a.btn {
 
 .diagramms__diagramm {
   overflow-x: hidden;
+}
+
+.diagramms__mobile-diagramm {
+  display: none;
 }
 
 .diagramms__table {
@@ -2851,10 +2922,32 @@ a.btn {
 }
 
 @media screen and (max-width: 475px) {
-  .diagramm {
-    width: 134%;
-    -webkit-transform: translateX(-12%);
-            transform: translateX(-12%);
+  .diagramms__container {
+    display: none;
+  }
+  .diagramms__mobile-diagramm {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 100%;
+    margin-top: -50px;
+  }
+  .diagramms__mobile-diagramm::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    background: #A52BFF;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    width: 180px;
+    height: 180px;
+  }
+  .diagramms__mobile-diagramm img {
+    width: 100%;
+  }
+  .diagramms__diagramm {
+    overflow-x: inherit;
   }
 }
 
