@@ -565,7 +565,7 @@ a.btn {
 
 @media screen and (max-width: 600px) {
   .head__bike-img {
-    width: 400px;
+    width: 370px;
     height: 550px;
     right: auto;
     left: 0;
@@ -574,10 +574,10 @@ a.btn {
             transform: translateX(0);
   }
   .head__bike-gif {
-    top: 7%;
+    top: 8.5%;
     width: 330px;
     right: auto;
-    left: 93px;
+    left: 86px;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -588,7 +588,7 @@ a.btn {
     margin-bottom: 40px;
   }
   .head__hero {
-    padding-top: 550px;
+    padding-top: 520px;
     padding-bottom: 30vw;
   }
   .head__description {
@@ -616,7 +616,7 @@ a.btn {
   .head__bike-gif {
     top: 8%;
     right: auto;
-    left: 63px;
+    left: 56px;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -624,13 +624,12 @@ a.btn {
 
 @media screen and (max-width: 425px) {
   .head__bike-img {
-    width: 400px;
-    height: 530px;
-    left: -50px;
+    width: 350px;
+    left: -40px;
   }
   .head__bike-gif {
     top: 7%;
-    left: 43px;
+    left: 42px;
   }
   .head__btn {
     min-width: 245px;
@@ -649,6 +648,7 @@ a.btn {
   }
   .head__hero {
     padding-bottom: 40vw;
+    padding-top: 500px;
   }
 }
 
@@ -657,16 +657,17 @@ a.btn {
     font-size: 34px;
   }
   .head__bike-img {
-    width: 350px;
-    height: 480px;
+    width: 330px;
     left: -50px;
   }
   .head__bike-gif {
     width: 290px;
-    left: 32px;
+    left: 27px;
+    top: 9%;
   }
   .head__hero {
     padding-top: 490px;
+    padding-top: 470px;
   }
 }
 
