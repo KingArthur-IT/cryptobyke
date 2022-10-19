@@ -25,7 +25,7 @@ bikesArr.forEach(index => {
   document.querySelector(`.show-modal-bike-${index}`).addEventListener('click', () => {
     const modal = document.querySelector(`.modal-bike-${index}`);
     modal.classList.add('modal-display');
-    modal.querySelector('iframe').setAttribute('src', iframeSrc[index]);
+    modal.querySelector('iframe').setAttribute('src', iframeSrc[index - 1]);
     setTimeout(() => {
       modal.classList.add('modal-visible');
     }, 100);
