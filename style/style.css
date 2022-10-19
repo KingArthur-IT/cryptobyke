@@ -2107,15 +2107,15 @@ a.btn {
   .groups__owl-carousel::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 5%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     background: #A52BFF;
     -webkit-filter: blur(156.5px);
             filter: blur(156.5px);
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
   }
   .groups__owl-img {
     padding-top: 40px;
