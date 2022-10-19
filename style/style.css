@@ -445,10 +445,6 @@ a.btn {
           transform: translateX(8vw) translateX(105px);
 }
 
-.head__bike-mobile {
-  display: none;
-}
-
 @media screen and (max-width: 1550px) {
   .head__hero {
     position: relative;
@@ -576,7 +572,6 @@ a.btn {
     top: 5%;
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    display: none;
   }
   .head__bike-gif {
     top: 7%;
@@ -585,17 +580,15 @@ a.btn {
     left: 93px;
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    display: none;
   }
   .head__title {
     font-size: 40px;
     text-align: center;
     margin: auto;
     margin-bottom: 40px;
-    margin-top: -25vw;
   }
   .head__hero {
-    padding-top: 0px;
+    padding-top: 550px;
     padding-bottom: 30vw;
   }
   .head__description {
@@ -610,17 +603,10 @@ a.btn {
     font-size: 17px;
     margin: auto;
   }
-  .head__bike-mobile {
-    display: block;
-    width: 80vw;
-    margin-left: -30px;
-  }
 }
 
 @media screen and (max-width: 500px) {
   .head__bike-img {
-    width: 430px;
-    height: 560px;
     right: auto;
     left: -30px;
     top: 5%;
@@ -629,9 +615,8 @@ a.btn {
   }
   .head__bike-gif {
     top: 8%;
-    width: 330px;
     right: auto;
-    left: 70px;
+    left: 63px;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -679,6 +664,9 @@ a.btn {
   .head__bike-gif {
     width: 290px;
     left: 32px;
+  }
+  .head__hero {
+    padding-top: 490px;
   }
 }
 
@@ -2283,6 +2271,19 @@ a.btn {
   border: 1px solid #4ABCFD;
 }
 
+.roadmap__owl-carousel.owl-carousel.owl-drag .owl-item {
+  margin-right: -50px;
+}
+
+@media screen and (max-width: 600px) {
+  .roadmap__owl-carousel.owl-carousel .owl-stage {
+    padding-left: 0 !important;
+  }
+  .roadmap__owl-carousel.owl-carousel.owl-drag .owl-item {
+    margin-right: 0px;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .roadmap__owl-carousel {
     display: block;
@@ -2334,6 +2335,12 @@ a.btn {
   }
   .roadmap__owl-carousel.owl-carousel .owl-stage-outer .owl-stage {
     margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .roadmap__quater-item {
+    padding-right: 50px;
   }
 }
 
@@ -2510,8 +2517,8 @@ a.btn {
   line-height: 171%;
   color: #FFFFFF;
   border: 1px solid #FBFBFA;
-  -webkit-filter: drop-shadow(0px 65.9501px 125.518px rgba(152, 152, 152, 0.76));
-          filter: drop-shadow(0px 65.9501px 125.518px rgba(152, 152, 152, 0.76));
+  -webkit-filter: drop-shadow(0px 65.9501px 125.518px rgba(152, 152, 152, 0.26));
+          filter: drop-shadow(0px 65.9501px 125.518px rgba(152, 152, 152, 0.26));
   border-radius: 14px;
   margin-bottom: 60px;
   overflow: hidden;
@@ -2734,9 +2741,7 @@ a.btn {
 @media screen and (max-width: 1240px) {
   .diagramm {
     width: 100%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 100%;
   }
 }
 
@@ -3034,6 +3039,7 @@ a.btn {
   .proceeds__center svg {
     margin: auto;
     display: block;
+    height: 100%;
   }
   .proceeds__center .svg-rotate-wrap {
     left: 50%;
@@ -3105,9 +3111,7 @@ a.btn {
   }
   .proceeds__center svg {
     width: 100%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 100%;
   }
   .proceeds__center .svg-logo {
     width: 58%;
@@ -3358,6 +3362,7 @@ a.btn {
   }
   .team__img img {
     width: 100%;
+    height: 95%;
   }
   .partners__btn {
     min-width: 0;
@@ -3417,18 +3422,19 @@ a.btn {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .team__img img {
-    padding: 0;
-  }
-}
-
 @media screen and (max-width: 675px) {
   .team__job {
     font-size: 10px;
   }
   .team__name {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .team__img img {
+    padding: 0;
+    height: 93%;
   }
 }
 
@@ -3459,6 +3465,9 @@ a.btn {
   .team__name {
     font-size: 13px;
   }
+  .team__img img {
+    height: 92%;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -3466,6 +3475,12 @@ a.btn {
     -ms-flex-preferred-size: 18%;
         flex-basis: 18%;
     width: 18%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .team__img img {
+    height: 89%;
   }
 }
 

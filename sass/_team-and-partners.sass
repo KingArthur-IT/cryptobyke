@@ -142,6 +142,7 @@
         &__img
             & img
                 width: 100%
+                height: 95%
     .partners
         &__btn
             min-width: 0
@@ -178,17 +179,19 @@
     .partners
         &__item-wrapper
             flex-basis: 33%
-@media screen and (max-width: 600px)
-    .team
-        &__img
-            & img
-                padding: 0
 @media screen and (max-width: 675px)
     .team
         &__job
             font-size: 10px
         &__name
             font-size: 14px
+@media screen and (max-width: 600px)
+    .team
+        &__img
+            & img
+                padding: 0
+                height: 93%
+
 @media screen and (max-width: 575px)
     .partners
         &__item-wrapper
@@ -208,8 +211,16 @@
             font-size: 8px
         &__name
             font-size: 13px
+        &__img
+            & img
+                height: 92%
 @media screen and (max-width: 400px)
     .team
         &__item
             flex-basis: 18%
             width: 18%
+@media screen and (max-width: 375px)
+    .team
+        &__img
+            & img
+                height: 89%

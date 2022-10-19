@@ -104,6 +104,16 @@
         & .roadmap__circle
             border: 1px solid #4ABCFD
 
+.roadmap__owl-carousel.owl-carousel.owl-drag .owl-item
+    margin-right: -50px
+
+@media screen and (max-width: 600px)
+    .roadmap__owl-carousel.owl-carousel .owl-stage
+        padding-left: 0 !important
+    .roadmap__owl-carousel.owl-carousel.owl-drag .owl-item
+        margin-right: 0px
+    
+
 @media screen and (max-width: 1023px)
     .roadmap
         &__owl-carousel
@@ -149,3 +159,8 @@
     .roadmap
         &__owl-carousel.owl-carousel .owl-stage-outer .owl-stage
             margin-left: 20px
+
+@media screen and (max-width: 425px)
+    .roadmap
+        &__quater-item
+            padding-right: 50px

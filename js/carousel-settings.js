@@ -179,17 +179,21 @@ function startStagesCarousel(){
 
 function startRoadmapCarousel(){
   $('.roadmap__owl-carousel').owlCarousel({
-    loop: true,
+    loop: false,
     slideTransition: 'ease',
     nav: false,
     dots: false,
-    items: 1.3,
     responsive:{
       0:{
-        items: 1.3
+        items: 1,
+        stagePadding: 50
       },
-      768:{
-        items: 2.3,
+      425:{
+        items: 1,
+        stagePadding: 50
+      },
+      600:{
+        items: 2,
       },
     }
   });
