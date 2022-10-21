@@ -403,9 +403,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="groups__carousel">
-                    <div class="groups__carousel-content">
-                        <div class="groups__item active">
+                <div class="groups__carousel-wrapper">
+                    <div class="groups__carousel owl-carousel owl-theme">
+                        <div class="groups__item">
                             <div class="groups__card">
                                 <img src="./assets/img/stages/1.png">
                                 <div class="groups__hero">
@@ -447,8 +447,18 @@
                             </div>
                         </div>
                     </div>
+                    <button class="btn groups__carousel-btn groups__left-btn groups__carousel-btn-desc">
+                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.91606 9.23516C0.622057 10.0122 0.622057 11.8882 1.91606 12.6652L16.0291 21.1332C17.3621 21.9332 19.0581 20.9732 19.0581 19.4182L19.0581 2.48216C19.0581 0.928162 17.3621 -0.0318377 16.0291 0.767162L1.91606 9.23516V9.23516Z" fill="#291071"/>
+                        </svg>                            
+                    </button>
+                    <button class="btn groups__carousel-btn groups__right-btn groups__carousel-btn-desc">
+                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.0837 9.23516C19.3777 10.0122 19.3777 11.8882 18.0837 12.6652L3.9707 21.1332C2.6377 21.9332 0.941699 20.9732 0.941699 19.4182L0.9417 2.48216C0.9417 0.928162 2.6377 -0.0318377 3.9707 0.767162L18.0837 9.23516V9.23516Z" fill="#291071"/>
+                        </svg>                            
+                    </button>
                 </div>
-                <div class="groups__owl-carousel owl-carousel owl-theme">
+                <div class="groups__mobile-carousel owl-carousel owl-theme">
                     <div class="groups__owl-item">
                         <div class="groups__owl-img">
                             <img src="./assets/img/stages/mobile/1.png" class="groups__owl-img-main">
@@ -483,6 +493,20 @@
                     </div>
                 </div>
                 <a href="https://marketplace.crypto-bike.game/" class="btn groups__btn">Marketplace</a>
+                <div class="groups__controls">
+                    <div class="groups__leftline"></div>
+                    <button class="btn groups__carousel-btn groups__left-btn">
+                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.91606 9.23516C0.622057 10.0122 0.622057 11.8882 1.91606 12.6652L16.0291 21.1332C17.3621 21.9332 19.0581 20.9732 19.0581 19.4182L19.0581 2.48216C19.0581 0.928162 17.3621 -0.0318377 16.0291 0.767162L1.91606 9.23516V9.23516Z" fill="#291071"/>
+                        </svg>                            
+                    </button>
+                    <button class="btn groups__carousel-btn groups__right-btn">
+                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.0837 9.23516C19.3777 10.0122 19.3777 11.8882 18.0837 12.6652L3.9707 21.1332C2.6377 21.9332 0.941699 20.9732 0.941699 19.4182L0.9417 2.48216C0.9417 0.928162 2.6377 -0.0318377 3.9707 0.767162L18.0837 9.23516V9.23516Z" fill="#291071"/>
+                        </svg>                            
+                    </button>
+                    <div class="groups__rightline"></div>
+                </div>
             </section>
             <!-- Roadmap -->
             <section id="roadmap" class="section roadmap">
@@ -2731,8 +2755,8 @@
     <script src="./js/main.js"></script>
     <script src="./js/carousel-settings.js"></script>
     <script src="./js/scrollAnimation.js"></script>
-    <script src="./js/scroll-stages-section.js"></script>
-    <script src="./js/scroll-roadmap-section.js"></script>
+    <!-- <script src="./js/scroll-stages-section.js"></script>
+    <script src="./js/scroll-roadmap-section.js"></script> -->
     <script>
         window.addEventListener('load', () => {
             document.querySelector('.preloader')?.classList.add('d-none');

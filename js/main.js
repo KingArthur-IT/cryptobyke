@@ -75,10 +75,10 @@ document.querySelectorAll('.modal__hero').forEach(el => el.addEventListener('cli
 // })
 
 //table
-document.querySelector('.diagramms__table-btn').addEventListener('click', () => {
-  document.querySelectorAll('.short-table').forEach((el) => el.classList.toggle('d-none'))
-  document.querySelectorAll('.full-table').forEach((el) => el.classList.toggle('d-none'))
-})
+// document.querySelector('.diagramms__table-btn').addEventListener('click', () => {
+//   document.querySelectorAll('.short-table').forEach((el) => el.classList.toggle('d-none'))
+//   document.querySelectorAll('.full-table').forEach((el) => el.classList.toggle('d-none'))
+// })
 
 //svg animation
 const svgItemsArr = ['build', 'countingency', 'legal', 'marketing', 'operations'];
@@ -100,26 +100,26 @@ svgItemsArr.forEach((item) => {
 
 
 //diagramm
-const diagrammArr = ['game', 'staking', 'community', 'presale', 'sale', 'reserve', 'team', 'coin', 'ecosystem', 'partners', 'liquidity', 'marketing']
-diagrammArr.forEach((item) => {
-  const svgPath = document.querySelector(`.diagramm-${item}`);
-  if (svgPath){
+// const diagrammArr = ['game', 'staking', 'community', 'presale', 'sale', 'reserve', 'team', 'coin', 'ecosystem', 'partners', 'liquidity', 'marketing']
+// diagrammArr.forEach((item) => {
+//   const svgPath = document.querySelector(`.diagramm-${item}`);
+//   if (svgPath){
 
-    svgPath.addEventListener('mouseover', (e) => {
-      svgPath.classList.add('svg-show-shadow');
-      document.querySelector(`.diagramm-${item}-bg`)?.classList.add('opacity0');
-      document.querySelector(`.diagramm-${item}-text`)?.classList.add(`${item}-text-fill`);
-    })
+//     svgPath.addEventListener('mouseover', (e) => {
+//       svgPath.classList.add('svg-show-shadow');
+//       document.querySelector(`.diagramm-${item}-bg`)?.classList.add('opacity0');
+//       document.querySelector(`.diagramm-${item}-text`)?.classList.add(`${item}-text-fill`);
+//     })
 
-    svgPath.addEventListener('mouseleave', (e) => {
-      document.querySelector(`.diagramm-${item}-bg`)?.classList.remove('opacity0');
-      document.querySelector(`.diagramm-${item}-text`)?.classList.remove(`${item}-text-fill`);
-      setTimeout(() => {
-        e.target.classList.remove('svg-show-shadow');
-      }, 400);
-    })
-  }
-})
+//     svgPath.addEventListener('mouseleave', (e) => {
+//       document.querySelector(`.diagramm-${item}-bg`)?.classList.remove('opacity0');
+//       document.querySelector(`.diagramm-${item}-text`)?.classList.remove(`${item}-text-fill`);
+//       setTimeout(() => {
+//         e.target.classList.remove('svg-show-shadow');
+//       }, 400);
+//     })
+//   }
+// })
 
 //menu
 document.querySelector('.header__burger').addEventListener('click', () => {

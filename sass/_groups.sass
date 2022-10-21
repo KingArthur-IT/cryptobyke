@@ -11,22 +11,19 @@
         margin-bottom: 70px
         max-width: 860px
         padding: 0 20px
-    &__owl-carousel
+    &__carousel-wrapper
         position: relative
-        display: none
+    &__mobile-carousel
+        position: relative
+        display: none !important
     &__carousel
         margin-bottom: 80px
-        width: 100%
-        overflow: hidden
-    &__carousel-content
-        display: flex
-        width: fit-content
-        margin-left: 15%
-        transition: transform 0.6s linear
+        & .owl-item.active
+            & .groups__item
+                opacity: 1
     &__item
         max-width: 1200px
         margin: auto
-        padding: 10px 34px
         width: 100vw
         opacity: 0.6
         transition: opacity 0.3s ease-in
@@ -37,6 +34,7 @@
         align-items: center
         max-width: 100%
         overflow-x: hidden
+        margin-left: calc(50vw - 590px - 20px)
         &.anim-active .groups__label
             transform: translateX(0%)
     &__label
@@ -55,7 +53,7 @@
         background: url("../assets/img/bikes/bg.png") no-repeat
         background-size: 100% 100%
         min-height: 158px
-        margin-left: -140px
+        margin-left: -125px
         transform: translateX(400%)
         transition: transform 0.6s ease-in-out
         & span
@@ -63,10 +61,10 @@
             font-size: 52px
             line-height: 123.4%
             letter-spacing: -0.025em
-            margin-bottom: -15px
+            margin-bottom: -12px
             display: block
         &:nth-child(1)
-            margin-left: calc(15% + 34px)
+            margin-left: 0
         &:nth-child(2)
             transition-delay: 0.2s
         &:nth-child(3)
@@ -74,8 +72,7 @@
         &:nth-child(4)
             transition-delay: 0.5s
         &:nth-child(5)
-            transition-delay: 0.8s
-            
+            transition-delay: 0.8s 
     &__card
         max-width: 1200px
         background: url("../assets/img/stages/bg.png") no-repeat
@@ -84,6 +81,7 @@
         display: flex
         overflow: hidden
         padding-right: 80px
+        z-index: 12
     &__hero
         display: flex
         flex-direction: column
@@ -97,37 +95,93 @@
     &__btn
         margin: auto
         min-height: 90px
-        width: 290px
+        width: 330px
         &::before
             top: 10px
             bottom: 10px
             left: 10px
             right: 10px
+    &__carousel-btn
+        position: absolute
+        top: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        min-height: 90px
+        min-width: 80px
+        &::before
+            top: 10px
+            bottom: 10px
+            left: 10px
+            right: 10px
+    &__left-btn
+        left: calc(50% - 700px)
+        transform: translate(-50%, -50%)
+    &__right-btn
+        right: calc(50% - 700px)
+        transform: translate(50%, -50%)
+        background: linear-gradient(90deg, #29ACE27A 0%, #AB22FF6B 100%)
+        &::before
+            background: linear-gradient(90deg, #8AEDFF 5.93%, #6100FF 97.24%)
+    &__controls
+        display: none
+        align-items: center
+        justify-content: center
+    &__leftline
+        width: 360px
+        height: 1px
+        background: linear-gradient(270deg, #6414FF 0%, rgba(100, 19, 255, 0) 100%)
+        margin-right: 40px
+    &__rightline
+        width: 360px
+        height: 1px
+        background: linear-gradient(270deg, rgba(100, 19, 255, 0) 0%, #6414FF 100%)
+
+
 @media screen and (max-width: 1600px)
     .groups
+        &__item
+            max-width: 1000px
+        &__label-wrap
+            margin-left: calc(50vw - 500px - 20px)
+            max-width: 1020px
         &__label
             margin-bottom: 60px
-            &:nth-child(1)
-                margin-left: calc(10% + 34px)
+            flex-basis: 50%
         &__carousel-content
             margin-left: 10%
-@media screen and (max-width: 1440px)
-    .groups
-        &__item
-            max-width: 75vw
         &__card
-            background-size: cover
-            background-position-x: center
-            padding-right: 40px
+            padding-right: 60px
             & img
                 height: 100%
-                margin-left: -25%
+                margin-left: -14%
                 margin-top: auto
+        &__left-btn
+            left: calc(50% - 600px)
+        &__right-btn
+            right: calc(50% - 600px)
+@media screen and (max-width: 1440px)
+    .groups
         &__content
             & h3
                 font-size: 60px
-        &__label
-            flex-basis: 22%
+        &__carousel-btn-desc
+            display: none
+        &__controls
+            display: flex
+            margin-top: 48px
+        &__carousel-btn
+            min-width: 150px
+            position: relative
+            top: 0
+        &__left-btn
+            left: auto
+            transform: translateX(0%)
+            margin-right: 30px
+        &__right-btn
+            right: auto
+            transform: translateX(0%)
+            margin-right: 40px
 @media screen and (max-width: 1250px)
     .groups
         &__item
@@ -136,9 +190,9 @@
             margin-left: 40px
         &__label
             margin-bottom: 40px
-            flex-basis: 25%
-            &:nth-child(1)
-                margin-left: calc(40px + 34px)
+        &__label-wrap
+            margin-left: calc(40px + 34px)
+            max-width: calc(85vw + 20px)
 @media screen and (max-width: 1200px)
     .groups
         &__title
@@ -147,22 +201,24 @@
     .groups
         &__card
             & img
-                margin-left: -30%
+                margin-left: -17%
 @media screen and (max-width: 1060px)
     .groups
         &__card
+            padding-right: 45px
             & img
-                margin-left: -40%
+                margin-left: -25%
 @media screen and (max-width: 1023px)
     .groups-and-roadmap
         background-size: cover
     .groups
-        &__carousel
+        &__carousel-wrapper
             display: none
-        &__owl-carousel
-            display: block
+        &__mobile-carousel
+            display: block !important
         &__label-wrap
             flex-direction: column
+            margin: auto
             margin-bottom: 50px
         &__label
             min-width: 260px
@@ -224,7 +280,7 @@
             min-height: 100px
             & span
                 margin-bottom: -7px
-        &__owl-carousel
+        &__mobile-carousel
             &::before
                 content: ""
                 position: absolute
@@ -237,3 +293,13 @@
                 height: 200px
         &__owl-img
             padding-top: 40px
+        &__carousel-btn
+            min-height: 70px
+            min-width: 130px
+            & svg
+                width: 15px
+                height: 15px
+        &__btn
+            width: 290px
+        &__controls
+            margin-top: 32px

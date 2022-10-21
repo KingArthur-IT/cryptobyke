@@ -107,17 +107,17 @@ $(document).ready(function(){
       $('.bikes__carousel').trigger('to.owl.carousel', $(this).data( 'position' ) ); 
     });
 
-
     $('.bikes__carousel .owl-item.active').each(function(i){
       stylesChange(i, $( this ))
     })
 
+    //stages carousel
+    startStagesCarousel();
+
     //stages and roadmap carousel
     if ( $(window).width() < 1024 ) {
-      startStagesCarousel();
       startRoadmapCarousel();
     } else {
-      $('.groups__owl-carousel').addClass('off');
       $('.roadmap__owl-carousel').addClass('off');
     }
 
@@ -132,11 +132,9 @@ $(document).ready(function(){
 $(window).resize(function() {
   if ( $(window).width() > 1023 ) {
     startTeamCarousel();
-    stopCarousel('groups__owl-carousel');
     stopCarousel('roadmap__owl-carousel');
   } else {
     stopCarousel('team__list');
-    startStagesCarousel();
     startRoadmapCarousel();
   }
 });
@@ -168,13 +166,41 @@ function startTeamCarousel(){
 
 
 function startStagesCarousel(){
-  $('.groups__owl-carousel').owlCarousel({
+  const webStagesCarousel = $('.groups__carousel').owlCarousel({
+    loop: false,
+    slideTransition: 'ease',
+    nav: false,
+    dots: false,
+    items: 1,
+  });
+  const mobileStagesCarousel = $('.groups__mobile-carousel').owlCarousel({
     loop: false,
     slideTransition: 'ease',
     nav: false,
     dots: true,
     items: 1,
   });
+
+  $('.groups__carousel-wrapper .groups__left-btn').click(function() {
+    webStagesCarousel.trigger('prev.owl.carousel');
+  });
+  $('.groups__carousel-wrapper .groups__right-btn').click(function() {
+    webStagesCarousel.trigger('next.owl.carousel');
+  });
+
+  $('.groups__controls .groups__left-btn').click(function() {
+    if ($(window).width() > 1023)
+      webStagesCarousel.trigger('prev.owl.carousel');
+    else 
+      mobileStagesCarousel.trigger('prev.owl.carousel');
+  });
+  $('.groups__controls .groups__right-btn').click(function() {
+    if ($(window).width() > 1023)
+      webStagesCarousel.trigger('next.owl.carousel');
+    else 
+      mobileStagesCarousel.trigger('next.owl.carousel');
+  });
+  
 };
 
 function startRoadmapCarousel(){
