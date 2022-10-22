@@ -135,3 +135,10 @@ document.querySelectorAll('.menu__anchor').forEach( (el) => {
     document.querySelector('.menu').classList.remove('opened');
   })
 })
+
+//roadmap show all on 4th quater
+const roadmapShowAllBtn = document.querySelector('.roadmap__show-all');
+roadmapShowAllBtn.addEventListener('click', () => {
+  roadmapShowAllBtn.classList.add('d-none');
+  document.querySelectorAll('.roadmap__item-hidden').forEach(el => el.classList.add('show-item') )
+})

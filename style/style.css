@@ -2258,7 +2258,7 @@ a.btn {
   top: 186px;
   left: 70px;
   right: 0;
-  width: 274%;
+  width: 185vw;
   opacity: 0.6;
 }
 
@@ -2374,6 +2374,17 @@ a.btn {
   background: #0a0011;
 }
 
+.roadmap__show-all {
+  color: #AB22FF;
+  cursor: pointer;
+  padding-left: 33px;
+  font-weight: 700;
+}
+
+.roadmap__item-hidden {
+  display: none;
+}
+
 .roadmap__owl-carousel {
   display: none;
 }
@@ -2388,20 +2399,85 @@ a.btn {
   display: none;
 }
 
-.roadmap__quater-item.active .roadmap__head {
+.roadmap__controls {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.roadmap__btn {
+  min-height: 90px;
+  width: 185px;
+  margin-right: 34px;
+}
+
+.roadmap__btn::before {
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.roadmap__right-btn {
+  background: -webkit-gradient(linear, left top, right top, from(#29ACE27A), to(#AB22FF6B));
+  background: linear-gradient(90deg, #29ACE27A 0%, #AB22FF6B 100%);
+}
+
+.roadmap__right-btn::before {
+  background: -webkit-gradient(linear, left top, right top, color-stop(5.93%, #8AEDFF), color-stop(97.24%, #6100FF));
+  background: linear-gradient(90deg, #8AEDFF 5.93%, #6100FF 97.24%);
+}
+
+.roadmap__leftline {
+  width: 360px;
+  height: 1px;
+  background: -webkit-gradient(linear, right top, left top, from(#6414FF), to(rgba(100, 19, 255, 0)));
+  background: linear-gradient(270deg, #6414FF 0%, rgba(100, 19, 255, 0) 100%);
+  margin-right: 40px;
+}
+
+.roadmap__rightline {
+  width: 360px;
+  height: 1px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(100, 19, 255, 0)), to(#6414FF));
+  background: linear-gradient(270deg, rgba(100, 19, 255, 0) 0%, #6414FF 100%);
+}
+
+.show-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.roadmap__owl-carousel .owl-stage .owl-item.active .roadmap__head {
   opacity: 1;
 }
 
-.roadmap__quater-item.active .roadmap__list {
+.roadmap__owl-carousel .owl-stage .owl-item.active .roadmap__list {
   opacity: 1;
 }
 
-.roadmap__quater-item.active .roadmap__circle {
+.roadmap__owl-carousel .owl-stage .owl-item.active .roadmap__circle {
   border: 1px solid #4ABCFD;
 }
 
 .roadmap__owl-carousel.owl-carousel.owl-drag .owl-item {
   margin-right: -50px;
+}
+
+.roadmap__owl-carousel.owl-carousel .owl-stage {
+  margin-left: calc(50vw - 590px);
+}
+
+.roadmap__owl-carousel.owl-carousel .owl-stage {
+  padding-left: 0 !important;
 }
 
 @media screen and (max-width: 600px) {
@@ -2410,6 +2486,60 @@ a.btn {
   }
   .roadmap__owl-carousel.owl-carousel.owl-drag .owl-item {
     margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 1830px) {
+  .roadmap__line {
+    width: 183vw;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .roadmap__line {
+    width: 180vw;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .roadmap__line {
+    width: 177vw;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .roadmap__owl-carousel.owl-carousel .owl-stage {
+    margin-left: calc(50vw - 500px);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .roadmap__line {
+    width: 187vw;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .roadmap__empty-item {
+    display: none;
+  }
+  .roadmap__quater-item {
+    padding-right: 100px;
+  }
+  .roadmap__line {
+    width: 200vw;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .roadmap__line {
+    width: 197vw;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .roadmap__line {
+    width: 308vw;
   }
 }
 
@@ -2468,6 +2598,24 @@ a.btn {
   }
   .roadmap__svg {
     margin-bottom: 50px;
+  }
+  .roadmap__btn {
+    min-height: 60px;
+    min-width: 118px;
+    margin-right: 22px;
+  }
+  .roadmap__btn svg {
+    width: 13px;
+    margin-top: 4px;
+  }
+  .roadmap__btn::before {
+    top: 6px;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+  }
+  .roadmap__leftline {
+    margin-right: 22px;
   }
 }
 

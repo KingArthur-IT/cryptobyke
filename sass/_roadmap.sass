@@ -17,7 +17,7 @@
         top: 186px
         left: 70px
         right: 0
-        width: 274%
+        width: 185vw
         opacity: 0.6
     &__quater-list
         display: flex
@@ -87,6 +87,13 @@
             color: #FFFFFF
         &:last-child
             background: #0a0011
+    &__show-all
+        color: #AB22FF
+        cursor: pointer
+        padding-left: 33px
+        font-weight: 700
+    &__item-hidden
+        display: none
     &__owl-carousel
         display: none
     &__swipe-hand
@@ -94,9 +101,39 @@
         animation: swipeShake 1s ease-in 0s infinite
     &__swipe-text
         display: none
+    &__controls
+        margin-top: 48px
+        display: flex
+        align-items: center
+        justify-content: center
+    &__btn
+        min-height: 90px
+        width: 185px
+        margin-right: 34px
+        &::before
+            top: 10px
+            bottom: 10px
+            left: 10px
+            right: 10px
+    &__left-btn
+    &__right-btn
+        background: linear-gradient(90deg, #29ACE27A 0%, #AB22FF6B 100%)
+        &::before
+            background: linear-gradient(90deg, #8AEDFF 5.93%, #6100FF 97.24%)
+    &__leftline
+        width: 360px
+        height: 1px
+        background: linear-gradient(270deg, #6414FF 0%, rgba(100, 19, 255, 0) 100%)
+        margin-right: 40px
+    &__rightline
+        width: 360px
+        height: 1px
+        background: linear-gradient(270deg, rgba(100, 19, 255, 0) 0%, #6414FF 100%)
 
+.show-item
+    display: flex
 .roadmap
-    &__quater-item.active
+    &__owl-carousel .owl-stage .owl-item.active
         & .roadmap__head
             opacity: 1
         & .roadmap__list
@@ -106,6 +143,11 @@
 
 .roadmap__owl-carousel.owl-carousel.owl-drag .owl-item
     margin-right: -50px
+.roadmap__owl-carousel.owl-carousel .owl-stage 
+    margin-left: calc(50vw - 590px)
+
+.roadmap__owl-carousel.owl-carousel .owl-stage
+        padding-left: 0 !important
 
 @media screen and (max-width: 600px)
     .roadmap__owl-carousel.owl-carousel .owl-stage
@@ -113,6 +155,42 @@
     .roadmap__owl-carousel.owl-carousel.owl-drag .owl-item
         margin-right: 0px
     
+@media screen and (max-width: 1830px)
+    .roadmap
+        &__line
+            width: 183vw
+@media screen and (max-width: 1700px)
+    .roadmap
+        &__line
+            width: 180vw
+@media screen and (max-width: 1600px)
+    .roadmap
+        &__line
+            width: 177vw
+@media screen and (max-width: 1600px)
+    .roadmap__owl-carousel.owl-carousel .owl-stage 
+        margin-left: calc(50vw - 500px)
+
+@media screen and (max-width: 1440px)
+    .roadmap
+        &__line
+            width: 187vw
+@media screen and (max-width: 1300px)
+    .roadmap__empty-item
+        display: none
+    .roadmap
+        &__quater-item
+            padding-right: 100px
+        &__line
+            width: 200vw
+@media screen and (max-width: 1180px)
+    .roadmap
+        &__line
+            width: 197vw
+@media screen and (max-width: 1100px)
+    .roadmap
+        &__line
+            width: 308vw
 
 @media screen and (max-width: 1023px)
     .roadmap
@@ -159,6 +237,20 @@
             margin-bottom: 50px
         &__svg
             margin-bottom: 50px
+        &__btn
+            min-height: 60px
+            min-width: 118px
+            margin-right: 22px
+            & svg
+                width: 13px
+                margin-top: 4px
+            &::before
+                top: 6px
+                bottom: 6px
+                left: 6px
+                right: 6px
+        &__leftline
+            margin-right: 22px
 
 @media screen and (max-width: 700px)
     .roadmap

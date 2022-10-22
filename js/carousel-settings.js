@@ -114,12 +114,8 @@ $(document).ready(function(){
     //stages carousel
     startStagesCarousel();
 
-    //stages and roadmap carousel
-    if ( $(window).width() < 1024 ) {
-      startRoadmapCarousel();
-    } else {
-      $('.roadmap__owl-carousel').addClass('off');
-    }
+    //roadmap carousel
+    startRoadmapCarousel();
 
     //team carousel
     if ( $(window).width() > 1023 ) {
@@ -132,10 +128,8 @@ $(document).ready(function(){
 $(window).resize(function() {
   if ( $(window).width() > 1023 ) {
     startTeamCarousel();
-    stopCarousel('roadmap__owl-carousel');
   } else {
     stopCarousel('team__list');
-    startRoadmapCarousel();
   }
 });
 
@@ -204,7 +198,7 @@ function startStagesCarousel(){
 };
 
 function startRoadmapCarousel(){
-  $('.roadmap__owl-carousel').owlCarousel({
+  const roadmapCarousel = $('.roadmap__owl-carousel').owlCarousel({
     loop: false,
     slideTransition: 'ease',
     nav: false,
@@ -221,7 +215,25 @@ function startRoadmapCarousel(){
       600:{
         items: 2,
       },
+      1100:{
+        items: 3,
+      },
+      1300:{
+        items: 3,
+        stagePadding: 50
+      },
+      1440:{
+        items: 3,
+        stagePadding: 100
+      },
     }
+  });
+
+  $('.roadmap__controls .roadmap__left-btn').click(function() {
+    roadmapCarousel.trigger('prev.owl.carousel');
+  });
+  $('.roadmap__controls .roadmap__right-btn').click(function() {
+    roadmapCarousel.trigger('next.owl.carousel');
   });
 };
 
