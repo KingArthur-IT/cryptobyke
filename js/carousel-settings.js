@@ -118,7 +118,7 @@ $(document).ready(function(){
     startRoadmapCarousel();
 
     //team carousel
-    if ( $(window).width() > 1023 ) {
+    if ( $(window).width() > 1024 ) {
       startTeamCarousel();
     } else {
       $('.team__list').addClass('off');
@@ -126,7 +126,7 @@ $(document).ready(function(){
 });
 
 $(window).resize(function() {
-  if ( $(window).width() > 1023 ) {
+  if ( $(window).width() > 1024 ) {
     startTeamCarousel();
   } else {
     stopCarousel('team__list');
@@ -134,7 +134,7 @@ $(window).resize(function() {
 });
 
 function startTeamCarousel(){
-  $('.team__list').owlCarousel({
+  const teamCarousel = $('.team__list').owlCarousel({
     loop: false,
     slideTransition: 'linear',
     autoplayTimeout: 2000,
@@ -155,6 +155,13 @@ function startTeamCarousel(){
         items: 6,
       },
     }
+  });
+
+  $('.team__controls .team__left-btn').click(function() {
+    teamCarousel.trigger('prev.owl.carousel');
+  });
+  $('.team__controls .team__right-btn').click(function() {
+    teamCarousel.trigger('next.owl.carousel');
   });
 };
 

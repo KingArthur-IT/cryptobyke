@@ -37,6 +37,39 @@
         color: #4A4A4A
         text-align: center
         max-width: 256px
+    &__controls
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 48px
+    &__leftline
+        width: 360px
+        height: 1px
+        background: linear-gradient(270deg, #6414FF 0%, rgba(100, 19, 255, 0) 100%)
+        margin-right: 40px
+    &__rightline
+        width: 360px
+        height: 1px
+        background: linear-gradient(270deg, rgba(100, 19, 255, 0) 0%, #6414FF 100%)
+    &__btn
+        margin-right: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        min-height: 91px
+        min-width: 185px
+        &::before
+            top: 10px
+            bottom: 10px
+            left: 10px
+            right: 10px
+            background: #550989
+        & svg path
+            fill: #fff
+            stroke: #fff
+    &__right-btn
+        background: linear-gradient(90deg, #29ACE27A 0%, #AB22FF6B 100%)
+
 
 .team__list .owl-stage
     margin-left: calc(50vw - 590px)
@@ -143,6 +176,8 @@
             & img
                 width: 100%
                 height: 95%
+        &__controls
+            display: none
     .partners
         &__btn
             min-width: 0

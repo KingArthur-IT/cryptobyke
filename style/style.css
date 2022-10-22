@@ -3567,6 +3567,67 @@ a.btn {
   max-width: 256px;
 }
 
+.team__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 48px;
+}
+
+.team__leftline {
+  width: 360px;
+  height: 1px;
+  background: -webkit-gradient(linear, right top, left top, from(#6414FF), to(rgba(100, 19, 255, 0)));
+  background: linear-gradient(270deg, #6414FF 0%, rgba(100, 19, 255, 0) 100%);
+  margin-right: 40px;
+}
+
+.team__rightline {
+  width: 360px;
+  height: 1px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(100, 19, 255, 0)), to(#6414FF));
+  background: linear-gradient(270deg, rgba(100, 19, 255, 0) 0%, #6414FF 100%);
+}
+
+.team__btn {
+  margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 91px;
+  min-width: 185px;
+}
+
+.team__btn::before {
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: #550989;
+}
+
+.team__btn svg path {
+  fill: #fff;
+  stroke: #fff;
+}
+
+.team__right-btn {
+  background: -webkit-gradient(linear, left top, right top, from(#29ACE27A), to(#AB22FF6B));
+  background: linear-gradient(90deg, #29ACE27A 0%, #AB22FF6B 100%);
+}
+
 .team__list .owl-stage {
   margin-left: calc(50vw - 590px);
 }
@@ -3732,6 +3793,9 @@ a.btn {
   .team__img img {
     width: 100%;
     height: 95%;
+  }
+  .team__controls {
+    display: none;
   }
   .partners__btn {
     min-width: 0;
