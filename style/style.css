@@ -3256,8 +3256,8 @@ a.btn {
 .proceeds__center {
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%, -10%);
-          transform: translate(-50%, -10%);
+  -webkit-transform: translate(-50%, 30%);
+          transform: translate(-50%, 30%);
 }
 
 .proceeds__right {
@@ -3272,6 +3272,16 @@ a.btn {
   margin-bottom: 48px;
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
+}
+
+.proceeds__item-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.proceeds__item-num {
+  margin-right: 5px;
 }
 
 .proceeds__head {
@@ -3299,24 +3309,44 @@ a.btn {
   font-weight: 400;
 }
 
-.proceeds__build {
+.proceeds__ecosystem {
   background: #5134FE;
 }
 
 .proceeds__marketing {
-  background: #EB69FF;
+  background: #A534FE;
 }
 
-.proceeds__operations {
+.proceeds__liquidity {
+  background: #F420F9;
+}
+
+.proceeds__staking {
   background: #FF53B4;
 }
 
-.proceeds__countingency {
-  background: #FD9FB4;
+.proceeds__in-game {
+  background: #7DA0FB;
 }
 
-.proceeds__legal {
-  background: #FFC7C3;
+.proceeds__seed {
+  background: #C8ED61;
+}
+
+.proceeds__private {
+  background: #DC516A;
+}
+
+.proceeds__kols {
+  background: #CF2965;
+}
+
+.proceeds__ido {
+  background: #96FB7D;
+}
+
+.proceeds__team {
+  background: #7DECFB;
 }
 
 .proceeds__btn {
@@ -3325,21 +3355,83 @@ a.btn {
   margin-top: 230px;
 }
 
-.svg-build {
+.item-ecosystem {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.item-in-game {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.item-seed {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.item-team {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.svg-ecosystem {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
   cursor: pointer;
 }
 
-.svg-countingency {
+.svg-seed {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
   cursor: pointer;
 }
 
-.svg-legal {
+.svg-private {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.svg-kols {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.svg-ido {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.svg-team {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.svg-in-game {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.svg-staking {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.svg-liquidity {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
@@ -3353,21 +3445,14 @@ a.btn {
   cursor: pointer;
 }
 
-.svg-operations {
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
-  cursor: pointer;
-}
-
 .svg-show-shadow {
   opacity: 1;
 }
 
 .svg-rotate-wrap {
   position: absolute;
-  top: 81px;
-  left: 87px;
+  top: 35px;
+  left: 55px;
   pointer-events: none;
 }
 
@@ -3383,9 +3468,10 @@ a.btn {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-52%, -68%);
-          transform: translate(-52%, -68%);
+  -webkit-transform: translate(-52%, -78%);
+          transform: translate(-52%, -78%);
   pointer-events: none;
+  width: 400px;
 }
 
 @keyframes rotation {

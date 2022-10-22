@@ -10,7 +10,7 @@
     &__center
         position: absolute
         left: 50%
-        transform: translate(-50%, -10%)
+        transform: translate(-50%, 30%)
     &__right
         flex-basis: 20%
     &__item
@@ -19,6 +19,10 @@
         line-height: 171%
         margin-bottom: 48px
         transition: opacity 0.3s ease-in
+        &-line
+            display: flex
+        &-num
+            margin-right: 5px      
     &__head
         display: flex
         align-items: center
@@ -33,31 +37,74 @@
             font-weight: 700
         & p
             font-weight: 400
-    &__build
+    &__ecosystem
         background: #5134FE
     &__marketing
-        background: #EB69FF
-    &__operations
+        background: #A534FE
+    &__liquidity
+        background: #F420F9
+    &__staking
         background: #FF53B4
-    &__countingency
-        background: #FD9FB4
-    &__legal
-        background: #FFC7C3
+    &__in-game
+        background: #7DA0FB
+    &__seed
+        background: #C8ED61
+    &__private
+        background: #DC516A
+    &__kols
+        background: #CF2965
+    &__ido
+        background: #96FB7D
+    &__team
+        background: #7DECFB
     &__btn
         min-height: 83px
         min-width: 290px
         margin-top: 230px
+
+.item-ecosystem
+    transform: translateX(50%)
+.item-in-game
+    transform: translateX(50%)
+.item-seed
+    transform: translateX(-50%)
+.item-team
+    transform: translateX(-50%)
             
 .svg
-    &-build
+    &-ecosystem
         opacity: 0
         transition: opacity 0.3s ease-in
         cursor: pointer
-    &-countingency
+    &-seed
         opacity: 0
         transition: opacity 0.3s ease-in
         cursor: pointer
-    &-legal
+    &-private
+        opacity: 0
+        transition: opacity 0.3s ease-in
+        cursor: pointer
+    &-kols
+        opacity: 0
+        transition: opacity 0.3s ease-in
+        cursor: pointer
+    &-ido
+        opacity: 0
+        transition: opacity 0.3s ease-in
+        cursor: pointer
+    &-team
+        opacity: 0
+        transition: opacity 0.3s ease-in
+        cursor: pointer
+    &-in-game
+        opacity: 0
+        transition: opacity 0.3s ease-in
+        cursor: pointer
+    &-staking
+        opacity: 0
+        transition: opacity 0.3s ease-in
+        cursor: pointer
+    &-liquidity
         opacity: 0
         transition: opacity 0.3s ease-in
         cursor: pointer
@@ -65,16 +112,12 @@
         opacity: 0
         transition: opacity 0.3s ease-in
         cursor: pointer
-    &-operations
-        opacity: 0
-        transition: opacity 0.3s ease-in
-        cursor: pointer
 .svg-show-shadow
     opacity: 1
 .svg-rotate-wrap
     position: absolute
-    top: 81px
-    left: 87px
+    top: 35px
+    left: 55px
     pointer-events: none
 .svg-rotate
     transform: rotate(0deg)
@@ -84,8 +127,9 @@
     position: absolute
     top: 50%
     left: 50%
-    transform: translate(-52%, -68%)
+    transform: translate(-52%, -78%)
     pointer-events: none
+    width: 400px
 
 @keyframes rotation
     0%

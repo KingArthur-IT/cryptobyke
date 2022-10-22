@@ -81,7 +81,7 @@ document.querySelectorAll('.modal__hero').forEach(el => el.addEventListener('cli
 // })
 
 //svg animation
-const svgItemsArr = ['build', 'countingency', 'legal', 'marketing', 'operations'];
+const svgItemsArr = ['ecosystem', 'seed', 'private', 'kols', 'ido', 'team', 'in-game', 'staking', 'liquidity', 'marketing'];
 svgItemsArr.forEach((item) => {
   const svgPath = document.querySelector(`.svg-${item}`);
   if (svgPath){
