@@ -177,7 +177,7 @@ function startStagesCarousel(){
     loop: false,
     slideTransition: 'ease',
     nav: false,
-    dots: true,
+    dots: false,
     items: 1,
   });
 
