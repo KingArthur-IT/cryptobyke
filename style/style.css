@@ -2833,7 +2833,7 @@ a.btn {
 
 .diagramms__hand {
   position: absolute;
-  top: -7%;
+  top: -6%;
   left: 0;
   z-index: -1;
 }
@@ -3081,7 +3081,7 @@ a.btn {
 @media screen and (max-width: 1600px) {
   .diagramms__hand {
     width: 600px;
-    top: -5%;
+    top: -4%;
   }
 }
 
@@ -3098,7 +3098,7 @@ a.btn {
   }
   .diagramms__hand {
     width: 500px;
-    top: -5%;
+    top: -4%;
   }
 }
 
