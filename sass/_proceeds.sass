@@ -60,16 +60,20 @@
     &__btn
         min-height: 83px
         min-width: 290px
-        margin-top: 230px
+        margin: auto
+        margin-top: 60px
 
 .item-ecosystem
-    transform: translateX(50%)
+    transform: translateX(80%)
 .item-in-game
-    transform: translateX(50%)
+    transform: translateX(80%)
 .item-seed
-    transform: translateX(-50%)
+    transform: translateX(-80%)
+    width: 135%
 .item-team
-    transform: translateX(-50%)
+    transform: translateX(-80%)
+    width: 135%
+    margin-top: 78px
             
 .svg
     &-ecosystem
@@ -140,9 +144,12 @@
 
 @media screen and (max-width: 1240px)
     .proceeds
+        padding-bottom: 80px
         &__center
             position: relative
             flex-basis: 100%
+            left: 0%
+            transform: translate(0%, -6%)
             & svg
                 margin: auto
                 display: block
@@ -155,18 +162,33 @@
             justify-content: center
         &__left
             flex-basis: 40%
-            margin-top: -200px
-            padding-left: 50px
+            margin-top: -140px
+            padding-left: 48px
         &__right
-            flex-basis: 35%
-            margin-top: -200px
-            padding-left: 150px
-        &__btn
-            margin-top: 120px
+            flex-basis: 40%
+            margin-top: -140px
+            padding-left: 60px
+        .item-ecosystem
+            transform: translateX(0%)
+        .item-in-game
+            transform: translateX(0%)
+        .item-seed
+            transform: translateX(0%)
+            width: 100%
+        .item-team
+            transform: translateX(0%)
+            width: 100%
+            margin-top: 0
 
-@media screen and (max-width: 1240px)
+@media screen and (max-width: 1024px)
     .proceeds
-        padding-bottom: 80px
+        &__left
+            flex-basis: 50%
+            padding-left: 48px
+        &__right
+            flex-basis: 40%
+            padding-left: 60px
+        
 @media screen and (max-width: 860px)
     .proceeds
         &__left
@@ -180,15 +202,23 @@
         padding-bottom: 60px
         &__left
             flex-basis: 100%
+            max-width: 350px
+            margin: auto
+            margin-top: -140px
         &__right
             padding-left: 0px
             flex-basis: 100%
+            max-width: 350px
             margin-top: 0
         &__btn
             margin: auto
             margin-top: 70px
         &__head
             margin-bottom: 13px
+@media screen and (max-width: 600px)
+    .proceeds
+        &__left
+            margin-top: -100px
         &__center
             & svg 
                 width: 100%
@@ -198,12 +228,24 @@
             & .svg-rotate
                 width: 100%
             & .svg-rotate-wrap
-                width: 77%
-                top: 10%
-@media screen and (max-width: 600px)
+                width: 83%
+                top: 5%
+        &__left
+            max-width: 100%
+            padding: 0 16px
+        &__right
+            max-width: 100%
+            padding: 0 16px
+
+@media screen and (max-width: 425px)
     .proceeds
         &__left
-            margin-top: -100px
+            padding: 0
+        &__right
+            padding: 0
+        &__btn
+            margin-top: 30px
+
 @media screen and (max-width: 375px)
     .proceeds
         &__left
