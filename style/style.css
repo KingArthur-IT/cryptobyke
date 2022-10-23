@@ -3743,6 +3743,7 @@ a.btn {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 48px;
+  margin-bottom: 60px;
 }
 
 .team__leftline {
@@ -3871,7 +3872,6 @@ a.btn {
   display: -ms-flexbox;
   display: flex;
   padding-top: 75px;
-  padding-bottom: 75px;
   width: calc(100% + 25px);
   -webkit-transform: translateX(-12.5px);
           transform: translateX(-12.5px);

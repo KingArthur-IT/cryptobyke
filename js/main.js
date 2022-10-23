@@ -53,26 +53,26 @@ bikesArr.forEach(index => document.querySelector(`.modal-bike-${index}`)?.addEve
 document.querySelectorAll('.modal__hero').forEach(el => el.addEventListener('click', (e) => e.stopPropagation()));
 
 //tabs
-// const daoTab = document.querySelector('tab-dao');
-// const strategicTab = document.querySelector('tab-strategic');
-// const exchangeTab = document.querySelector('tab-exchange');
+const daoTab = document.querySelector('tab-dao');
+const strategicTab = document.querySelector('tab-strategic');
+const exchangeTab = document.querySelector('tab-exchange');
 
-// const daoTabContent = document.querySelector('tab-content-dao');
-// const strategicTabContent = document.querySelector('tab-content-strategic');
-// const exchangeTabContent = document.querySelector('tab-content-exchange');
+const daoTabContent = document.querySelector('tab-content-dao');
+const strategicTabContent = document.querySelector('tab-content-strategic');
+const exchangeTabContent = document.querySelector('tab-content-exchange');
 
-// const tabsArr = ['dao', 'strategic', 'exchange'];
+const tabsArr = ['dao', 'strategic', 'exchange'];
 
-// tabsArr.forEach(el => {
-//   document.querySelector(`.tab-${el}`).addEventListener('click', () => {
-//     tabsArr.filter(item => item != el).forEach(t => {
-//       document.querySelector(`.tab-${t}`).classList.remove('active');
-//       document.querySelector(`.tab-content-${t}`).classList.add('d-none');
-//     })
-//     document.querySelector(`.tab-${el}`).classList.add('active');
-//     document.querySelector(`.tab-content-${el}`).classList.remove('d-none');
-//   })
-// })
+tabsArr.forEach(el => {
+  document.querySelector(`.tab-${el}`).addEventListener('click', () => {
+    tabsArr.filter(item => item != el).forEach(t => {
+      document.querySelector(`.tab-${t}`).classList.remove('active');
+      document.querySelector(`.tab-content-${t}`).classList.add('d-none');
+    })
+    document.querySelector(`.tab-${el}`).classList.add('active');
+    document.querySelector(`.tab-content-${el}`).classList.remove('d-none');
+  })
+})
 
 //table
 // document.querySelector('.diagramms__table-btn').addEventListener('click', () => {
