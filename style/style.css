@@ -1587,6 +1587,7 @@ a.btn {
   z-index: 10;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  width: 620px;
 }
 
 .metaworld__left-design {
@@ -1651,13 +1652,13 @@ a.btn {
             transform: translateX(0%);
     margin: auto;
     display: block;
-    width: 100%;
+    width: 75%;
   }
   .metaworld__first-wrap {
     margin-top: 20px;
   }
   .metaworld__items {
-    margin-top: -20%;
+    margin-top: -4%;
   }
   .metaworld__item {
     max-width: 100%;
