@@ -105,6 +105,12 @@
                         <rect x="0.399414" y="15.4912" width="35.6006" height="2.12472" fill="#1EC597"/>
                     </svg>                        
                 </button>
+                <!-- <select>
+                    <option value="EN">EN</option>
+                    <option value="UA">UA</option>
+                    <option value="RU">RU</option>
+                    <option value="PL">PL</option>
+                </select> -->
             </nav>
         </div>
     </header>
@@ -2425,7 +2431,12 @@
                 <img src="./assets/img/logo.png" alt="Cryptobike">
             </div>
             <div class="footer__wrapper">
-                <a href="./assets/pdf/Terms & Conditions_merged.pdf" target="_blank" class="footer__policy">Project Policy</a>
+                <div class="footer__links">
+                    <a href="./assets/pdf/Terms & Conditions_merged.pdf" target="_blank" class="footer__link">Project Policy</a>
+                    <a href="#" target="_blank" class="footer__link">FAQ</a>
+                    <a href="#" target="_blank" class="footer__link">Terms of use</a>
+                    <a href="https://whitepaper.crypto-bike.game" target="_blank" class="footer__link">Whitepaper</a>
+                </div>
                 <div class="footer__socials">
                     <a href="https://t.me/+BAh8s67NIaozNGQy" class="footer__social-link">
                         <img src="./assets/img/socials/telegram.svg" alt="telegram">
@@ -2444,6 +2455,7 @@
                     </a>
                 </div>
             </div>
+            <button class="btn footer__contact-btn">Contact Us</button>
         </div>
     </footer>
     <!-- modal -->
@@ -2522,11 +2534,46 @@
         </div>
     </div>
 
+    <div class="modal contact-modal">
+        <div class="container modal__container">
+            <form id="contact-form" class="modal__hero contact-modal__hero">
+                <div class="contact-modal__message-box"></div>
+                <div class="contact-modal__close"> 
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="94.926px" height="94.926px" viewBox="0 0 94.926 94.926" style="enable-background:new 0 0 94.926 94.926;"
+                        xml:space="preserve">
+                        <g>
+                            <path d="M55.931,47.463L94.306,9.09c0.826-0.827,0.826-2.167,0-2.994L88.833,0.62C88.436,0.224,87.896,0,87.335,0
+                                c-0.562,0-1.101,0.224-1.498,0.62L47.463,38.994L9.089,0.62c-0.795-0.795-2.202-0.794-2.995,0L0.622,6.096
+                                c-0.827,0.827-0.827,2.167,0,2.994l38.374,38.373L0.622,85.836c-0.827,0.827-0.827,2.167,0,2.994l5.473,5.476
+                                c0.397,0.396,0.936,0.62,1.498,0.62s1.1-0.224,1.497-0.62l38.374-38.374l38.374,38.374c0.397,0.396,0.937,0.62,1.498,0.62
+                                s1.101-0.224,1.498-0.62l5.473-5.476c0.826-0.827,0.826-2.167,0-2.994L55.931,47.463z" stroke="#fff" fill="#fff"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="contact-modal__input-wrapper">
+                    <label for="name">Name<span>*</span> </label>
+                    <input id="contact-form-name" type="text" name="name" placeholder="Name">
+                </div>
+                <div class="contact-modal__input-wrapper">
+                    <label for="email">Email<span>*</span> </label>
+                    <input id="contact-form-email" type="email" name="email" placeholder="Email">
+                </div>
+                <div class="contact-modal__input-wrapper">
+                    <label for="msg">Message<span>*</span> </label>
+                    <textarea id="contact-form-msg" name="msg" cols="30" rows="10" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn contact-modal__btn">Contact Us</button>
+            </form>
+        </div>
+    </div>
+
     <script src="./js/jquery.slim.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/carousel-settings.js"></script>
     <script src="./js/scrollAnimation.js"></script>
+    <script src="./js/form.js"></script>
     <!-- <script src="./js/scroll-stages-section.js"></script>
     <script src="./js/scroll-roadmap-section.js"></script> -->
     <script>

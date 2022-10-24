@@ -1587,7 +1587,7 @@ a.btn {
   z-index: 10;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 620px;
+  width: 580px;
 }
 
 .metaworld__left-design {
@@ -4106,8 +4106,8 @@ a.btn {
 }
 
 .footer__logo {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
 }
 
 .footer__logo img {
@@ -4115,8 +4115,20 @@ a.btn {
 }
 
 .footer__wrapper {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 76%;
+      flex-basis: 76%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4129,11 +4141,16 @@ a.btn {
   padding-bottom: 15px;
 }
 
-.footer__policy {
+.footer__link {
   font-size: 23px;
   line-height: 171%;
   text-align: center;
   color: #FFFFFF;
+  margin-right: 16px;
+}
+
+.footer__link::last-child {
+  margin-right: 0;
 }
 
 .footer__socials {
@@ -4143,22 +4160,26 @@ a.btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
 .footer__social-link {
-  margin-right: 35px;
+  margin-right: 30px;
 }
 
 .footer__social-link:last-child {
   margin-right: 0;
 }
 
-@media screen and (max-width: 1024px) {
+.footer__contact-btn {
+  display: none;
+}
+
+@media screen and (max-width: 1240px) {
   .footer {
     background: none;
   }
@@ -4194,12 +4215,34 @@ a.btn {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .footer__policy {
+  .footer__links {
     padding-bottom: 0px;
     margin-bottom: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__link {
+    margin-bottom: 16px;
+    margin-right: 0;
   }
   .footer__socials {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
+  }
+  .footer__contact-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 70px;
+    min-width: 290px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 30px;
   }
 }
 
@@ -4274,6 +4317,176 @@ a.btn {
   }
   .modal__video {
     width: calc(100vw - 40px);
+  }
+}
+
+.contact-modal__hero {
+  position: relative;
+  padding: 32px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(5.93%, #1e3e45), color-stop(97.24%, #352550));
+  background: linear-gradient(0deg, #1e3e45 5.93%, #352550 97.24%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-modal__message-box {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 200px;
+  left: 10px;
+  right: 10px;
+  background: #000000E6;
+  z-index: 10;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  padding: 24px;
+  font-size: 18px;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
+  background-image: '';
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10%;
+}
+
+.contact-modal__message-box.visible {
+  opacity: 1;
+}
+
+.contact-modal__message-box.loading {
+  background-image: url(../assets/gif/loading.gif);
+}
+
+.contact-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.contact-modal__close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.contact-modal__input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.contact-modal__input-wrapper label {
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.contact-modal__input-wrapper input {
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background: transparent;
+  padding: 6px 12px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.contact-modal__input-wrapper input::-webkit-input-placeholder {
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+.contact-modal__input-wrapper input:-ms-input-placeholder {
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+.contact-modal__input-wrapper input::-ms-input-placeholder {
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+.contact-modal__input-wrapper input::placeholder {
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+.contact-modal__input-wrapper textarea {
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background: transparent;
+  padding: 6px 12px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.contact-modal__input-wrapper textarea::-webkit-input-placeholder {
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+.contact-modal__input-wrapper textarea:-ms-input-placeholder {
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+.contact-modal__input-wrapper textarea::-ms-input-placeholder {
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+.contact-modal__input-wrapper textarea::placeholder {
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+.contact-modal__btn {
+  min-height: 60px;
+  margin-top: 16px;
+  cursor: default;
+}
+
+.contact-modal__btn::before {
+  background: none;
+  cursor: default;
+}
+
+.contact-modal__btn.active {
+  cursor: pointer;
+}
+
+.contact-modal__btn.active::before {
+  background: linear-gradient(264.04deg, #8AEDFF 5.93%, #6100FF 97.24%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  .contact-modal .modal__container {
+    width: 100%;
   }
 }
 
