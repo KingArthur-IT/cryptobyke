@@ -3966,6 +3966,9 @@ a.btn {
         flex-basis: 25%;
     margin-bottom: 20px;
   }
+  .partners__item {
+    padding: 0 10px;
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -4011,8 +4014,8 @@ a.btn {
     width: 20%;
   }
   .partners__item-wrapper {
-    -ms-flex-preferred-size: 33%;
-        flex-basis: 33%;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
   }
   .partners__job {
     font-size: 13px;
@@ -4051,12 +4054,14 @@ a.btn {
     padding: 0;
     height: 93%;
   }
+  .partners__item-wrapper {
+    padding: 0 5px;
+  }
 }
 
 @media screen and (max-width: 575px) {
-  .partners__item-wrapper {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+  .partners__name {
+    width: 120%;
   }
   .partners__btn {
     font-size: 13px;
@@ -4083,6 +4088,9 @@ a.btn {
   .team__img img {
     height: 92%;
   }
+  .partners__item {
+    padding: 0;
+  }
   .partners__folowers {
     font-size: 10px;
   }
@@ -4091,6 +4099,17 @@ a.btn {
   }
   .partners__name {
     font-size: 13px;
+    width: 100%;
+    line-height: 1.5;
+  }
+  .partners__img {
+    margin-bottom: 6px;
+  }
+  .partners__img-wrapper::before {
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: 4px;
   }
 }
 
