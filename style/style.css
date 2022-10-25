@@ -3851,6 +3851,7 @@ a.btn {
   color: #4C0E73;
   border: 1px solid #4C0E73;
   width: 100%;
+  padding: 0 10px;
 }
 
 .partners__btn.active {
@@ -4133,10 +4134,12 @@ a.btn {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 15px;
+  -ms-flex-preferred-size: 63%;
+      flex-basis: 63%;
 }
 
 .footer__link {
-  font-size: 23px;
+  font-size: 16px;
   line-height: 171%;
   text-align: center;
   color: #FFFFFF;
@@ -4220,6 +4223,7 @@ a.btn {
   .footer__link {
     margin-bottom: 16px;
     margin-right: 0;
+    font-size: 22px;
   }
   .footer__socials {
     padding-bottom: 50px;
