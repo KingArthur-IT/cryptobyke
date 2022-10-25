@@ -154,6 +154,12 @@ function startTeamCarousel(){
       1600:{
         items: 6,
       },
+      1800:{
+        items: 7,
+      },
+      2200:{
+        items: 8,
+      },
     }
   });
 
