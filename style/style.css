@@ -4023,6 +4023,9 @@ a.btn {
   .partners__name {
     font-size: 16px;
   }
+  .partners__img {
+    margin-bottom: 16px;
+  }
 }
 
 @media screen and (max-width: 675px) {
