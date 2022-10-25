@@ -141,4 +141,12 @@ const roadmapShowAllBtn = document.querySelector('.roadmap__show-all');
 roadmapShowAllBtn.addEventListener('click', () => {
   roadmapShowAllBtn.classList.add('d-none');
   document.querySelectorAll('.roadmap__item-hidden').forEach(el => el.classList.add('show-item') )
+});
+
+
+//dropdown
+document.querySelectorAll('.dropdown').forEach(el => {
+  el.addEventListener('click', () => {
+    el.classList.toggle('active');
+  })
 })
