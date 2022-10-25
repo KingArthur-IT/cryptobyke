@@ -19,15 +19,12 @@ try {
     $mail->Port = 465;
     $mail->Host = 'smtp.gmail.com';
     $mail->Username   = 'ostapt5@gmail.com';
-    $mail->Password   = 'xardas22';
-
-    $mail->isHTML(true);//HTML формат
-    $mail->setFrom("ostapt5@gmail.com","Имя от кого отправлять");
-    $mail->addAddress("ostapenko.web.7@gmail.com","");//Кому отправляем
-    //$mail->addReplyTo("kudaotvetit@yandex.ru","Имя кому писать при ответе");
-    $mail->Subject = "Тема сообщения";
-    $mail->Body    = "Содержание сообщения";
-    // $mail->AltBody = "Альтернативное содержание сообщения";
+    $mail->Password   = '***';
+    $mail->isHTML(true);
+    $mail->setFrom("ostapt5@gmail.com","sender name");
+    $mail->addAddress("ostapenko.web.7@gmail.com","Artem");
+    $mail->Subject = "Cryptobike message";
+    $mail->Body    = 'Name: '.$_POST['name'].' Email: '.$_POST['email'].' Message: '.$_POST['message'];
 
     $mail->send();
     echo "Message has been sent successfully";

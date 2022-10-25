@@ -99,7 +99,6 @@ document.getElementById('contact-form').onsubmit = async (e) => {
           body: formData
         })
         .then((res) => {
-            // let result = await response.json();
             console.log(res);
             if (res.status === 200)
                 closeMessageBox('Message sended successfully');
