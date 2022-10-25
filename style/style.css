@@ -4014,6 +4014,15 @@ a.btn {
     -ms-flex-preferred-size: 33%;
         flex-basis: 33%;
   }
+  .partners__job {
+    font-size: 13px;
+  }
+  .partners__folowers {
+    font-size: 13px;
+  }
+  .partners__name {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 675px) {
@@ -4021,6 +4030,15 @@ a.btn {
     font-size: 10px;
   }
   .team__name {
+    font-size: 14px;
+  }
+  .partners__folowers {
+    font-size: 10px;
+  }
+  .partners__job {
+    font-size: 10px;
+  }
+  .partners__name {
     font-size: 14px;
   }
 }
@@ -4061,6 +4079,15 @@ a.btn {
   }
   .team__img img {
     height: 92%;
+  }
+  .partners__folowers {
+    font-size: 10px;
+  }
+  .partners__job {
+    font-size: 10px;
+  }
+  .partners__name {
+    font-size: 13px;
   }
 }
 
