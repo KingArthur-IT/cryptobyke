@@ -74,9 +74,13 @@
 
 .team__list .owl-stage
     margin-left: calc(50vw - 590px)
+.dao-list .owl-stage
+    margin-left: calc(50vw - 590px)
 
 @media screen and (max-width: 1200px)
     .team__list .owl-stage
+        margin-left: 30px
+    .dao-list .owl-stage
         margin-left: 30px
 
 .partners
@@ -117,9 +121,9 @@
             color: #FFFFFF
             min-height: 81px
     &__content
-        display: flex
         padding-top: 75px
-        // padding-bottom: 75px
+    &__hero
+        display: flex
         width: calc(100% + 25px)
         transform: translateX(-12.5px)
         flex-wrap: wrap
@@ -127,12 +131,13 @@
         flex-basis: 16.6%
         padding: 0 12.5px
     &__item
+        margin-bottom: 16px
     &__img-wrapper
         position: relative
         &::before
             content: ""
             top: -6px
-            bottom: 0px
+            bottom: -6px
             left: -6px
             right: -6px
             position: absolute
@@ -142,6 +147,7 @@
         border-radius: 50%
         overflow: hidden
         margin-bottom: 26px
+        display: flex
         & img
             width: 100%
     &__name
@@ -160,6 +166,24 @@
         line-height: 170.9%
         text-align: center
         color: #4A4A4A
+
+.dao
+    &__simple-list
+        display: none
+        justify-content: space-between
+    &__controls
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 0px
+.strategic
+    &__list
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__item
+        flex-basis: 20%
+        width: 20%
 
 @media screen and (max-width: 1024px)
     .team
@@ -188,6 +212,16 @@
             margin-bottom: 20px
         &__item
             padding: 0 10px
+        &__content
+            width: 97%
+            margin: auto
+    .dao
+        &__simple-list
+            display: flex
+        &__controls
+            display: none
+    .strategic.partners__content
+        width: 100%
 @media screen and (max-width: 860px)
     .partners
         &__tabs
@@ -218,6 +252,7 @@
     .partners
         &__item-wrapper
             flex-basis: 25%
+            width: 25%
         &__job
             font-size: 13px
         &__folowers
@@ -226,6 +261,8 @@
             font-size: 16px
         &__img
             margin-bottom: 16px
+        &__content
+            width: 86%
 @media screen and (max-width: 675px)
     .team
         &__job
@@ -273,12 +310,14 @@
             & img
                 height: 92%
     .partners
+        &__item-wrapper
+            padding: 0 10px
         &__item
             padding: 0
         &__folowers
-            font-size: 10px
+            font-size: 8px
         &__job
-            font-size: 10px
+            font-size: 8px
         &__name
             font-size: 13px
             width: 100%
@@ -290,7 +329,11 @@
                 top: -3px
                 left: -3px
                 right: -3px
-                bottom: 4px
+                bottom: -3px
+@media screen and (max-width: 425px)
+    .partners
+        &__name
+            font-size: 12px
 @media screen and (max-width: 400px)
     .team
         &__item
@@ -301,3 +344,6 @@
         &__img
             & img
                 height: 89%
+    .partners
+        &__name
+            font-size: 10px

@@ -120,16 +120,20 @@ $(document).ready(function(){
     //team carousel
     if ( $(window).width() > 1024 ) {
       startTeamCarousel();
+      startDaoCarousel();
     } else {
       $('.team__list').addClass('off');
+      $('.dao-list').addClass('off');
     }
 });
 
 $(window).resize(function() {
   if ( $(window).width() > 1024 ) {
     startTeamCarousel();
+    startDaoCarousel();
   } else {
     stopCarousel('team__list');
+    stopCarousel('dao-list');
   }
 });
 
@@ -168,6 +172,44 @@ function startTeamCarousel(){
   });
   $('.team__controls .team__right-btn').click(function() {
     teamCarousel.trigger('next.owl.carousel');
+  });
+};
+
+function startDaoCarousel(){
+  const daoCarousel = $('.dao-list').owlCarousel({
+    loop: false,
+    slideTransition: 'linear',
+    autoplayTimeout: 2000,
+    autoplaySpeed: 2000,
+    nav: false,
+    dots: false,
+    responsive:{
+      0:{
+        items: 5
+      },
+      1150:{
+        items: 5
+      },
+      1400:{
+        items: 6,
+      },
+      1600:{
+        items: 6,
+      },
+      1800:{
+        items: 7,
+      },
+      2200:{
+        items: 8,
+      },
+    }
+  });
+
+  $('.dao__controls .dao__left-btn').click(function() {
+    daoCarousel.trigger('prev.owl.carousel');
+  });
+  $('.dao__controls .dao__right-btn').click(function() {
+    daoCarousel.trigger('next.owl.carousel');
   });
 };
 
