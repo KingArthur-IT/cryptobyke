@@ -52,6 +52,8 @@
         flex-basis: 40%
         max-width: 500px
         transform: translateX(-150px)
+    &__first-hero
+        max-width: 550px
     &__title
         font-weight: 700
         font-size: 70px
@@ -63,6 +65,11 @@
     &__text
         font-size: 19px
         color: #FFFFFF
+    &__how-to-play-btn
+        margin-top: 40px
+        min-height: 75px
+        min-width: 300px
+        width: fit-content
     &__controls
         display: flex
         align-items: center
@@ -117,14 +124,24 @@
             height: 114px
             bottom: 26%
             right: 26%
+        &__title
+            padding-top: 100px
+        &__controls
+            margin-top: 0px
 @media screen and (max-width: 1200px)
     .about
         &__title
             font-size: 60px
         &__controls
-            margin-top: -60px
+            margin-top: 0px
+@media screen and (max-width: 1160px)
+    .about
+        &__controls
+            margin-top: 30px
 @media screen and (max-width: 1024px)
     .about
+        &__title
+            padding-top: 0
         &__item
             flex-direction: column
         &__item-bg
@@ -147,6 +164,12 @@
             height: 124px
             bottom: 23%
             right: 24%
+@media screen and (max-width: 860px)
+    .about
+        &__how-to-play-btn
+            min-width: 225px
+            min-height: 60px
+            font-size: 17px
 @media screen and (max-width: 768px)
     .about
         &__hero
