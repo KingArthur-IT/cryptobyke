@@ -150,3 +150,25 @@ document.querySelectorAll('.dropdown').forEach(el => {
     el.classList.toggle('active');
   })
 })
+
+//ACCORDEON
+var accordeons = document.querySelectorAll(".accordeon__head");
+
+accordeons.forEach((item, index) => {
+    item.addEventListener("click", () => {
+        item.classList.toggle("active");
+        const panel = item.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        };
+
+        //remove from others
+        [...accordeons].filter((el, inx) => inx != index).forEach(element => {
+            element.classList.remove("active");
+            const panel = element.nextElementSibling;
+            panel.style.maxHeight = null;
+        });
+      });
+});

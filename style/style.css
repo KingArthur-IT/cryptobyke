@@ -4260,6 +4260,109 @@ a.btn {
   }
 }
 
+.faq {
+  padding: 100px 0;
+}
+
+.faq__title {
+  text-align: center;
+  color: #FFFFFF;
+  margin: auto;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+
+.accordeon {
+  margin-bottom: 30px;
+  z-index: 2;
+}
+
+.accordeon__head {
+  width: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(#29ACE2), to(#AB22FF));
+  background: linear-gradient(270deg, #29ACE2 0%, #AB22FF 100%);
+  border-radius: 13px;
+  padding: 14px 38px 14px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.accordeon__head svg {
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+
+.accordeon__head.active svg {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.accordeon__panel {
+  margin-top: -20px;
+  background-color: #fff;
+  border-radius: 0 0 13px 13px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordeon__panel p {
+  padding: 40px 30px 30px;
+}
+
+.accordeon__title {
+  color: #fff;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .accordeon__head {
+    padding: 14px 38px 14px 30px;
+  }
+  .accordeon__panel p {
+    padding: 40px 30px 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .accordeon__head {
+    padding: 14px 30px 14px 30px;
+  }
+  .accordeon__head svg {
+    min-width: 17px;
+  }
+  .accordeon__panel p {
+    padding: 40px 30px 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .faq {
+    padding: 60px 0;
+  }
+  .faq__title {
+    margin-bottom: 35px;
+  }
+  .accordeon__head {
+    padding: 14px 16px;
+  }
+  .accordeon__panel p {
+    padding: 35px 16px 20px;
+  }
+}
+
 .footer {
   width: 100%;
   background-color: #000;
