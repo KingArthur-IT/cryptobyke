@@ -1808,8 +1808,18 @@ a.btn {
 }
 
 .groups__label-wrap.anim-active .groups__label {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  -webkit-transform: translate(0%, 2px);
+          transform: translate(0%, 2px);
+}
+
+.groups__label-wrap.anim-active .groups__label:hover {
+  z-index: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
 .groups__label {
@@ -1837,12 +1847,12 @@ a.btn {
   background-size: 100% 100%;
   min-height: 158px;
   margin-left: -125px;
-  -webkit-transform: translateX(400%);
-          transform: translateX(400%);
-  -webkit-transition: -webkit-transform 0.6s ease-in-out;
-  transition: -webkit-transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+  -webkit-transform: translate(400%, 2px);
+          transform: translate(400%, 2px);
+  -webkit-transition: z-index 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+  transition: z-index 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, z-index 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, z-index 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 
 .groups__label span {
