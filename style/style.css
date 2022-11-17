@@ -4322,6 +4322,11 @@ a.btn {
   padding: 40px 30px 30px;
 }
 
+.accordeon__panel p a {
+  color: #AB22FF;
+  font-weight: 600;
+}
+
 .accordeon__title {
   color: #fff;
   margin-right: 30px;
