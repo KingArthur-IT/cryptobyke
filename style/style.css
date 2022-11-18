@@ -4317,6 +4317,7 @@ a.btn {
           justify-content: space-between;
   cursor: pointer;
   z-index: 2;
+  font-weight: 500;
 }
 
 .accordeon__head svg {
@@ -4343,6 +4344,7 @@ a.btn {
 
 .accordeon__panel p {
   padding: 40px 30px 30px;
+  font-weight: 500;
 }
 
 .accordeon__panel p a {
