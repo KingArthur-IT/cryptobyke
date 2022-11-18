@@ -890,6 +890,12 @@ a.btn {
   background: linear-gradient(90deg, #8AEDFF 5.93%, #6100FF 97.24%);
 }
 
+@media screen and (max-width: 1860px) {
+  .about__controls {
+    margin-top: -120px;
+  }
+}
+
 @media screen and (max-width: 1800px) {
   .about__hero {
     -ms-flex-preferred-size: 40%;
@@ -897,6 +903,15 @@ a.btn {
   }
   .about__video {
     bottom: 29%;
+  }
+  .about__controls {
+    margin-top: -100px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .about__controls {
+    margin-top: -80px;
   }
 }
 
@@ -910,6 +925,12 @@ a.btn {
   }
   .about__video {
     bottom: 28%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .about__controls {
+    margin-top: -60px;
   }
 }
 
@@ -928,7 +949,7 @@ a.btn {
     padding-top: 100px;
   }
   .about__controls {
-    margin-top: 0px;
+    margin-top: 60px;
   }
 }
 
@@ -937,13 +958,13 @@ a.btn {
     font-size: 60px;
   }
   .about__controls {
-    margin-top: 0px;
+    margin-top: 60px;
   }
 }
 
 @media screen and (max-width: 1160px) {
   .about__controls {
-    margin-top: 30px;
+    margin-top: 60px;
   }
 }
 
@@ -991,7 +1012,7 @@ a.btn {
 @media screen and (max-width: 860px) {
   .about__how-to-play-btn {
     min-width: 225px;
-    min-height: 60px;
+    min-height: 70px;
     font-size: 17px;
   }
 }
@@ -3360,6 +3381,8 @@ a.btn {
 .proceeds__circle {
   width: 53px;
   height: 53px;
+  min-width: 53px;
+  min-height: 53px;
   border-radius: 50%;
   margin-right: 18px;
 }
